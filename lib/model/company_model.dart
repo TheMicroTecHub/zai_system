@@ -1,0 +1,215 @@
+class Company_model {
+  final int id;
+  final String name;
+  final String position;
+  final String image;
+  final String description;
+
+  Company_model({
+    required this.id,
+    required this.name,
+    required this.position,
+    required this.image,
+    required this.description,
+  });
+
+  static List<Company_model> CompanyModels() => [
+        Company_model(
+          id: 0,
+          name: 'Owais Ahmed Khan',
+          position: 'CEO',
+          image: 'assests/team/owais.jpg',
+          description:
+              "A chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs act as the company's public face and make major corporate decisions.",
+        ),
+        Company_model(
+          id: 1,
+          name: 'Abdul Rafay Khan',
+          position: 'COO',
+          image: 'assests/team/ark.jpeg',
+          description: "Our Expert",
+        ),
+        Company_model(
+          id: 2,
+          name: 'Huzaifa Ali, (CTO)',
+          position: 'CTO',
+          image: 'assests/team/huzaifa.jpeg',
+          description: "React Developer",
+        ),
+        Company_model(
+          id: 3,
+          name: 'Mishal Riasat',
+          position: 'Developer',
+          image: 'assests/team/mishalriasat.jpeg',
+          description: "Developer",
+        ),
+        Company_model(
+          id: 4,
+          name: 'Muhammad Saeed',
+          position: 'Developer',
+          image: 'assests/team/saeed.jpeg',
+          description: "Developer",
+        ),
+        Company_model(
+          id: 5,
+          name: 'Fatima alvi',
+          position: 'Developer',
+          image: 'assests/team/fatima.jpg',
+          description: "Developer",
+        ),
+        Company_model(
+          id: 6,
+          name: 'Sami Ahmad',
+          position: 'Developer',
+          image: 'assests/team/samiahmed.png',
+          description: "Developer",
+        ),
+        Company_model(
+          id: 7,
+          name: 'M Furqan Latif',
+          position: 'Web Developer',
+          image: 'assests/team/mfurqan.jpg',
+          description: "Web Developer",
+        ),
+        Company_model(
+          id: 8,
+          name: 'Aiman Atif',
+          position: 'Developer',
+          image: "assests/team/aimandev.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 9,
+          name: 'Sameen Fatime',
+          position: 'Developer',
+          image: "assests/team/sameen.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 10,
+          name: 'Soha Fatime',
+          position: 'Developer',
+          image: "assests/team/soha.jpeg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 11,
+          name: 'Muhammad Nadeem',
+          position: 'Developer',
+          image: "assests/team/nadeem.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 12,
+          name: 'Rashid Fareed',
+          position: 'Developer',
+          image: "assests/team/rashid.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 13,
+          name: 'Muhammad Saad',
+          position: 'Developer',
+          image: "assests/team/saad.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 14,
+          name: 'Waqas Mughal',
+          position: 'Developer',
+          image: "assests/team/waqasmughal.jpg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 15,
+          name: 'Abdullah Asif',
+          position: 'Developer',
+          image: "assests/team/abdullahdeveloper.jpeg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 16,
+          name: 'Talha Nasir',
+          position: 'Developer',
+          image: "assests/team/talha.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 17,
+          name: 'Kumail Raza',
+          position: 'Developer',
+          image: "assests/team/kumailraza.jpg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 18,
+          name: 'Ubaid Shah Nawaz',
+          position: 'Developer',
+          image: "assests/team/ubaidshah.jpg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 19,
+          name: 'Usman Sohaib',
+          position: 'Graphic Designer',
+          image: "assests/team/usmansohaib.jpeg",
+          description: "Graphic Designer",
+        ),
+        Company_model(
+          id: 20,
+          name: 'Tehseen Ullah',
+          position: 'Developer',
+          image: "assests/team/tehseenullah.jpeg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 21,
+          name: 'Asad',
+          position: 'Developer',
+          image: "assests/team/asaddev.jpeg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 22,
+          name: 'Hussnain Zafar',
+          position: 'Developer',
+          image: "assests/team/husnain.jpg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 23,
+          name: 'Abubakar',
+          position: 'Developer',
+          image: "assests/team/abubakr.jpeg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 24,
+          name: 'Malik Usman',
+          position: 'Developer',
+          image: "assests/team/malik.PNG",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 25,
+          name: 'Waleed Butt',
+          position: 'Developer',
+          image: "assests/team/waleed.jpeg",
+          description: "Developer",
+        ),
+        Company_model(
+          id: 26,
+          name: 'Faiq Dogar',
+          position: 'Developer',
+          image: "assests/team/faiq.jpeg",
+          description: "Developer",
+        ),
+    Company_model(
+      id: 27,
+      name: '',
+      position: '',
+      image: "",
+      description: "",
+    ),
+      ];
+}
