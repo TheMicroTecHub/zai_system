@@ -14,6 +14,7 @@ class CoursesController extends GetxController {
   void fetchCourses() async {
     try {
       isLoading(true);
+      print("hello");
     } finally {}
   }
 }
