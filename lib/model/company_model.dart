@@ -4,30 +4,37 @@ class Company_model {
   final String position;
   final String image;
   final String description;
+  final String contact;
+  final String profile;
 
-  Company_model({
-    required this.id,
-    required this.name,
-    required this.position,
-    required this.image,
-    required this.description,
-  });
+  Company_model(
+      {required this.id,
+      required this.name,
+      required this.position,
+      required this.image,
+      required this.description,
+      required this.contact,
+      required this.profile});
 
   static List<Company_model> CompanyModels() => [
         Company_model(
-          id: 0,
-          name: 'Owais Ahmed Khan',
-          position: 'CEO',
-          image: 'assests/team/owais.jpg',
-          description:
-              "A chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs act as the company's public face and make major corporate decisions.",
-        ),
+            id: 0,
+            name: 'Owais Ahmed Khan',
+            position: 'CEO',
+            image: 'assests/team/owais.jpg',
+            description:
+                "A chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs act as the company's public face and make major corporate decisions.",
+            contact: "+923346906960",
+            profile:
+                "https://www.facebook.com/zaisystems?paipv=0&eav=AfY8FerIphTkdF6U1gcw5SpXWpEET_yups6EeIAuM8C_BP-U5HU003uWYUWbtICGvcY"),
         Company_model(
           id: 1,
           name: 'Abdul Rafay Khan',
           position: 'COO',
           image: 'assests/team/ark.jpeg',
           description: "Our Expert",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 2,
@@ -35,6 +42,8 @@ class Company_model {
           position: 'CTO',
           image: 'assests/team/huzaifa.jpeg',
           description: "React Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 3,
@@ -42,6 +51,8 @@ class Company_model {
           position: 'Developer',
           image: 'assests/team/mishalriasat.jpeg',
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 4,
@@ -49,6 +60,8 @@ class Company_model {
           position: 'Developer',
           image: 'assests/team/saeed.jpeg',
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 5,
@@ -56,6 +69,8 @@ class Company_model {
           position: 'Developer',
           image: 'assests/team/fatima.jpg',
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 6,
@@ -63,6 +78,8 @@ class Company_model {
           position: 'Developer',
           image: 'assests/team/samiahmed.png',
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 7,
@@ -70,6 +87,8 @@ class Company_model {
           position: 'Web Developer',
           image: 'assests/team/mfurqan.jpg',
           description: "Web Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 8,
@@ -77,6 +96,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/aimandev.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 9,
@@ -84,6 +105,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/sameen.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 10,
@@ -91,6 +114,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/soha.jpeg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 11,
@@ -98,6 +123,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/nadeem.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 12,
@@ -105,6 +132,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/rashid.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 13,
@@ -112,6 +141,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/saad.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 14,
@@ -119,6 +150,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/waqasmughal.jpg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 15,
@@ -126,6 +159,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/abdullahdeveloper.jpeg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 16,
@@ -133,6 +168,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/talha.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 17,
@@ -140,6 +177,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/kumailraza.jpg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 18,
@@ -147,6 +186,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/ubaidshah.jpg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 19,
@@ -154,6 +195,8 @@ class Company_model {
           position: 'Graphic Designer',
           image: "assests/team/usmansohaib.jpeg",
           description: "Graphic Designer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 20,
@@ -161,6 +204,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/tehseenullah.jpeg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 21,
@@ -168,6 +213,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/asaddev.jpeg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 22,
@@ -175,6 +222,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/husnain.jpg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 23,
@@ -182,6 +231,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/abubakr.jpeg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 24,
@@ -189,6 +240,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/malik.PNG",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 25,
@@ -196,6 +249,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/waleed.jpeg",
           description: "Developer",
+          contact: "",
+          profile: "",
         ),
         Company_model(
           id: 26,
@@ -203,13 +258,8 @@ class Company_model {
           position: 'Developer',
           image: "assests/team/faiq.jpeg",
           description: "Developer",
-        ),
-    Company_model(
-      id: 27,
-      name: '',
-      position: '',
-      image: "",
-      description: "",
-    ),
+          contact: "",
+          profile: "",
+        )
       ];
 }
