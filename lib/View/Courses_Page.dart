@@ -127,7 +127,12 @@ class Courses extends StatelessWidget {
           itemCount: data.length,
           separatorBuilder: (BuildContext context, int index) => Divider(color: Colors.white),
           itemBuilder: (BuildContext context, int index) {
-            return Column(
+            return TextButton(
+                onPressed: (){
+                  int id = data[index].id;
+                  Get.to(DetailPage(id: id));
+                },
+                child: Column(
               children: [
                 SizedBox(height: 8,),
                 Row(children: [
@@ -168,19 +173,16 @@ class Courses extends StatelessWidget {
                 Row(children: [
                   SizedBox(width: 270,),
 
-                  TextButton(onPressed: (){
-                    int id = data[index].id;
-                    Get.to(DetailPage(id: id));
-                  }, child: SizedBox(
+                  SizedBox(
                     width: 50,
                     height: 50,
                     child: Text('More', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.red),),
 
-                  ),)
+                  ),
 
                 ]),
-              ],
-            );
+                SizedBox(height: 7,), ],
+            ));
           },
         ))
     )]
