@@ -17,7 +17,7 @@ class Team extends StatelessWidget {
         child: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Center(
+        title: const Center(
           child: Text(
             "Our Team",
             style: TextStyle(color: Colors.white),
