@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:zai_system/View/Courses_Page.dart';
-import 'package:zai_system/View/home.dart';
+import 'package:my_profile_screen/home_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -11,7 +9,6 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +19,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         backgroundColor: Colors.black,
         actions: [
           IconButton(
-            onPressed: () {Get.back();},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => const HomeScreen())));
+            },
             icon: const Icon(
               Icons.close,
               size: 35,
@@ -37,16 +39,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 end: Alignment.bottomCenter,
                 colors: [Colors.black, Color(0xff810000)])),
         child: Padding(
-          padding: const EdgeInsets.only(top: 80.0),
+          padding: const EdgeInsets.only(top: 70.0),
           child: Center(
             child: Column(
               children: [
                 const CircleAvatar(
+                  backgroundImage: AssetImage('images/pictures.jpg'),
                   backgroundColor: Colors.grey,
                   radius: 60,
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 const Text(
                   "Shahzain Ahmed",
@@ -55,13 +58,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
-                const Text('shahzainahmed57@gmail.com',
-                    style: TextStyle(fontSize: 17, color: Colors.grey)),
                 const SizedBox(
-                  height: 60,
+                  height: 10,
+                ),
+                const Text(
+                  'shahzainahmed57@gmail.com',
+                  style: TextStyle(fontSize: 17, color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                const Text(
+                  '+92 334 1234567',
+                  style: TextStyle(fontSize: 17, color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 80,
                 ),
                 Container(
-                  height: 350,
+                  height: 230,
                   width: 350,
                   padding: const EdgeInsets.only(top: 15),
                   decoration: BoxDecoration(
@@ -80,47 +95,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ],
                   ),
                   child: ListView(children: [
-                    GestureDetector(
-                      onTap: () {
-                        debugPrint('My Profile');
-                      },
-                      child: const ListTile(
-                        leading: Icon(
-                          Icons.person,
-                          size: 30,
-                        ),
-                        title: Text(
-                          'My Profile',
-                          style: TextStyle(fontSize: 25),
-                        ),
-                        trailing: Icon(
-                          Icons.arrow_forward_ios,
-                          size: 26,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        debugPrint('Courses');
-                      },
-                      child: const ListTile(
-                        leading: Icon(
-                          Icons.article_outlined,
-                          size: 30,
-                        ),
-                        title: Text(
-                          'Courses',
-                          style: TextStyle(fontSize: 23),
-                        ),
-                        trailing: Icon(
-                          Icons.arrow_forward_ios,
-                          size: 26,
-                        ),
-                      ),
-                    ),
                     const SizedBox(
                       height: 10,
                     ),
