@@ -47,6 +47,8 @@ dependencies:
   http_parser:
   flutter_image_slideshow:
   font_awesome_flutter: ^10.2.1
+  firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
 
 
 dev_dependencies:

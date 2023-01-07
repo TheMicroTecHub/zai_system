@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/otp_verification2.dart';
 import 'package:zai_system/Widget/constants.dart';
 
