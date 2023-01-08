@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_profile_screen/home_screen.dart';
+import 'package:zai_system/Components/home_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
