@@ -29,13 +29,14 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
                   const SizedBox(height: 50,),
                   const Text('Enter OTP', style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
                   const SizedBox(height: 30,),
-                  const Text('Enter the 4 digit OTP that we sent',style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500)),
-                  const Text('to 0300 1234567',style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500)),
+                  const Text('Enter the 6 digits OTP that we sent',style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500)),
+                  const SizedBox(height: 2,),
+                  const Text('to +92300 1234567',style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500)),
                   const SizedBox(height: 30,),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 61.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 50.0),
                     child: PinCodeTextField(appContext: context,
-                        length: 4,
+                        length: 6,
                         keyboardType: TextInputType.number,
                         pinTheme: PinTheme(
                           shape: PinCodeFieldShape.box,

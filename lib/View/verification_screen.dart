@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:zai_system/Controller/verification_controller.dart';
 import 'package:zai_system/View/otp_verification2.dart';
 import 'package:zai_system/Widget/constants.dart';
 
@@ -13,9 +14,13 @@ class VerificationScr extends StatefulWidget {
 class _VerificationScrState extends State<VerificationScr> {
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VerificationController());
+    final formKey = GlobalKey<FormState>();
+
     return Scaffold(
       body: SafeArea(
         child: Container(
+          key: formKey,
           decoration: const BoxDecoration(gradient: LinearGradient(begin: Alignment.bottomCenter, end: Alignment.topCenter, colors: [Colors.red,Colors.black])),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
@@ -32,9 +37,10 @@ class _VerificationScrState extends State<VerificationScr> {
                 Padding(
                   padding: apppaddings,
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
+                    controller: controller.phoneNo,
+                    
                     decoration: InputDecoration(
-                      hintText: '0300 1234567',
+                      hintText: '+92300 1234567',
                       hintStyle: const TextStyle(fontFamily: 'Rubik Medium',fontSize: 16),
                       fillColor: const Color(0xffF8F9FA),
                       filled: true,
@@ -64,7 +70,13 @@ class _VerificationScrState extends State<VerificationScr> {
                               fontFamily: 'Rubik Medium',),
                           ),
                           ),
-                          onPressed: () => Get.to(const OTPVerificationScr()),
+                          onPressed: () {
+                            if(formKey.currentState!.validate()){
+                              VerificationController.instance.phoneAuthentication(controller.phoneNo.text.trim());
+                              Get.to(()=>const OTPVerificationScr());
+                            }
+                          },
+
                         ),
                       ),
 
