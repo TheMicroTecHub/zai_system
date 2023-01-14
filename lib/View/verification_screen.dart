@@ -38,7 +38,7 @@ class _VerificationScrState extends State<VerificationScr> {
                   padding: apppaddings,
                   child: TextFormField(
                     controller: controller.phoneNo,
-                    
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       hintText: '+92300 1234567',
                       hintStyle: const TextStyle(fontFamily: 'Rubik Medium',fontSize: 16),
