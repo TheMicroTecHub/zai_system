@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:zai_system/Utils/utils.dart';
 import 'package:zai_system/View/profile_screen.dart';
+import 'package:zai_system/View/verification_screen.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -10,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,12 +109,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.white,
                   ),
                 ),
-                const ListTile(
-                  title: Text("Log Out", style: TextStyle(color: Colors.white)),
-                  leading: Icon(
-                    Icons.logout,
-                    color: Colors.white,
-                  ),
+                 ListTile(
+                  title:const Text("Log Out", style: TextStyle(color: Colors.white)),
+                  leading: IconButton(onPressed: (){
+                    auth.signOut().then((value){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const VerificationScr()));
+                    }).onError((error, stackTrace){
+                      Utils().toastMessage(error.toString());
+                    });
+                  },
+                      icon:const Icon(Icons.logout_outlined,color: Colors.white,)),
                 ),
               ],
             )

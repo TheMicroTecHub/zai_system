@@ -67,7 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '636439448051',
     projectId: 'zai-system-app',
     storageBucket: 'zai-system-app.appspot.com',
-    androidClientId: '636439448051-rjpcqr5lhr7jv38u4n04kviunl2l60dh.apps.googleusercontent.com',
+    androidClientId: '636439448051-8ih526euqf74mgrog1e7diubq40sh0mv.apps.googleusercontent.com',
     iosClientId: '636439448051-8b4d74t2nh2ujupieqsf8v32b5gdps9k.apps.googleusercontent.com',
     iosBundleId: 'com.example.zaiSystem',
   );
@@ -78,7 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '636439448051',
     projectId: 'zai-system-app',
     storageBucket: 'zai-system-app.appspot.com',
-    androidClientId: '636439448051-rjpcqr5lhr7jv38u4n04kviunl2l60dh.apps.googleusercontent.com',
+    androidClientId: '636439448051-8ih526euqf74mgrog1e7diubq40sh0mv.apps.googleusercontent.com',
     iosClientId: '636439448051-8b4d74t2nh2ujupieqsf8v32b5gdps9k.apps.googleusercontent.com',
     iosBundleId: 'com.example.zaiSystem',
   );

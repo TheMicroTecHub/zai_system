@@ -1,8 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:zai_system/Controller/verification_controller.dart';
+import 'package:zai_system/Utils/utils.dart';
 import 'package:zai_system/View/otp_verification2.dart';
 import 'package:zai_system/Widget/constants.dart';
+import 'package:zai_system/Widget/round_button.dart';
 
 class VerificationScr extends StatefulWidget {
   const VerificationScr({Key? key}) : super(key: key);
@@ -12,75 +13,129 @@ class VerificationScr extends StatefulWidget {
 }
 
 class _VerificationScrState extends State<VerificationScr> {
+
+  bool loading = false;
+  final phoneNumberController = TextEditingController();
+  final auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(VerificationController());
-    final formKey = GlobalKey<FormState>();
-
     return Scaffold(
       body: SafeArea(
         child: Container(
-          key: formKey,
-          decoration: const BoxDecoration(gradient: LinearGradient(begin: Alignment.bottomCenter, end: Alignment.topCenter, colors: [Colors.red,Colors.black])),
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Colors.red, Colors.black])),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Column(
               children: [
-                const Image( height: 150, width: 150, image: AssetImage('assests/splashScreen/spWhite.png')),
-                const Text('Building the Future with Tech', style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500),),
-                const SizedBox(height: 50,),
-                const Text('OTP Verification', style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
-                const SizedBox(height: 30,),
-                const Text('Enter your phone number to receive',style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500)),
-                const Text('verification code',style: TextStyle(fontSize:15,color:whitecolor,fontWeight: FontWeight.w500)),
-                const SizedBox(height: 30,),
+                const Image(
+                    height: 150,
+                    width: 150,
+                    image: AssetImage('assests/splashScreen/spWhite.png')),
+                const Text(
+                  'Building the Future with Tech',
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: whitecolor,
+                      fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                const Text(
+                  'OTP Verification',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text('Enter your phone number to receive',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: whitecolor,
+                        fontWeight: FontWeight.w500)),
+                const Text('verification code',
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: whitecolor,
+                        fontWeight: FontWeight.w500)),
+                const SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: apppaddings,
                   child: TextFormField(
-                    controller: controller.phoneNo,
-                    keyboardType: TextInputType.number,
+                    controller: phoneNumberController,
+                    keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
                       hintText: '+92300 1234567',
-                      hintStyle: const TextStyle(fontFamily: 'Rubik Medium',fontSize: 16),
+                      hintStyle: const TextStyle(
+                          fontFamily: 'Rubik Medium', fontSize: 16),
                       fillColor: const Color(0xffF8F9FA),
                       filled: true,
-                      prefixIcon: const Icon(Icons.perm_contact_cal_outlined,color: iconcolor,),
+                      prefixIcon: const Icon(
+                        Icons.perm_contact_cal_outlined,
+                        color: iconcolor,
+                      ),
                       focusedBorder: fbbutton,
                       enabledBorder: ebbutton,
                     ),
                   ),
                 ),
-                const SizedBox(height: 90,),
+                const SizedBox(
+                  height: 90,
+                ),
                 Padding(
-                  padding:apppaddings,
-                  child: Row(
+                  padding: apppaddings,
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: redcolor,
-                            borderRadius: BorderRadius.circular(20)),
-                        height: 50,
-                        width: 300,
-                        child: TextButton(
-                          child:const Center(child: Text('GET OTP',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontFamily: 'Rubik Medium',),
-                          ),
-                          ),
-                          onPressed: () {
-                            if(formKey.currentState!.validate()){
-                              VerificationController.instance.phoneAuthentication(controller.phoneNo.text.trim());
-                              Get.to(()=>const OTPVerificationScr());
-                            }
-                          },
+                      RoundButton(
+                        title: 'GET OTP', loading:loading, onTap: () {
 
-                        ),
-                      ),
+                          setState(() {
+                            loading = true;
+                          });
 
-                    ],),
+                          auth.verifyPhoneNumber(
+                              phoneNumber: phoneNumberController.text,
+                              verificationCompleted: (_) {
+                                setState(() {
+                                  loading = false;
+                                });
+                              },
+                              verificationFailed: (e) {
+                                setState(() {
+                                  loading = false;
+                                });
+                                Utils().toastMessage(e.toString());
+                              },
+                              codeSent: (String verificationId, int? token) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => OTPVerificationScr(verificationId: verificationId,)));
+                                setState(() {
+                                  loading = false;
+                                });
+                              },
+                              codeAutoRetrievalTimeout: (e) {
+                                Utils().toastMessage(e.toString());
+                                setState(() {
+                                  loading = false;
+                                });
+                              });
+                        },
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
