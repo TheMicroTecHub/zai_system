@@ -4,10 +4,9 @@ import 'package:get/get.dart';
 import 'package:zai_system/View/splashscreen.dart';
 import 'package:zai_system/firebase_options.dart';
 
-
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp(options:DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -21,8 +20,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         getPages: [
-          GetPage(name: "/", page: () =>SplashScreen()),
-
+          GetPage(name: "/", page: () => SplashScreen()),
         ]);
   }
 }

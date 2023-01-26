@@ -202,7 +202,7 @@ class _FooterState extends State<Footer> {
                       height: 10,
                     ),
                     Text(
-                      "Mopnday-Saturday",
+                      "Monday-Saturday",
                       style: TextStyle(
                           color: Colors.grey.shade400,
                           fontSize: 20,

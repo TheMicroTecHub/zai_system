@@ -1,19 +1,17 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
 import 'package:zai_system/Components/companyhome.dart';
+import 'package:zai_system/Components/expertise.dart';
 import 'package:zai_system/Components/experts.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:zai_system/Components/imagecarousel.dart';
 import 'package:zai_system/Components/imgslider.dart';
 import 'package:zai_system/Components/testimonial.dart';
-import 'package:zai_system/Utils/utils.dart';
 import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/View/courseshome.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
-import 'package:zai_system/View/verification_screen.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -23,13 +21,15 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(
+      appBar: AppBar(
         centerTitle: true,
-        title: const Text("Zai Systems", style: TextStyle(color: Colors.white), ),
+        title: const Text(
+          "Zai Systems",
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.black,
       ),
       drawer: Drawer(
@@ -60,48 +60,45 @@ class _HomescreenState extends State<Homescreen> {
             Column(
               children: [
                 ListTile(
-                 leading: TextButton.icon(onPressed: () => Get.to(Homescreen()),
-                      label: const Text("HOME", style: TextStyle(color: Colors.white)),
-                      icon: const Icon(
-                          Icons.home,
+                  leading: TextButton.icon(
+                    onPressed: () => Get.to(Homescreen()),
+                    label: const Text("HOME",
+                        style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.home, color: Colors.white),
+                  ),
+                ),
+                ListTile(
+                  leading: TextButton.icon(
+                    onPressed: () => Get.to(ProfileScreen()),
+                    label: const Text("PROFILE",
+                        style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.person, color: Colors.white),
+                  ),
+                ),
+                ListTile(
+                  leading: TextButton.icon(
+                    onPressed: () => Get.to(Courses()),
+                    label: const Text("COURSES",
+                        style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.my_library_books_sharp,
                         color: Colors.white),
                   ),
                 ),
                 ListTile(
-                  leading: TextButton.icon(onPressed: () => Get.to(ProfileScreen()),
-                    label: const Text("PROFILE", style: TextStyle(color: Colors.white)),
-                    icon: const Icon(
-                        Icons.person,
-                        color: Colors.white),
+                  leading: TextButton.icon(
+                    onPressed: () => Get.to(Team()),
+                    label: const Text("TEAM",
+                        style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.group, color: Colors.white),
                   ),
                 ),
                 ListTile(
-                  leading: TextButton.icon(onPressed: ()=>Get.to(Courses()),
-                    label: const Text("COURSES", style: TextStyle(color: Colors.white)),
-                    icon: const Icon(
-                        Icons.my_library_books_sharp,
-                        color: Colors.white),
+                  leading: TextButton.icon(
+                    onPressed: () => {},
+                    label: const Text("LOG OUT",
+                        style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.logout, color: Colors.white),
                   ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(onPressed: ()=>Get.to(Team()),
-                    label: const Text("TEAM", style: TextStyle(color: Colors.white)),
-                    icon: const Icon(
-                        Icons.group,
-                        color: Colors.white),
-                  ),
-                ),
-
-                ListTile(
-                  title:const Text("Log Out", style: TextStyle(color: Colors.white)),
-                  leading: IconButton(onPressed: (){
-                    auth.signOut().then((value){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const VerificationScr()));
-                    }).onError((error, stackTrace){
-                      Utils().toastMessage(error.toString());
-                    });
-                  },
-                      icon:const Icon(Icons.logout_outlined,color: Colors.white,)),
                 ),
               ],
             )
@@ -123,6 +120,7 @@ class _HomescreenState extends State<Homescreen> {
             Companyhome(),
             CoursesHome(),
             AboutCompany(),
+            Expertise(),
             ImageSlider(),
             Experts(),
             Testimonials(),

@@ -25,6 +25,8 @@ class _ImageSliderState extends State<ImageSlider> {
             image: DecorationImage(
               image: AssetImage("assests/img1.PNG"),
               fit: BoxFit.cover,
+              colorFilter:
+                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
             ),
           ),
           child: Column(
@@ -70,6 +72,9 @@ class _ImageSliderState extends State<ImageSlider> {
             image: DecorationImage(
               image: AssetImage("assests/img2.PNG"),
               fit: BoxFit.cover,
+              opacity: 20,
+              colorFilter:
+                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
             ),
           ),
           child: Column(
@@ -115,6 +120,9 @@ class _ImageSliderState extends State<ImageSlider> {
             image: DecorationImage(
               image: AssetImage("assests/img3.PNG"),
               fit: BoxFit.cover,
+              opacity: 20,
+              colorFilter:
+                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
             ),
           ),
           child: Column(
@@ -160,6 +168,9 @@ class _ImageSliderState extends State<ImageSlider> {
             image: DecorationImage(
               image: AssetImage("assests/img4.PNG"),
               fit: BoxFit.cover,
+              opacity: 20,
+              colorFilter:
+                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
             ),
           ),
           child: Column(
@@ -205,11 +216,14 @@ class _ImageSliderState extends State<ImageSlider> {
             image: DecorationImage(
               image: AssetImage("assests/img.PNG"),
               fit: BoxFit.cover,
+              opacity: 20,
+              colorFilter:
+                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
             ),
           ),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "Legacy Migration",
