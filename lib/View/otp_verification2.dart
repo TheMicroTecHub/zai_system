@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zai_system/Utils/utils.dart';
 import 'package:zai_system/View/home.dart';
+import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:zai_system/Widget/round_button.dart';
@@ -132,7 +133,7 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Homescreen()));
+                                        builder: (context) => LoginScreen()));
                               } catch (e) {
                                 setState(() {
                                   loading = false;

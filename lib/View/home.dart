@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
@@ -10,8 +11,10 @@ import 'package:zai_system/Components/imgslider.dart';
 import 'package:zai_system/Components/testimonial.dart';
 import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/View/courseshome.dart';
+import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
+import 'package:zai_system/model/current_appuser.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -21,6 +24,14 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  String? name;
+  @override
+  void initState() {
+    super.initState();
+    name = CurrentAppUser.currentUserData.name ?? "";
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +50,7 @@ class _HomescreenState extends State<Homescreen> {
             DrawerHeader(
               decoration: const BoxDecoration(color: Color(0xff810000)),
               child: Column(
-                children: const [
+                children: [
                   SizedBox(
                     height: 10,
                   ),
@@ -51,7 +62,7 @@ class _HomescreenState extends State<Homescreen> {
                     height: 10,
                   ),
                   Text(
-                    "Shahzain Ahmed",
+                    "$name",
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )
                 ],
@@ -61,7 +72,7 @@ class _HomescreenState extends State<Homescreen> {
               children: [
                 ListTile(
                   leading: TextButton.icon(
-                    onPressed: () => Get.to(Homescreen()),
+                    onPressed: () => Get.to(() => Homescreen()),
                     label: const Text("HOME",
                         style: TextStyle(color: Colors.white)),
                     icon: const Icon(Icons.home, color: Colors.white),
@@ -69,7 +80,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
                 ListTile(
                   leading: TextButton.icon(
-                    onPressed: () => Get.to(ProfileScreen()),
+                    onPressed: () => Get.to(() => ProfileScreen()),
                     label: const Text("PROFILE",
                         style: TextStyle(color: Colors.white)),
                     icon: const Icon(Icons.person, color: Colors.white),
@@ -77,7 +88,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
                 ListTile(
                   leading: TextButton.icon(
-                    onPressed: () => Get.to(Courses()),
+                    onPressed: () => Get.to(() => Courses()),
                     label: const Text("COURSES",
                         style: TextStyle(color: Colors.white)),
                     icon: const Icon(Icons.my_library_books_sharp,
@@ -86,7 +97,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
                 ListTile(
                   leading: TextButton.icon(
-                    onPressed: () => Get.to(Team()),
+                    onPressed: () => Get.to(() => Team()),
                     label: const Text("TEAM",
                         style: TextStyle(color: Colors.white)),
                     icon: const Icon(Icons.group, color: Colors.white),
@@ -94,7 +105,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
                 ListTile(
                   leading: TextButton.icon(
-                    onPressed: () => {},
+                    onPressed: () async => await logout(context),
                     label: const Text("LOG OUT",
                         style: TextStyle(color: Colors.white)),
                     icon: const Icon(Icons.logout, color: Colors.white),
@@ -129,5 +140,11 @@ class _HomescreenState extends State<Homescreen> {
         ),
       ),
     );
+  }
+
+  Future<void> logout(BuildContext context) async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => LoginScreen()));
   }
 }

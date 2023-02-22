@@ -1,5 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:zai_system/Components/home_screen.dart';
+import 'package:zai_system/View/loginscreen.dart';
+import 'package:zai_system/model/current_appuser.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -9,6 +13,19 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  String? name;
+  String? email;
+  @override
+  void initState() {
+    super.initState();
+    name = CurrentAppUser.currentUserData.name;
+    email = CurrentAppUser.currentUserData.email;
+    setState(() {});
+  }
+
+  bool showSpinner = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,8 +68,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "Shahzain Ahmed",
+                Text(
+                  "$name",
                   style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -61,15 +78,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  'shahzainahmed57@gmail.com',
+                Text(
+                  '$email +2',
                   style: TextStyle(fontSize: 17, color: Colors.grey),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 const Text(
-                  '+92 334 1234567',
+                  '+923341234567',
                   style: TextStyle(fontSize: 17, color: Colors.grey),
                 ),
                 const SizedBox(
@@ -140,8 +157,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        debugPrint('Log out');
+                      onTap: () async {
+                        await logout(context);
                       },
                       child: const ListTile(
                         leading: Icon(
@@ -167,4 +184,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
+}
+
+Future<void> logout(BuildContext context) async {
+  await FirebaseAuth.instance.signOut();
+  Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+}
+
+void toastMessage(String message) {
+  Fluttertoast.showToast(
+      msg: message.toString(),
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.SNACKBAR,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 16.0);
 }

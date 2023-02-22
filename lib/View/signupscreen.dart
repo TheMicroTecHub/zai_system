@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -12,6 +13,9 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  bool loading = false;
+  final phoneNumberController = TextEditingController();
+  final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
