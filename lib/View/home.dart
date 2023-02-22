@@ -24,13 +24,18 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  String image = CurrentAppUser.currentUserData.image ??
+      "https://firebasestorage.googleapis.com/v0/b/zai-system-app-1f2c7.appspot.com/o/images%2Fdefault.png?alt=media&token=0b0b0b0b-0b0b-0b0b-0b0b-0b0b0b0b0b0b";
   String? name;
   @override
   void initState() {
     super.initState();
-    name = CurrentAppUser.currentUserData.name ?? "";
+    name = CurrentAppUser.currentUserData.name;
     setState(() {});
   }
+
+  bool showSpinner = false;
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +60,7 @@ class _HomescreenState extends State<Homescreen> {
                     height: 10,
                   ),
                   CircleAvatar(
+                    backgroundImage: NetworkImage(image),
                     backgroundColor: Colors.grey,
                     radius: 45,
                   ),
@@ -147,4 +153,7 @@ class _HomescreenState extends State<Homescreen> {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => LoginScreen()));
   }
+  // Image(){
+
+  // }
 }

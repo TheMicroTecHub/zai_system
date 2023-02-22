@@ -52,6 +52,8 @@ dependencies:
   fluttertoast: ^8.1.2
   percent_indicator: ^4.2.2
   cloud_firestore: ^4.4.3
+  firebase_storage:
+  badges: ^2.0.3
 
 
 dev_dependencies:

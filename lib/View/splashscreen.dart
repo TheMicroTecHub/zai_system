@@ -1,7 +1,9 @@
+import 'dart:async';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:zai_system/Controller/splash_services.dart';
+import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/verification_screen.dart';
+import 'package:zai_system/model/current_appuser.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -11,21 +13,42 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  SplashServices splashScreen = SplashServices();
-
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    splashScreen.isLogin(context);
+    var user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      CurrentAppUser.currentUserData.getCurrentUserData(user.uid);
+      Timer(
+          const Duration(seconds: 3),
+          () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const Homescreen())));
+    } else {
+      Timer(
+          const Duration(seconds: 3),
+          () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const VerificationScr())));
+    }
   }
 
+  @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-        splash: Image.asset('assests/splashScreen/spBlack.png'),
-        nextScreen: const VerificationScr(),
-      splashTransition: SplashTransition.fadeTransition,
-      duration: 2500,
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: Image.asset(
+              'assests/splashScreen/spBlack.png',
+              width: 100,
+              height: 100,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

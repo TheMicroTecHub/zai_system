@@ -183,7 +183,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                            onPressed: () => Get.to(() =>Homescreen()),
+                            onPressed: () async {
+                              await signIn(emailController.text,
+                                  passwordController.text);
+                            },
                           ),
                         ),
                       ],
