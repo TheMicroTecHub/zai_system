@@ -4,7 +4,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/View/forgotpassword.dart';
 import 'package:zai_system/View/home.dart';
-import 'package:zai_system/View/signupscreen.dart';
 import 'package:zai_system/View/verification_screen.dart';
 import 'package:zai_system/model/current_appuser.dart';
 
@@ -41,7 +40,6 @@ class _LoginScreenState extends State<LoginScreen> {
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Image(
                       height: 150,
@@ -68,6 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 50,
                   ),
                   Form(
+                    key: _formkey,
                     child: Column(children: [
                       Padding(
                         padding: apppaddings,
@@ -141,11 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const ForgotPScreen()));
+                              Get.to(() => ForgotPScreen());
                             },
                             child: const Text(
                               'Forgot Password?',
@@ -159,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   Padding(
                     padding: apppaddings,
@@ -193,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 100),
+                      padding: const EdgeInsets.symmetric(vertical: 70),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -203,11 +198,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           TextButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const VerificationScr()));
+                                Get.to(() => VerificationScr());
                               },
                               child: const Text('Sign up',
                                   style: TextStyle(
@@ -235,8 +226,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 CurrentAppUser.currentUserData
                     .getCurrentUserData(uid.user!.uid),
                 Fluttertoast.showToast(msg: "Login Successful"),
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => Homescreen())),
+                Get.to(() => Homescreen()),
               });
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
