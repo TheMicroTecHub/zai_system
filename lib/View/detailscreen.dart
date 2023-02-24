@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:zai_system/Controller/drawer.dart';
 import '../model/company_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
@@ -56,57 +57,56 @@ class _DetailScreenState extends State<DetailScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-         body: SafeArea(
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          FractionallySizedBox(
-            alignment: Alignment.topCenter,
-            heightFactor: 0.7,
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(companydata[id].image),
-                  fit: BoxFit.cover,
+        drawer: const MyDrawer(),
+        body: SafeArea(
+          child: Stack(
+            fit: StackFit.expand,
+            children: <Widget>[
+              FractionallySizedBox(
+                  alignment: Alignment.topCenter,
+                  heightFactor: 0.7,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(companydata[id].image),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )),
+              Positioned(
+                  top: 50,
+                  left: 10,
+                  child: IconButton(
+                    onPressed: () => Get.back(),
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.white,
+                    ),
+                  )),
+              FractionallySizedBox(
+                alignment: Alignment.bottomCenter,
+                heightFactor: 0.5,
+                child: Container(
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                  child: panelBody(),
                 ),
               ),
-            )),
-       
-          Positioned(
-              top: 50,
-              left: 10,
-              child: IconButton(
-                onPressed: () => Get.back(),
-                icon: Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
-                 
-                ),
-                )),
-          FractionallySizedBox(
-            alignment: Alignment.bottomCenter,
-            heightFactor: 0.5,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(50))),
-              child: panelBody(),
-            ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 
   SingleChildScrollView panelBody() {
     //double hPadding = 40;
     return SingleChildScrollView(
       //controller: controller,
-      physics: ClampingScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       child: Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
             height: MediaQuery.of(context).size.height * 0.5,
             child: Column(
               //mainAxisSize: MainAxisSize.max,
@@ -122,74 +122,78 @@ class _DetailScreenState extends State<DetailScreen> {
       ),
     );
   }
-                      Row _actionSection({double? hPadding}) {
+
+  Row _actionSection({double? hPadding}) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Visibility(
-          visible: !_isOpen,
-          child: Expanded(
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                side: BorderSide(color: Colors.blue),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-              ),
-              onPressed: () {
-                if (Platform.isAndroid) {
-                  var fbUrl = "fb://facewebmodal/f?href=" +
-                      companydata[id].profile; //for android
-                  launchFacebook(fbUrl, companydata[id].profile.toString());
-                } else if (Platform.isIOS) {
-                  var fbUrl =
-                      "fb://profile/" + companydata[id].profile; //for IOS
-                  launchFacebook(fbUrl, companydata[id].profile.toString());
-                }
-              },
-              child: Text(
-                'VIEW PROFILE',
-                style: TextStyle(
-                  fontFamily: 'NimbusSanL',
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          ),
-        ),
-        Visibility(
-          visible: !_isOpen,
-          child: SizedBox(
-            width: 16,
-          ),
-        ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.center,
-            child: SizedBox(
-              width: _isOpen
-                  ? (MediaQuery.of(context).size.width - (2 * hPadding!)) / 1.6
-                  : double.infinity,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Visibility(
+            visible: !_isOpen,
+            child: Expanded(
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: const BorderSide(color: Colors.blue),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
                 ),
-                onPressed: () => launchWhatsApp(
-                    phone: int.parse("${companydata[id].contact}"),
-                    message: 'Hello Sir'),
-                child: Text(
-                  'MESSAGE',
+                onPressed: () {
+                  if (Platform.isAndroid) {
+                    var fbUrl = "fb://facewebmodal/f?href=" +
+                        companydata[id].profile; //for android
+                    launchFacebook(fbUrl, companydata[id].profile.toString());
+                  } else if (Platform.isIOS) {
+                    var fbUrl =
+                        "fb://profile/" + companydata[id].profile; //for IOS
+                    launchFacebook(fbUrl, companydata[id].profile.toString());
+                  }
+                },
+                child: const Text(
+                  'VIEW PROFILE',
                   style: TextStyle(
                     fontFamily: 'NimbusSanL',
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            ),
           ),
-        ),),))),
-      ]);
-    
+          Visibility(
+            visible: !_isOpen,
+            child: const SizedBox(
+              width: 16,
+            ),
+          ),
+          Expanded(
+              child: Container(
+                  alignment: Alignment.center,
+                  child: SizedBox(
+                    width: _isOpen
+                        ? (MediaQuery.of(context).size.width -
+                                (2 * hPadding!)) /
+                            1.6
+                        : double.infinity,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                      ),
+                      onPressed: () => launchWhatsApp(
+                          phone: int.parse("${companydata[id].contact}"),
+                          message: 'Hello Sir'),
+                      child: const Text(
+                        'MESSAGE',
+                        style: TextStyle(
+                          fontFamily: 'NimbusSanL',
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ))),
+        ]);
   }
 
   Column _infoSection() {
@@ -198,7 +202,7 @@ class _DetailScreenState extends State<DetailScreen> {
       children: <Widget>[
         Text(
           companydata[id].description,
-          style: TextStyle(
+          style: const TextStyle(
             fontStyle: FontStyle.italic,
             fontFamily: 'NimbusSanL',
             fontSize: 18,
@@ -213,7 +217,7 @@ class _DetailScreenState extends State<DetailScreen> {
       children: <Widget>[
         Text(
           companydata[id].name,
-          style: TextStyle(
+          style: const TextStyle(
             fontStyle: FontStyle.italic,
             color: Colors.black,
             fontFamily: 'NimbusSanL',
@@ -221,12 +225,12 @@ class _DetailScreenState extends State<DetailScreen> {
             fontSize: 30,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(
           companydata[id].position,
-          style: TextStyle(
+          style: const TextStyle(
             fontStyle: FontStyle.italic,
             fontFamily: 'NimbusSanL',
             fontSize: 18,
@@ -234,4 +238,5 @@ class _DetailScreenState extends State<DetailScreen> {
         ),
       ],
     );
-}}
+  }
+}

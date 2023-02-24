@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zai_system/Controller/drawer.dart';
 
 class CoursesHome extends StatefulWidget {
   const CoursesHome({super.key});
@@ -14,21 +15,22 @@ class _CoursesHomeState extends State<CoursesHome> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const MyDrawer(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 80),
           child: Column(
             children: [
               Container(
-                  decoration: BoxDecoration(color: Colors.black),
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
+                  decoration: const BoxDecoration(color: Colors.black),
+                  child: const Padding(
+                    padding: EdgeInsets.all(3.0),
                     child: Text("Courses",
                         style: TextStyle(color: Colors.red, fontSize: 20)),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text("Our Courses.",
+              const Text("Our Courses.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
@@ -45,8 +47,9 @@ class _CoursesHomeState extends State<CoursesHome> {
                   decoration: BoxDecoration(
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(20)),
-                  child: Image(image: AssetImage("assests/webDevelopment.png"))),
-              SizedBox(
+                  child: const Image(
+                      image: AssetImage("assests/webDevelopment.png"))),
+              const SizedBox(
                 height: 30,
               ),
               Padding(
@@ -60,7 +63,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        Align(
+                        const Align(
                           alignment: Alignment.topLeft,
                           child: Text(
                             "Web Developement",
@@ -70,7 +73,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -96,7 +99,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        Align(
+                        const Align(
                           alignment: Alignment.topLeft,
                           child: Text(
                             "App Development",
@@ -106,7 +109,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -132,7 +135,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        Align(
+                        const Align(
                           alignment: Alignment.topLeft,
                           child: Text(
                             "Graphic Designing",
@@ -142,7 +145,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(

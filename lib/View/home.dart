@@ -16,6 +16,8 @@ import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
 import 'package:zai_system/model/current_appuser.dart';
 
+import '../Controller/drawer.dart';
+
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -48,82 +50,9 @@ class _HomescreenState extends State<Homescreen> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.grey[800],
-        child: ListView(
-          children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(color: Color(0xff810000)),
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(image),
-                    backgroundColor: Colors.grey,
-                    radius: 45,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "$name",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
-            ),
-            Column(
-              children: [
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(() => Homescreen()),
-                    label: const Text("HOME",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.home, color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(() => ProfileScreen()),
-                    label: const Text("PROFILE",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.person, color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(() => Courses()),
-                    label: const Text("COURSES",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.my_library_books_sharp,
-                        color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(() => Team()),
-                    label: const Text("TEAM",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.group, color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () async => await logout(context),
-                    label: const Text("LOG OUT",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.logout, color: Colors.white),
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
+      drawer: const MyDrawer(),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.black, Colors.red],
             begin: FractionalOffset(0.0, 0.9),
@@ -132,7 +61,7 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
         child: SingleChildScrollView(
-          child: Column(children: [
+          child: Column(children: const [
             Carousel(),
             Companyhome(),
             CoursesHome(),

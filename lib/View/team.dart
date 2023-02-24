@@ -6,6 +6,8 @@ import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/model/company_model.dart';
 
+import '../Controller/drawer.dart';
+
 class Team extends StatelessWidget {
   final companydata = Company_model.CompanyModels();
 
@@ -15,6 +17,7 @@ class Team extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(
+          
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Center(
@@ -25,81 +28,9 @@ class Team extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.black,
-      drawer: Drawer(
-        backgroundColor: Colors.grey[800],
-        child: ListView(
-          children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(color: Color(0xff810000)),
-              child: Column(
-                children: const [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.grey,
-                    radius: 45,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Shahzain Ahmed",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
-            ),
-            Column(
-              children: [
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(Homescreen()),
-                    label: const Text("HOME",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.home, color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(ProfileScreen()),
-                    label: const Text("PROFILE",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.person, color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(Courses()),
-                    label: const Text("COURSES",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.my_library_books_sharp,
-                        color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => Get.to(Team()),
-                    label: const Text("TEAM",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.group, color: Colors.white),
-                  ),
-                ),
-                ListTile(
-                  leading: TextButton.icon(
-                    onPressed: () => {},
-                    label: const Text("LOG OUT",
-                        style: TextStyle(color: Colors.white)),
-                    icon: const Icon(Icons.logout, color: Colors.white),
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
+      drawer: const MyDrawer(),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.black, Colors.red],
             begin: FractionalOffset(1.0, 0.0),
@@ -110,7 +41,7 @@ class Team extends StatelessWidget {
         child: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 colors: [Colors.black, Colors.red],
                 begin: FractionalOffset(1.0, 0.0),
                 end: FractionalOffset(0.0, 0.9),
@@ -121,10 +52,10 @@ class Team extends StatelessWidget {
             child: ListView.separated(
                 itemCount: companydata.length,
                 separatorBuilder: (BuildContext context, int index) =>
-                    Divider(color: Colors.transparent),
+                    const Divider(color: Colors.transparent),
                 itemBuilder: (BuildContext context, int index) {
                   return Column(children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                       width: 20,
                     ),
@@ -134,12 +65,12 @@ class Team extends StatelessWidget {
                         Get.to(DetailScreen(id: id));
                       },
                       child: Row(children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                           width: 10,
                         ),
                         Row(children: [
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           SizedBox(
@@ -159,7 +90,7 @@ class Team extends StatelessWidget {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         SizedBox(
@@ -170,28 +101,28 @@ class Team extends StatelessWidget {
                               children: [
                                 Text(
                                   companydata[index].name,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                       fontSize: 18),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Text(
                                   companydata[index].position,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.white, fontSize: 16),
                                 ),
                               ]),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_right,
                           color: Colors.red,
                         ),
                       ]),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                   ]);
                 }),
           ),

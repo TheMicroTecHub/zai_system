@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:zai_system/Controller/drawer.dart';
 
 class Testimonials extends StatefulWidget {
   const Testimonials({super.key});
@@ -15,21 +16,22 @@ class _TestimonialsState extends State<Testimonials> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const MyDrawer(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 50),
             child: Column(
               children: [
                 Container(
-                    decoration: BoxDecoration(color: Colors.black),
-                    child: Padding(
-                      padding: const EdgeInsets.all(3.0),
+                    decoration: const BoxDecoration(color: Colors.black),
+                    child: const Padding(
+                      padding: EdgeInsets.all(3.0),
                       child: Text("Client Feedback",
                           style: TextStyle(color: Colors.red, fontSize: 20)),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text("Testimonial.",
+                const Text("Testimonial.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,
@@ -59,7 +61,7 @@ class _TestimonialsState extends State<Testimonials> {
                         Container(
                           width: 300,
                           height: 300,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Color.fromARGB(255, 177, 27, 27),
                             boxShadow: [
@@ -71,7 +73,7 @@ class _TestimonialsState extends State<Testimonials> {
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(2.0),
+                            padding: const EdgeInsets.all(2.0),
                             child: Container(
                               child: ClipOval(
                                 child: Image.asset(
@@ -93,7 +95,7 @@ class _TestimonialsState extends State<Testimonials> {
                                 fontWeight: FontWeight.normal),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         Text(
@@ -103,13 +105,13 @@ class _TestimonialsState extends State<Testimonials> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Chandra Keyser",
                               textAlign: TextAlign.left,
                               style: TextStyle(
@@ -117,7 +119,7 @@ class _TestimonialsState extends State<Testimonials> {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
@@ -142,7 +144,7 @@ class _TestimonialsState extends State<Testimonials> {
                         Container(
                           width: 300,
                           height: 300,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Color.fromARGB(255, 177, 27, 27),
                             boxShadow: [
@@ -154,7 +156,7 @@ class _TestimonialsState extends State<Testimonials> {
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(2.0),
+                            padding: const EdgeInsets.all(2.0),
                             child: Container(
                               child: ClipOval(
                                 child: Image.asset(
@@ -173,7 +175,7 @@ class _TestimonialsState extends State<Testimonials> {
                               fontSize: 20,
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         Text(
@@ -183,13 +185,13 @@ class _TestimonialsState extends State<Testimonials> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Ryan Donnelly",
                               textAlign: TextAlign.left,
                               style: TextStyle(
@@ -197,7 +199,7 @@ class _TestimonialsState extends State<Testimonials> {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
@@ -221,7 +223,7 @@ class _TestimonialsState extends State<Testimonials> {
                         Container(
                           width: 300,
                           height: 300,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Color.fromARGB(255, 177, 27, 27),
                             boxShadow: [
@@ -233,7 +235,7 @@ class _TestimonialsState extends State<Testimonials> {
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(4.0),
+                            padding: const EdgeInsets.all(4.0),
                             child: Container(
                               child: ClipOval(
                                 child: Image.asset(
@@ -252,7 +254,7 @@ class _TestimonialsState extends State<Testimonials> {
                               fontSize: 20,
                               fontWeight: FontWeight.normal),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         Text(
@@ -262,13 +264,13 @@ class _TestimonialsState extends State<Testimonials> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "Jason Galli",
                               textAlign: TextAlign.left,
                               style: TextStyle(
@@ -276,7 +278,7 @@ class _TestimonialsState extends State<Testimonials> {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Text(
@@ -296,16 +298,16 @@ class _TestimonialsState extends State<Testimonials> {
             padding: const EdgeInsets.all(15.0),
             child: Stack(alignment: Alignment.topCenter, children: <Widget>[
               Padding(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     top: 160 / 2.0,
                   ),
                   child: Container(
                     height: 320.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      color: Color.fromARGB(255, 48, 47, 47),
+                      color: const Color.fromARGB(255, 48, 47, 47),
                       boxShadow: [
-                        BoxShadow(
+                        const BoxShadow(
                           color: Colors.black26,
                           blurRadius: 8.0,
                           offset: Offset(0.0, 5.0),
@@ -323,17 +325,17 @@ class _TestimonialsState extends State<Testimonials> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
-                              Text(
+                              const Text(
                                 'Get in Touch',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 34.0,
                                     color: Colors.white),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               Text(
@@ -343,7 +345,7 @@ class _TestimonialsState extends State<Testimonials> {
                                     fontSize: 20.0,
                                     color: Colors.grey.shade400),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 40,
                               ),
                               Column(
@@ -355,7 +357,7 @@ class _TestimonialsState extends State<Testimonials> {
                                         Icons.email_outlined,
                                         color: Colors.grey.shade400,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Text(
@@ -367,7 +369,7 @@ class _TestimonialsState extends State<Testimonials> {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
                                   Row(
@@ -377,7 +379,7 @@ class _TestimonialsState extends State<Testimonials> {
                                         Icons.phone,
                                         color: Colors.grey.shade400,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Text(

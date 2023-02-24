@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Controller/drawer.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -23,69 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Zai Systems"),
         backgroundColor: Colors.black,
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.grey[800],
-        child: ListView(
-          children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(color: Color(0xff810000)),
-              child: Column(
-                children: const [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.grey,
-                    radius: 45,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Shahzain Ahmed",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
-            ),
-            Column(
-              children: const [
-                ListTile(
-                  title: Text(
-                    "Home",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  leading: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                ),
-                ListTile(
-                  title: Text("Profile", style: TextStyle(color: Colors.white)),
-                  leading: Icon(
-                    Icons.person,
-                    color: Colors.white,
-                  ),
-                ),
-                ListTile(
-                  title: Text("Courses", style: TextStyle(color: Colors.white)),
-                  leading: Icon(
-                    Icons.my_library_books_sharp,
-                    color: Colors.white,
-                  ),
-                ),
-                ListTile(
-                  title: Text("Log Out", style: TextStyle(color: Colors.white)),
-                  leading: Icon(
-                    Icons.logout,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
+      drawer: const MyDrawer(),
     );
   }
 }

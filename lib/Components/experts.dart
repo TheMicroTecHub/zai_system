@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Controller/drawer.dart';
+
 class Experts extends StatefulWidget {
   const Experts({super.key});
 
@@ -15,21 +17,22 @@ class _ExpertsState extends State<Experts> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+           const MyDrawer(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 60),
             child: Column(
               children: [
                 Container(
-                    decoration: BoxDecoration(color: Colors.black),
-                    child: Padding(
-                      padding: const EdgeInsets.all(3.0),
+                    decoration: const BoxDecoration(color: Colors.black),
+                    child: const Padding(
+                      padding: EdgeInsets.all(3.0),
                       child: Text("Our Experts",
                           style: TextStyle(color: Colors.red, fontSize: 20)),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text("Our Experts Team",
+                const Text("Our Experts Team",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,
@@ -49,9 +52,9 @@ class _ExpertsState extends State<Experts> {
                       height: 320.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
-                        color: Color.fromARGB(255, 48, 47, 47),
+                        color: const Color.fromARGB(255, 48, 47, 47),
                         boxShadow: [
-                          BoxShadow(
+                          const BoxShadow(
                             color: Colors.black26,
                             blurRadius: 8.0,
                             offset: Offset(0.0, 5.0),
@@ -66,24 +69,24 @@ class _ExpertsState extends State<Experts> {
                             SizedBox(
                               height: circleRadius / 2,
                             ),
-                            Text(
+                            const Text(
                               'Huzaifa Ali',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 34.0,
                                   color: Colors.white),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            const Text(
                               'React Developer',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
                                   color: Colors.red),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -102,7 +105,7 @@ class _ExpertsState extends State<Experts> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Padding(
@@ -121,7 +124,7 @@ class _ExpertsState extends State<Experts> {
                 Container(
                   width: circleRadius,
                   height: circleRadius,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.black,
                     boxShadow: [
@@ -133,7 +136,7 @@ class _ExpertsState extends State<Experts> {
                     ],
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Container(
                       child: ClipOval(
                         child: Image.asset(
@@ -156,9 +159,9 @@ class _ExpertsState extends State<Experts> {
                       height: 300.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
-                        color: Color.fromARGB(255, 48, 47, 47),
+                        color: const Color.fromARGB(255, 48, 47, 47),
                         boxShadow: [
-                          BoxShadow(
+                          const BoxShadow(
                             color: Colors.black26,
                             blurRadius: 8.0,
                             offset: Offset(0.0, 5.0),
@@ -173,24 +176,24 @@ class _ExpertsState extends State<Experts> {
                             SizedBox(
                               height: circleRadius / 2,
                             ),
-                            Text(
+                            const Text(
                               'Taimoor Ali',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 34.0,
                                   color: Colors.white),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            const Text(
                               'App Developer',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
                                   color: Colors.red),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -209,7 +212,7 @@ class _ExpertsState extends State<Experts> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Padding(
@@ -228,7 +231,7 @@ class _ExpertsState extends State<Experts> {
                 Container(
                   width: circleRadius,
                   height: circleRadius,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.black,
                     boxShadow: [
@@ -240,9 +243,9 @@ class _ExpertsState extends State<Experts> {
                     ],
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Container(
-                        child: Icon(
+                        child: const Icon(
                       Icons.person,
                       color: Colors.white,
                     )
@@ -267,9 +270,9 @@ class _ExpertsState extends State<Experts> {
                       height: 320.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
-                        color: Color.fromARGB(255, 48, 47, 47),
+                        color: const Color.fromARGB(255, 48, 47, 47),
                         boxShadow: [
-                          BoxShadow(
+                          const BoxShadow(
                             color: Colors.black26,
                             blurRadius: 8.0,
                             offset: Offset(0.0, 5.0),
@@ -284,24 +287,24 @@ class _ExpertsState extends State<Experts> {
                             SizedBox(
                               height: circleRadius / 2,
                             ),
-                            Text(
+                            const Text(
                               'Mishal Khan',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 34.0,
                                   color: Colors.white),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Text(
+                            const Text(
                               'Accounts Manager',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20.0,
                                   color: Colors.red),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -320,7 +323,7 @@ class _ExpertsState extends State<Experts> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Padding(
@@ -339,7 +342,7 @@ class _ExpertsState extends State<Experts> {
                 Container(
                   width: circleRadius,
                   height: circleRadius,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.black,
                     boxShadow: [
@@ -351,9 +354,9 @@ class _ExpertsState extends State<Experts> {
                     ],
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(2.0),
+                    padding: const EdgeInsets.all(2.0),
                     child: Container(
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         color: Colors.white,
                       ),

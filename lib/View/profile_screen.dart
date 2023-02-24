@@ -1,13 +1,13 @@
 import 'dart:io';
-
 import 'package:badges/badges.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Badge;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zai_system/Components/home_screen.dart';
+import 'package:zai_system/Controller/drawer.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/model/current_appuser.dart';
 
@@ -104,7 +104,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         getCameraImage();
                         Navigator.pop(context);
                       },
-                      child: ListTile(
+                      child: const ListTile(
                         leading: Icon(Icons.camera_alt),
                         title: Text("Camera"),
                       )),
@@ -113,7 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         getGalleryImage();
                         Navigator.pop(context);
                       },
-                      child: ListTile(
+                      child: const ListTile(
                         leading: Icon(Icons.photo_library),
                         title: Text("Gallery"),
                       ))
@@ -127,6 +127,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const MyDrawer(),
         // backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: const Text("My Profile"),
@@ -163,8 +164,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 badgeContent: InkWell(
                   onTap: () => dialog(context),
                   child: isUploading
-                      ? CircularProgressIndicator()
-                      : Icon(
+                      ? const CircularProgressIndicator()
+                      : const Icon(
                           Icons.camera_alt,
                           // color: Colors.grey.shade500,
                           size: 30.0,
@@ -185,11 +186,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         fit: BoxFit.fill,
                         loadingBuilder: (context, child, loadingProgress) {
                           if (loadingProgress == null) return child;
-                          return Center(child: CircularProgressIndicator());
+                          return const Center(child: CircularProgressIndicator());
                         },
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
-                            child: Icon(
+                            child: const Icon(
                               Icons.error_outline,
                               color: Colors.red,
                             ),
@@ -200,7 +201,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )),
               Text(
                 "$name",
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
@@ -210,14 +211,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Text(
                 '$email',
-                style: TextStyle(fontSize: 17, color: Colors.grey),
+                style: const TextStyle(fontSize: 17, color: Colors.grey),
               ),
               const SizedBox(
                 height: 5,
               ),
               Text(
                 '$phone',
-                style: TextStyle(fontSize: 17, color: Colors.grey),
+                style: const TextStyle(fontSize: 17, color: Colors.grey),
               ),
               const SizedBox(
                 height: 80,
@@ -316,7 +317,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 Future<void> logout(BuildContext context) async {
   await FirebaseAuth.instance.signOut();
   Navigator.of(context)
-      .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+      .push(MaterialPageRoute(builder: (context) => const LoginScreen()));
 }
 
 void toastMessage(String message) {

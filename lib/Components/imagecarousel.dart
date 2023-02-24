@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
+import '../Controller/drawer.dart';
+
 class Carousel extends StatefulWidget {
   const Carousel({super.key});
 
@@ -19,6 +21,7 @@ class _CarouselState extends State<Carousel> {
       indicatorBackgroundColor: Colors.grey,
       // ignore: sort_child_properties_last
       children: [
+         const MyDrawer(),
         Container(
           // height: 300,
           width: MediaQuery.of(context).size.width,
@@ -35,14 +38,14 @@ class _CarouselState extends State<Carousel> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "ZaiSystems",
                   style: TextStyle(
                       color: Color.fromRGBO(255, 255, 255, 1),
                       fontSize: 40,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
@@ -69,14 +72,14 @@ class _CarouselState extends State<Carousel> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Courses Provided",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 40,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
@@ -103,14 +106,14 @@ class _CarouselState extends State<Carousel> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Software Provider",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 40,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'package:zai_system/Controller/drawer.dart';
 import 'package:zai_system/View/forgotpassword.dart';
 import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/verification_screen.dart';
@@ -27,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const MyDrawer(),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,

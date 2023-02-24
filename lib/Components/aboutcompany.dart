@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Controller/drawer.dart';
+
 class AboutCompany extends StatefulWidget {
   const AboutCompany({super.key});
 
@@ -14,21 +16,22 @@ class _AboutCompanyState extends State<AboutCompany> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const MyDrawer(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 80),
             child: Column(
               children: [
                 Container(
-                    decoration: BoxDecoration(color: Colors.black),
-                    child: Padding(
-                      padding: const EdgeInsets.all(3.0),
+                    decoration: const BoxDecoration(color: Colors.black),
+                    child: const Padding(
+                      padding: EdgeInsets.all(3.0),
                       child: Text("About Our Company",
                           style: TextStyle(color: Colors.red, fontSize: 20)),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text("Services provide for you.",
+                const Text("Services provide for you.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,
@@ -46,7 +49,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: [
-                    Align(
+                    const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "Web and App",
@@ -56,7 +59,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -66,7 +69,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                           fontSize: 15,
                           fontWeight: FontWeight.normal),
                     ),
-                    Image(image: AssetImage("assests/webapp.png")),
+                    const Image(image: AssetImage("assests/webapp.png")),
                   ],
                 ),
               ),
@@ -81,7 +84,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: [
-                    Align(
+                    const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "E-commerce",
@@ -91,7 +94,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -101,7 +104,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                           fontSize: 15,
                           fontWeight: FontWeight.normal),
                     ),
-                    Image(image: AssetImage("assests/ecom.png")),
+                    const Image(image: AssetImage("assests/ecom.png")),
                   ],
                 ),
               ),
@@ -116,7 +119,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
                   children: [
-                    Align(
+                    const Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "24 Hours of Word Support",
@@ -126,7 +129,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -136,7 +139,7 @@ class _AboutCompanyState extends State<AboutCompany> {
                           fontSize: 15,
                           fontWeight: FontWeight.normal),
                     ),
-                    Image(image: AssetImage("assests/schedule.png")),
+                    const Image(image: AssetImage("assests/schedule.png")),
                   ],
                 ),
               ),
@@ -148,7 +151,7 @@ class _AboutCompanyState extends State<AboutCompany> {
               onTap: () {},
               child: Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
                       Color.fromARGB(255, 156, 27, 27),
                       Color.fromARGB(255, 238, 22, 7)
@@ -160,19 +163,19 @@ class _AboutCompanyState extends State<AboutCompany> {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 18, horizontal: 25),
-                  child: TextButton(
-    child:  Text(
-      "Read More",
-      style: TextStyle(
-        color: Colors.white,
-        fontWeight: FontWeight.normal,
-        fontSize: 19,
-      ),
-    ),onPressed: () {  },
-    )
-                ),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 18, horizontal: 25),
+                    child: TextButton(
+                      child: const Text(
+                        "Read More",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 19,
+                        ),
+                      ),
+                      onPressed: () {},
+                    )),
               ),
             ),
           )

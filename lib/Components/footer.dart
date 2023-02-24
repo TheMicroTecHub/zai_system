@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Controller/drawer.dart';
+
 class Footer extends StatefulWidget {
   const Footer({super.key});
 
@@ -14,14 +16,15 @@ class _FooterState extends State<Footer> {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
+          const MyDrawer(),
           Container(
-              decoration: BoxDecoration(color: Colors.black),
-              child: Image(image: AssetImage("assests/location.png"))),
+              decoration: const BoxDecoration(color: Colors.black),
+              child: const Image(image: AssetImage("assests/location.png"))),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: Column(
               children: [
-                Image(
+                const Image(
                   image: AssetImage("assests/logowhite.png"),
                   width: 100,
                   height: 100,
@@ -37,7 +40,7 @@ class _FooterState extends State<Footer> {
                         fontWeight: FontWeight.normal),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Padding(
@@ -48,14 +51,14 @@ class _FooterState extends State<Footer> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "We Also Provide",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             "CRM Systems Provider",
                             style: TextStyle(
@@ -63,7 +66,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             "ERP Systems Provider",
                             style: TextStyle(
@@ -71,7 +74,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             "POS Systems Provider",
                             style: TextStyle(
@@ -79,7 +82,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             "E-commerce Solution",
                             style: TextStyle(
@@ -87,7 +90,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             "Software Provider",
                             style: TextStyle(
@@ -97,20 +100,20 @@ class _FooterState extends State<Footer> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Our Services",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             "Custom Software \nDevelopment",
                             style: TextStyle(
@@ -118,7 +121,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           Text(
                             "Mobile App Development",
                             style: TextStyle(
@@ -126,7 +129,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 7),
+                          const SizedBox(height: 7),
                           Text(
                             "Discovery Workshop",
                             style: TextStyle(
@@ -134,7 +137,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 6),
+                          const SizedBox(height: 6),
                           Text(
                             "Web Development",
                             style: TextStyle(
@@ -142,7 +145,7 @@ class _FooterState extends State<Footer> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          SizedBox(height: 6),
+                          const SizedBox(height: 6),
                           Text(
                             "UI/UX Design",
                             style: TextStyle(
@@ -155,50 +158,50 @@ class _FooterState extends State<Footer> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "Follow Us",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(width: 5),
+                        const SizedBox(width: 5),
                         Icon(
                           Icons.facebook,
                           color: Colors.grey.shade300,
                         ),
-                        SizedBox(width: 5),
+                        const SizedBox(width: 5),
                         Icon(
                           Icons.facebook,
                           color: Colors.grey.shade300,
                         ),
-                        SizedBox(width: 5),
+                        const SizedBox(width: 5),
                         Icon(
                           Icons.facebook,
                           color: Colors.grey.shade300,
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
+                    const Text(
                       "Opening Hours",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -208,7 +211,7 @@ class _FooterState extends State<Footer> {
                           fontSize: 20,
                           fontWeight: FontWeight.normal),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Text(
@@ -223,7 +226,7 @@ class _FooterState extends State<Footer> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
             width: 10,
           ),
@@ -262,7 +265,7 @@ class _FooterState extends State<Footer> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text(

@@ -6,28 +6,28 @@ import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:zai_system/Controller/drawer.dart';
 import 'package:zai_system/model/courses_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DetailPage extends StatefulWidget {
-  int  id;
-  DetailPage({Key? key, required this.id }) : super(key: key);
+  int id;
+  DetailPage({Key? key, required this.id}) : super(key: key);
 
   @override
   _DetailPageState createState() => _DetailPageState(id);
 }
-
 
 class _DetailPageState extends State<DetailPage> {
   final data = model.getCoursesData();
   int id;
   _DetailPageState(this.id);
 
-  void launchWhatsApp(
-      {required int phone,
-        required String message,
-      }) async {
+  void launchWhatsApp({
+    required int phone,
+    required String message,
+  }) async {
     String url() {
       if (Platform.isAndroid) {
         // add the [https]
@@ -49,15 +49,17 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return  Scaffold(
+    return Scaffold(
+      drawer: const MyDrawer(),
       body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.black, Colors.red],
-              begin: FractionalOffset(0.9,0.0),
-              end: FractionalOffset(0.0,0.9),
-              stops: [0.0,1.0],
-            ),),
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.black, Colors.red],
+            begin: FractionalOffset(0.9, 0.0),
+            end: FractionalOffset(0.0, 0.9),
+            stops: [0.0, 1.0],
+          ),
+        ),
         child: Stack(
           children: [
             Positioned(
@@ -65,7 +67,10 @@ class _DetailPageState extends State<DetailPage> {
                 left: 10,
                 child: IconButton(
                   onPressed: () => Get.back(),
-                  icon: Icon(Icons.arrow_back_ios, color: Colors.white,),
+                  icon: const Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
                 )),
             Positioned(
               top: 120,
@@ -75,9 +80,12 @@ class _DetailPageState extends State<DetailPage> {
               child: Container(
                 width: width,
                 height: 100,
-                decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(20),),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
                 margin: const EdgeInsets.only(left: 25, right: 25),
-               //color: Colors.white,
+                //color: Colors.white,
                 child: Container(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Row(
@@ -86,7 +94,7 @@ class _DetailPageState extends State<DetailPage> {
                         radius: 40,
                         backgroundImage: AssetImage(data[id].image),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
@@ -94,13 +102,13 @@ class _DetailPageState extends State<DetailPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                      data[id].name,
-                            style: TextStyle(
+                            data[id].name,
+                            style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 18,
                                 decoration: TextDecoration.none),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -109,25 +117,28 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.watch_later, color: Color(0xFF69c5df)),
-                                  SizedBox(
+                                  const Icon(Icons.watch_later,
+                                      color: Color(0xFF69c5df)),
+                                  const SizedBox(
                                     width: 3,
                                   ),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         data[id].name,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontSize: 11,
                                             color: Colors.black,
                                             fontWeight: FontWeight.w700),
                                       ),
-                                      Text(
+                                      const Text(
                                         "Deadline",
                                         style: TextStyle(
-                                            fontSize: 10, color: Color(0xFFacacac)),
+                                            fontSize: 10,
+                                            color: Color(0xFFacacac)),
                                       )
                                     ],
                                   )
@@ -136,38 +147,38 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Icon(Icons.monetization_on,
+                                  const Icon(Icons.monetization_on,
                                       color: Color(0xFFfb8483)),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 3,
                                   ),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         '${data[id].rate}',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontSize: 11,
                                             color: Colors.black,
                                             fontWeight: FontWeight.w700),
                                       ),
-                                      Text(
+                                      const Text(
                                         "Prize",
                                         style: TextStyle(
-                                            fontSize: 10, color: Color(0xFFacacac)),
+                                            fontSize: 10,
+                                            color: Color(0xFFacacac)),
                                       )
                                     ],
                                   )
                                 ],
                               ),
-
                             ],
                           ),
                         ],
                       ),
                       Expanded(child: Container()),
-
                     ],
                   ),
                 ),
@@ -179,93 +190,102 @@ class _DetailPageState extends State<DetailPage> {
               width: width,
               height: height,
               child: Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.black, Colors.red],
-                  begin: FractionalOffset(0.9,0.0),
-                  end: FractionalOffset(0.0,0.9),
-                  stops: [0.0,1.0],
-                ),)
-              ),
-            ),
-         Positioned(
-             top: 250,
-             left: 0,
-             child: Container(
-                 margin: const EdgeInsets.only(left: 25, right: 20),
-                 decoration: BoxDecoration(
-                     borderRadius: BorderRadius.circular(20),
-                     color: Colors.white,
-                     boxShadow: [
-                       BoxShadow(
-                           blurRadius: 20,
-                           spreadRadius: 1,
-                           offset: Offset(0, 10),
-                           color: Colors.grey.withOpacity(0.2))
-                     ]),
-           height: 420,
-           width: 320,
-           child:Column(
-          children:[
-            SizedBox(height: 10,),
-            Padding(padding: EdgeInsets.fromLTRB(5, 5, 100, 0),
-             child: Text(
-              "Description",
-              style: TextStyle(
-                  fontSize: 25, fontWeight: FontWeight.bold),
-            ),),
-           Container(
-             height: 270,
-             width: 300,
-             margin: const EdgeInsets.only(left: 10, right: 10),
-             child:  SingleChildScrollView(
-             child: Text(
-               data[id].description,
-               style:
-               TextStyle(fontSize: 15, color: Color(0xFFb8b8b8),fontStyle: FontStyle.normal),
-             ),
-           ),),
-            SizedBox(
-              height: 10,
-            ),
-            Divider(
-              thickness: 1.0,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(width: 10,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "WhatsApp",
-                      style: TextStyle(
-                          fontSize:11,
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700),
+                  width: 80,
+                  height: 80,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.black, Colors.red],
+                      begin: FractionalOffset(0.9, 0.0),
+                      end: FractionalOffset(0.0, 0.9),
+                      stops: [0.0, 1.0],
                     ),
-                    TextButton.icon(
-                      onPressed: () => {
-                        launchWhatsApp(phone: 03332959077, message: 'Hello'),
-                      }, icon: FaIcon(
-                      FontAwesomeIcons.whatsapp,
-                      color: Colors.green,
-                    ), label: Text(''),
-                    )
-                  ],
-                )
-              ],
+                  )),
             ),
-          ])
-         ))
-
+            Positioned(
+                top: 250,
+                left: 0,
+                child: Container(
+                    margin: const EdgeInsets.only(left: 25, right: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                              blurRadius: 20,
+                              spreadRadius: 1,
+                              offset: const Offset(0, 10),
+                              color: Colors.grey.withOpacity(0.2))
+                        ]),
+                    height: 420,
+                    width: 320,
+                    child: Column(children: [
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(5, 5, 100, 0),
+                        child: Text(
+                          "Description",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Container(
+                        height: 270,
+                        width: 300,
+                        margin: const EdgeInsets.only(left: 10, right: 10),
+                        child: SingleChildScrollView(
+                          child: Text(
+                            data[id].description,
+                            style: const TextStyle(
+                                fontSize: 15,
+                                color: Color(0xFFb8b8b8),
+                                fontStyle: FontStyle.normal),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Divider(
+                        thickness: 1.0,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                "WhatsApp",
+                                style: TextStyle(
+                                    fontSize: 11,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              TextButton.icon(
+                                onPressed: () => {
+                                  launchWhatsApp(
+                                      phone: 03332959077, message: 'Hello'),
+                                },
+                                icon: const FaIcon(
+                                  FontAwesomeIcons.whatsapp,
+                                  color: Colors.green,
+                                ),
+                                label: const Text(''),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ])))
 
             //))
           ],

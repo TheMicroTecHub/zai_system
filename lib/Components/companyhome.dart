@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
 import 'package:zai_system/View/team.dart';
 
+import '../Controller/drawer.dart';
+
 class Companyhome extends StatefulWidget {
   const Companyhome({super.key});
 
@@ -14,21 +16,22 @@ class _CompanyhomeState extends State<Companyhome> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const MyDrawer(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 100),
           child: Column(
             children: [
               Container(
-                  decoration: BoxDecoration(color: Colors.black),
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
+                  decoration: const BoxDecoration(color: Colors.black),
+                  child: const Padding(
+                    padding: EdgeInsets.all(3.0),
                     child: Text("Company",
                         style: TextStyle(color: Colors.red, fontSize: 20)),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text("Our Business Strategy Here.",
+              const Text("Our Business Strategy Here.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
@@ -41,9 +44,9 @@ class _CompanyhomeState extends State<Companyhome> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              Image(image: AssetImage("assests/team/owais.jpg")),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 15),
+              const Image(image: AssetImage("assests/team/owais.jpg")),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
@@ -56,7 +59,7 @@ class _CompanyhomeState extends State<Companyhome> {
                   ),
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "ZAI SYSTEMS (SMC-PRIVATE) LIMITED",
@@ -75,7 +78,7 @@ class _CompanyhomeState extends State<Companyhome> {
                   fontSize: 18,
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "\nOwais Ahmad Khan, CEO",
@@ -106,7 +109,7 @@ class _CompanyhomeState extends State<Companyhome> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           colors: [
                             Color.fromARGB(255, 156, 27, 27),
                             Color.fromARGB(255, 238, 22, 7)
@@ -116,9 +119,9 @@ class _CompanyhomeState extends State<Companyhome> {
                           stops: [0.0, 0.5],
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 18, horizontal: 25),
+                      child: const Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 18, horizontal: 25),
                         child: Text(
                           "More About Us",
                           style: TextStyle(

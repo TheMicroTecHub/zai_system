@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
+import '../Controller/drawer.dart';
+
 class Expertise extends StatefulWidget {
   const Expertise({super.key});
 
@@ -15,21 +17,22 @@ class _ExpertiseState extends State<Expertise> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        const MyDrawer(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 60),
           child: Column(
             children: [
               Container(
-                  decoration: BoxDecoration(color: Colors.black),
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
+                  decoration: const BoxDecoration(color: Colors.black),
+                  child: const Padding(
+                    padding: EdgeInsets.all(3.0),
                     child: Text("Our Expertise",
                         style: TextStyle(color: Colors.red, fontSize: 20)),
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text("Our Expertise In",
+              const Text("Our Expertise In",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
@@ -89,7 +92,7 @@ class _ExpertiseState extends State<Expertise> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -139,7 +142,7 @@ class _ExpertiseState extends State<Expertise> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
           ],
         ),
       ],

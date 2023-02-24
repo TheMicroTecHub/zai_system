@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:zai_system/Controller/drawer.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
 
@@ -23,6 +24,7 @@ class _ForgotPScreenState extends State<ForgotPScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: const MyDrawer(),
         body: SingleChildScrollView(
             child: Container(
                 height: MediaQuery.of(context).size.height,
@@ -88,14 +90,14 @@ class _ForgotPScreenState extends State<ForgotPScreen> {
 
                                           return null;
                                         },
-                                        decoration: InputDecoration(
+                                        decoration: const InputDecoration(
                                           hintText: 'EMAIL',
-                                          hintStyle: const TextStyle(
+                                          hintStyle: TextStyle(
                                               fontFamily: 'Rubik Medium',
                                               fontSize: 16),
                                           fillColor: const Color(0xffF8F9FA),
                                           filled: true,
-                                          prefixIcon: const Icon(
+                                          prefixIcon: Icon(
                                             Icons.email_outlined,
                                             color: iconcolor,
                                           ),
@@ -121,10 +123,10 @@ class _ForgotPScreenState extends State<ForgotPScreen> {
                                             height: 50,
                                             width: 200,
                                             child: TextButton(
-                                              child: Center(
+                                              child: const Center(
                                                 child: Text(
                                                   'Recover Password',
-                                                  style: const TextStyle(
+                                                  style: TextStyle(
                                                     fontSize: 18,
                                                     color: Colors.white,
                                                     fontFamily: 'Rubik Medium',
