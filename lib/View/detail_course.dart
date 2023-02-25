@@ -217,19 +217,20 @@ class _DetailPageState extends State<DetailPage> {
                               color: Colors.grey.withOpacity(0.2))
                         ]),
                     height: 420,
-                    width: 320,
+                    width: 330,
                     child: Column(children: [
                       const SizedBox(
                         height: 10,
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(5, 5, 100, 0),
+                        padding: EdgeInsets.fromLTRB(5, 0, 150, 0),
                         child: Text(
                           "Description",
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                       ),
+                      SizedBox(height: 15,),
                       Container(
                         height: 270,
                         width: 300,
@@ -280,11 +281,13 @@ class _DetailPageState extends State<DetailPage> {
                                   color: Colors.green,
                                 ),
                                 label: const Text(''),
-                              )
+                              ),
+
                             ],
                           )
                         ],
                       ),
+                      SizedBox(height: 15,),
                     ])))
 
             //))

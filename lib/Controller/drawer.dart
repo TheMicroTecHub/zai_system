@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:zai_system/View/loginscreen.dart';
 
 import '../View/Courses_Page.dart';
 import '../View/home.dart';
@@ -79,7 +81,10 @@ class MyDrawerState extends State<MyDrawer> {
               ),
               ListTile(
                 leading: TextButton.icon(
-                  onPressed: () => {},
+                  onPressed: () async => {
+                    await FirebaseAuth.instance.signOut(),
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LoginScreen()))
+                  },
                   label: const Text("LOG OUT",
                       style: TextStyle(color: Colors.white)),
                   icon: const Icon(Icons.logout, color: Colors.white),

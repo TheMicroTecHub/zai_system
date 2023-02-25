@@ -130,23 +130,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
       drawer: const MyDrawer(),
         // backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: const Text("My Profile"),
+          title: const Center(child: Text("My Profile")),
           centerTitle: true,
           backgroundColor: Colors.black,
-          actions: [
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: ((context) => const HomeScreen())));
-              },
-              icon: const Icon(
-                Icons.close,
-                size: 35,
-              ),
-            ),
-          ],
         ),
         body: Container(
           decoration: const BoxDecoration(
