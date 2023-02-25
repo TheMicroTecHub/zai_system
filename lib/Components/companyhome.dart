@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
 import 'package:zai_system/View/team.dart';
 
-import '../Controller/drawer.dart';
 
 class Companyhome extends StatefulWidget {
   const Companyhome({super.key});
@@ -16,7 +15,7 @@ class _CompanyhomeState extends State<Companyhome> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const MyDrawer(),
+        
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 100),
           child: Column(

@@ -7,7 +7,7 @@ import 'package:zai_system/Widget/constants.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:zai_system/Widget/round_button.dart';
 
-import '../Controller/drawer.dart';
+
 
 class OTPVerificationScr extends StatefulWidget {
   final String verificationId;
@@ -26,7 +26,7 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MyDrawer(),
+      
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

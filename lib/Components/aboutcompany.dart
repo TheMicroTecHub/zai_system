@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Controller/drawer.dart';
 
 class AboutCompany extends StatefulWidget {
   const AboutCompany({super.key});
@@ -16,7 +15,7 @@ class _AboutCompanyState extends State<AboutCompany> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const MyDrawer(),
+         
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 80),
             child: Column(

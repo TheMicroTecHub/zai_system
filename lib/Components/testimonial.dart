@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:zai_system/Controller/drawer.dart';
 
 class Testimonials extends StatefulWidget {
   const Testimonials({super.key});
@@ -16,7 +15,6 @@ class _TestimonialsState extends State<Testimonials> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const MyDrawer(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 50),
             child: Column(

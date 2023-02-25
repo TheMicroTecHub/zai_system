@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
-import '../Controller/drawer.dart';
 
 class Carousel extends StatefulWidget {
   const Carousel({super.key});
@@ -21,7 +20,7 @@ class _CarouselState extends State<Carousel> {
       indicatorBackgroundColor: Colors.grey,
       // ignore: sort_child_properties_last
       children: [
-         const MyDrawer(),
+       
         Container(
           // height: 300,
           width: MediaQuery.of(context).size.width,

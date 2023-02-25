@@ -4,7 +4,6 @@ import 'package:zai_system/Utils/utils.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/verification_screen.dart';
 
-import '../Controller/drawer.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -31,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Zai Systems"),
         backgroundColor: Colors.black,
       ),
-      drawer: const MyDrawer(),
+    
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:zai_system/Controller/drawer.dart';
+
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
 
@@ -24,7 +24,7 @@ class _ForgotPScreenState extends State<ForgotPScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: const MyDrawer(),
+        
         body: SingleChildScrollView(
             child: Container(
                 height: MediaQuery.of(context).size.height,

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart' hide Badge;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zai_system/Components/home_screen.dart';
-import 'package:zai_system/Controller/drawer.dart';
+
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/model/current_appuser.dart';
 
@@ -127,7 +127,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MyDrawer(),
         // backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: const Center(child: Text("My Profile")),

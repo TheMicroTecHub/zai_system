@@ -16,7 +16,7 @@ import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
 import 'package:zai_system/model/current_appuser.dart';
 
-import '../Controller/drawer.dart';
+
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -50,7 +50,7 @@ class _HomescreenState extends State<Homescreen> {
         ),
         backgroundColor: Colors.black,
       ),
-      drawer: const MyDrawer(),
+    
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(

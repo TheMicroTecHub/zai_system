@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:zai_system/Controller/drawer.dart';
+
 import 'package:zai_system/Utils/utils.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/View/otp_verification2.dart';
@@ -33,7 +33,7 @@ class _VerificationScrState extends State<VerificationScr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MyDrawer(),
+    
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,

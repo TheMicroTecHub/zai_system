@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zai_system/Controller/drawer.dart';
 
 class CoursesHome extends StatefulWidget {
   const CoursesHome({super.key});
@@ -15,7 +14,7 @@ class _CoursesHomeState extends State<CoursesHome> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const MyDrawer(),
+        
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 80),
           child: Column(

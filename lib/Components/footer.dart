@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Controller/drawer.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key});
@@ -16,7 +15,7 @@ class _FooterState extends State<Footer> {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          const MyDrawer(),
+          
           Container(
               decoration: const BoxDecoration(color: Colors.black),
               child: const Image(image: AssetImage("assests/location.png"))),

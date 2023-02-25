@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-import '../Controller/drawer.dart';
 
 class Expertise extends StatefulWidget {
   const Expertise({super.key});
@@ -17,7 +16,7 @@ class _ExpertiseState extends State<Expertise> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const MyDrawer(),
+        
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 60),
           child: Column(

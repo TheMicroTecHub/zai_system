@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
-import '../Controller/drawer.dart';
 
 class ImageSlider extends StatefulWidget {
   const ImageSlider({super.key});
@@ -21,7 +20,7 @@ class _ImageSliderState extends State<ImageSlider> {
       indicatorColor: Colors.red,
       indicatorBackgroundColor: Colors.grey,
       children: [
-        const MyDrawer(),
+        
         Container(
           // height: 300,
           width: MediaQuery.of(context).size.width,

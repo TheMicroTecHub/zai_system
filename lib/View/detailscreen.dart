@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zai_system/Controller/drawer.dart';
+
 import '../model/company_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
@@ -57,7 +57,7 @@ class _DetailScreenState extends State<DetailScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-        drawer: const MyDrawer(),
+        
         body: SafeArea(
           child: Stack(
             fit: StackFit.expand,

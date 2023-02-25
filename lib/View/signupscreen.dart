@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zai_system/Controller/drawer.dart';
+
 import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
@@ -20,7 +20,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const MyDrawer(),
+     
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(gradient: LinearGradient(begin: Alignment.bottomCenter, end: Alignment.topCenter, colors: [Colors.red,Colors.black])),

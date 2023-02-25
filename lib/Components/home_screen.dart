@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Controller/drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Zai Systems"),
         backgroundColor: Colors.black,
       ),
-      drawer: const MyDrawer(),
+      
     );
   }
 }

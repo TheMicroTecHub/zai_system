@@ -6,7 +6,7 @@ import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/model/company_model.dart';
 
-import '../Controller/drawer.dart';
+
 
 class Team extends StatelessWidget {
   final companydata = Company_model.CompanyModels();
@@ -28,7 +28,7 @@ class Team extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.black,
-      drawer: const MyDrawer(),
+     
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(

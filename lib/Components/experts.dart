@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Controller/drawer.dart';
 
 class Experts extends StatefulWidget {
   const Experts({super.key});
@@ -17,7 +16,7 @@ class _ExpertsState extends State<Experts> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-           const MyDrawer(),
+         
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 60),
             child: Column(

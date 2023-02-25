@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zai_system/Controller/drawer.dart';
 import 'package:zai_system/model/courses_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -50,7 +49,7 @@ class _DetailPageState extends State<DetailPage> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      drawer: const MyDrawer(),
+    
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(

@@ -6,7 +6,6 @@ import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
 import 'package:zai_system/model/courses_model.dart';
 
-import '../Controller/drawer.dart';
 
 // ignore: must_be_immutable
 class Courses extends StatelessWidget {
@@ -32,7 +31,7 @@ class Courses extends StatelessWidget {
                 ),
               )
             ])),
-        drawer: const MyDrawer(),
+       
         body: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
