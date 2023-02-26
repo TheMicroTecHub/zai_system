@@ -11,9 +11,9 @@ import 'package:zai_system/Components/imgslider.dart';
 import 'package:zai_system/Components/testimonial.dart';
 import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/View/courseshome.dart';
+import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/View/loginscreen.dart';
-import 'package:zai_system/View/profile_screen.dart';
-import 'package:zai_system/View/team.dart';
+
 import 'package:zai_system/model/current_appuser.dart';
 
 
@@ -50,7 +50,7 @@ class _HomescreenState extends State<Homescreen> {
         ),
         backgroundColor: Colors.black,
       ),
-    
+      drawer: MyDrawer(),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(

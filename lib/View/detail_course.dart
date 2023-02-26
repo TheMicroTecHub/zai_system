@@ -49,7 +49,6 @@ class _DetailPageState extends State<DetailPage> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-    
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -190,7 +189,7 @@ class _DetailPageState extends State<DetailPage> {
               height: height,
               child: Container(
                   width: 80,
-                  height: 80,
+                  height: 100,
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [Colors.black, Colors.red],
@@ -215,7 +214,7 @@ class _DetailPageState extends State<DetailPage> {
                               offset: const Offset(0, 10),
                               color: Colors.grey.withOpacity(0.2))
                         ]),
-                    height: 420,
+                    height: 435,
                     width: 330,
                     child: Column(children: [
                       const SizedBox(
@@ -229,7 +228,9 @@ class _DetailPageState extends State<DetailPage> {
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SizedBox(height: 15,),
+                      SizedBox(
+                        height: 15,
+                      ),
                       Container(
                         height: 270,
                         width: 300,
@@ -251,13 +252,13 @@ class _DetailPageState extends State<DetailPage> {
                         thickness: 1.0,
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 5,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           const SizedBox(
-                            width: 10,
+                            width: 15,
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -281,12 +282,13 @@ class _DetailPageState extends State<DetailPage> {
                                 ),
                                 label: const Text(''),
                               ),
-
                             ],
                           )
                         ],
                       ),
-                      SizedBox(height: 15,),
+                      SizedBox(
+                        height: 15,
+                      ),
                     ])))
 
             //))

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/View/detail_course.dart';
+import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
 import 'package:zai_system/model/courses_model.dart';
-
 
 // ignore: must_be_immutable
 class Courses extends StatelessWidget {
@@ -21,17 +21,19 @@ class Courses extends StatelessWidget {
             title: Row(children: const [
               Expanded(
                 flex: 3,
-                child: Text(
-                  "          Course Screen",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.none),
+                child: Center(
+                  child: Text(
+                    "Course Screen",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.none),
+                  ),
                 ),
               )
             ])),
-       
+        drawer: const MyDrawer(),
         body: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -69,11 +71,11 @@ class Courses extends StatelessWidget {
                                   ),
                                   Row(children: [
                                     const SizedBox(
-                                      width: 10,
+                                      width: 5,
                                     ),
                                     Container(
                                       height: 80,
-                                      width: 150,
+                                      width: 129,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(40),
                                         // color: Colors.white
@@ -87,7 +89,7 @@ class Courses extends StatelessWidget {
                                       width: 20,
                                     ),
                                     SizedBox(
-                                      width: 200,
+                                      width: 190,
                                       height: 90,
                                       child: Column(
                                           crossAxisAlignment:
@@ -103,12 +105,17 @@ class Courses extends StatelessWidget {
                                             const SizedBox(
                                               height: 10,
                                             ),
-                                            Text(
-                                              "${data[index].Shortdescription}",
-                                              style: const TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 12,
-                                                  fontStyle: FontStyle.italic),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  right: 5),
+                                              child: Text(
+                                                "${data[index].Shortdescription}",
+                                                style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12,
+                                                    fontStyle:
+                                                        FontStyle.italic),
+                                              ),
                                             ),
                                           ]),
                                     ),

@@ -33,7 +33,6 @@ class _VerificationScrState extends State<VerificationScr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -44,287 +43,252 @@ class _VerificationScrState extends State<VerificationScr> {
                   colors: [Colors.red, Colors.black])),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Image(
-                    height: 150,
-                    width: 150,
-                    image: AssetImage('assests/splashScreen/spWhite.png')),
-                const Text(
-                  'Building the Future with Tech',
-                  style: TextStyle(
-                      fontSize: 15,
-                      color: whitecolor,
-                      fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  'SIGNUP',
-                  style: TextStyle(
-                      fontSize: 35,
-                      color: whitecolor,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Form(
-                  key: _formKey,
-                  child: Column(children: [
-                    Padding(
-                      padding: apppaddings,
-                      child: TextFormField(
-                        controller: namecontroller,
-                        keyboardType: TextInputType.text,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'required';
-                          } else
-                            return null;
-                        },
-                        decoration: InputDecoration(
-                          hintText: 'FULL NAME',
-                          hintStyle: const TextStyle(
-                              fontFamily: 'Rubik Medium', fontSize: 16),
-                          fillColor: const Color(0xffF8F9FA),
-                          filled: true,
-                          prefixIcon: const Icon(
-                            Icons.person_outlined,
-                            color: iconcolor,
-                          ),
-                          focusedBorder: fbbutton,
-                          enabledBorder: ebbutton,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Padding(
-                      padding: apppaddings,
-                      child: TextFormField(
-                        controller: emailcontroller,
-                        keyboardType: TextInputType.emailAddress,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'required';
-                          } else
-                            return null;
-                        },
-                        decoration: InputDecoration(
-                          hintText: 'EMAIL',
-                          hintStyle: const TextStyle(
-                              fontFamily: 'Rubik Medium', fontSize: 16),
-                          fillColor: const Color(0xffF8F9FA),
-                          filled: true,
-                          prefixIcon: const Icon(
-                            Icons.email_outlined,
-                            color: iconcolor,
-                          ),
-                          focusedBorder: fbbutton,
-                          enabledBorder: ebbutton,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Padding(
-                      padding: apppaddings,
-                      child: TextFormField(
-                        controller: passwordcontroller,
-                        keyboardType: TextInputType.text,
-                        obscureText: true,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'required';
-                          } else
-                            return null;
-                        },
-                        decoration: InputDecoration(
-                          hintText: 'PASSWORD',
-                          hintStyle: const TextStyle(
-                              fontFamily: 'Rubik Medium', fontSize: 16),
-                          fillColor: const Color(0xffF8F9FA),
-                          filled: true,
-                          prefixIcon: const Icon(
-                            Icons.lock_outlined,
-                            color: iconcolor,
-                          ),
-                          suffixIcon: const Icon(
-                            Icons.remove_red_eye_outlined,
-                            color: iconcolor,
-                          ),
-                          focusedBorder: fbbutton,
-                          enabledBorder: ebbutton,
-                        ),
-                      ),
-                    ),
-                    // const SizedBox(
-                    //   height: 15,
-                    // ),
-                    // Padding(
-                    //   padding: apppaddings,
-                    //   child: TextFormField(
-                    //     keyboardType: TextInputType.visiblePassword,
-                    //     decoration: InputDecoration(
-                    //       hintText: 'CONFIRM PASSWORD',
-                    //       hintStyle: const TextStyle(
-                    //           fontFamily: 'Rubik Medium', fontSize: 16),
-                    //       fillColor: const Color(0xffF8F9FA),
-                    //       filled: true,
-                    //       prefixIcon: const Icon(
-                    //         Icons.lock_outlined,
-                    //         color: iconcolor,
-                    //       ),
-                    //       suffixIcon: const Icon(
-                    //         Icons.remove_red_eye_outlined,
-                    //         color: iconcolor,
-                    //       ),
-                    //       focusedBorder: fbbutton,
-                    //       enabledBorder: ebbutton,
-                    //     ),
-                    //   ),
-                    // ),
-                    // const Text(
-                    //   'OTP Verification',
-                    //   style: TextStyle(
-                    //       color: Colors.white,
-                    //       fontSize: 25,
-                    //       fontWeight: FontWeight.bold),
-                    // ),
-                    // const SizedBox(
-                    //   height: 30,
-                    // ),
-
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Padding(
-                      padding: apppaddings,
-                      child: TextFormField(
-                        controller: phoneNumberController,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Provide Contact in +92 format required';
-                          } else
-                            return null;
-                        },
-                        keyboardType: TextInputType.phone,
-                        decoration: InputDecoration(
-                          hintText: '+923001234567',
-                          hintStyle: const TextStyle(
-                              fontFamily: 'Rubik Medium', fontSize: 16),
-                          fillColor: const Color(0xffF8F9FA),
-                          filled: true,
-                          prefixIcon: const Icon(
-                            Icons.perm_contact_cal_outlined,
-                            color: iconcolor,
-                          ),
-                          focusedBorder: fbbutton,
-                          enabledBorder: ebbutton,
-                        ),
-                      ),
-                    ),
-                  ]),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text('Enter your phone number to receive',
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Image(
+                      height: 150,
+                      width: 150,
+                      image: AssetImage('assests/splashScreen/spWhite.png')),
+                  const Text(
+                    'Building the Future with Tech',
                     style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 15,
                         color: whitecolor,
-                        fontWeight: FontWeight.w500)),
-                const Text('verification code',
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    'SIGNUP',
                     style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 35,
                         color: whitecolor,
-                        fontWeight: FontWeight.w500)),
-                const SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: apppaddings,
-                  child: Column(
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Form(
+                    key: _formKey,
+                    child: Column(children: [
+                      Padding(
+                        padding: apppaddings,
+                        child: TextFormField(
+                          controller: namecontroller,
+                          keyboardType: TextInputType.text,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'required';
+                            } else
+                              return null;
+                          },
+                          decoration: InputDecoration(
+                            hintText: 'FULL NAME',
+                            hintStyle: const TextStyle(
+                                fontFamily: 'Rubik Medium', fontSize: 16),
+                            fillColor: const Color(0xffF8F9FA),
+                            filled: true,
+                            prefixIcon: const Icon(
+                              Icons.person_outlined,
+                              color: iconcolor,
+                            ),
+                            focusedBorder: fbbutton,
+                            enabledBorder: ebbutton,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Padding(
+                        padding: apppaddings,
+                        child: TextFormField(
+                          controller: emailcontroller,
+                          keyboardType: TextInputType.emailAddress,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'required';
+                            } else
+                              return null;
+                          },
+                          decoration: InputDecoration(
+                            hintText: 'EMAIL',
+                            hintStyle: const TextStyle(
+                                fontFamily: 'Rubik Medium', fontSize: 16),
+                            fillColor: const Color(0xffF8F9FA),
+                            filled: true,
+                            prefixIcon: const Icon(
+                              Icons.email_outlined,
+                              color: iconcolor,
+                            ),
+                            focusedBorder: fbbutton,
+                            enabledBorder: ebbutton,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Padding(
+                        padding: apppaddings,
+                        child: TextFormField(
+                          controller: passwordcontroller,
+                          keyboardType: TextInputType.text,
+                          obscureText: true,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'required';
+                            } else
+                              return null;
+                          },
+                          decoration: InputDecoration(
+                            hintText: 'PASSWORD',
+                            hintStyle: const TextStyle(
+                                fontFamily: 'Rubik Medium', fontSize: 16),
+                            fillColor: const Color(0xffF8F9FA),
+                            filled: true,
+                            prefixIcon: const Icon(
+                              Icons.lock_outlined,
+                              color: iconcolor,
+                            ),
+                            suffixIcon: const Icon(
+                              Icons.remove_red_eye_outlined,
+                              color: iconcolor,
+                            ),
+                            focusedBorder: fbbutton,
+                            enabledBorder: ebbutton,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Padding(
+                        padding: apppaddings,
+                        child: TextFormField(
+                          controller: phoneNumberController,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Provide Contact in +92 format required';
+                            } else
+                              return null;
+                          },
+                          keyboardType: TextInputType.phone,
+                          decoration: InputDecoration(
+                            hintText: '+923001234567',
+                            hintStyle: const TextStyle(
+                                fontFamily: 'Rubik Medium', fontSize: 16),
+                            fillColor: const Color(0xffF8F9FA),
+                            filled: true,
+                            prefixIcon: const Icon(
+                              Icons.perm_contact_cal_outlined,
+                              color: iconcolor,
+                            ),
+                            focusedBorder: fbbutton,
+                            enabledBorder: ebbutton,
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text('Enter your phone number to receive',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: whitecolor,
+                          fontWeight: FontWeight.w500)),
+                  const Text('verification code',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: whitecolor,
+                          fontWeight: FontWeight.w500)),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: apppaddings,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RoundButton(
+                          title: 'GET OTP',
+                          loading: load,
+                          onTap: () async {
+                            setState(() {
+                              load = true;
+                            });
+                            await signUp(emailcontroller.text.toString(),
+                                passwordcontroller.text.toString());
+                            _auth.verifyPhoneNumber(
+                                phoneNumber: phoneNumberController.text,
+                                verificationCompleted: (_) {
+                                  setState(() {
+                                    load = false;
+                                  });
+                                },
+                                verificationFailed: (e) {
+                                  setState(() {
+                                    load = false;
+                                  });
+                                  Utils().toastMessage(e.toString());
+                                },
+                                codeSent: (String verificationId, int? token) {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              OTPVerificationScr(
+                                                verificationId: verificationId,
+                                              )));
+                                  setState(() {
+                                    load = false;
+                                  });
+                                },
+                                codeAutoRetrievalTimeout: (e) {
+                                  Utils().toastMessage(e.toString());
+                                  setState(() {
+                                    load = false;
+                                  });
+                                });
+                          },
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      RoundButton(
-                        title: 'GET OTP',
-                        loading: load,
-                        onTap: () async {
-                          setState(() {
-                            load = true;
-                          });
-                          await signUp(emailcontroller.text.toString(),
-                              passwordcontroller.text.toString());
-                          _auth.verifyPhoneNumber(
-                              phoneNumber: phoneNumberController.text,
-                              verificationCompleted: (_) {
-                                setState(() {
-                                  load = false;
-                                });
-                              },
-                              verificationFailed: (e) {
-                                setState(() {
-                                  load = false;
-                                });
-                                Utils().toastMessage(e.toString());
-                              },
-                              codeSent: (String verificationId, int? token) {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            OTPVerificationScr(
-                                              verificationId: verificationId,
-                                            )));
-                                setState(() {
-                                  load = false;
-                                });
-                              },
-                              codeAutoRetrievalTimeout: (e) {
-                                Utils().toastMessage(e.toString());
-                                setState(() {
-                                  load = false;
-                                });
-                              });
-                        },
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text('Already have an Account',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: whitecolor,
-                            fontWeight: FontWeight.w500)),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    InkWell(
-                      onTap: () => Navigator.push(
-                          (context),
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen())),
-                      child: Text('Login',
+                      const Text('Already have an Account',
                           style: TextStyle(
                               fontSize: 14,
                               color: whitecolor,
-                              fontWeight: FontWeight.bold)),
-                    ),
-                  ],
-                ),
-              ],
+                              fontWeight: FontWeight.w500)),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      InkWell(
+                        onTap: () => Navigator.push(
+                            (context),
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen())),
+                        child: Text('Login',
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: whitecolor,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

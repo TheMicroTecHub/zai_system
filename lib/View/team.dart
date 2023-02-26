@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/View/detailscreen.dart';
+import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/model/company_model.dart';
-
-
 
 class Team extends StatelessWidget {
   final companydata = Company_model.CompanyModels();
@@ -17,7 +16,6 @@ class Team extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(
-          
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Center(
@@ -28,7 +26,7 @@ class Team extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.black,
-     
+      drawer: const MyDrawer(),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -67,7 +65,7 @@ class Team extends StatelessWidget {
                       child: Row(children: [
                         const SizedBox(
                           height: 20,
-                          width: 10,
+                          width: 5,
                         ),
                         Row(children: [
                           const SizedBox(
