@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         getPages: [
-          GetPage(name: "/", page: () => SplashScreen()),
+          GetPage(name: "/", page: () => const SplashScreen()),
         ]);
   }
 }

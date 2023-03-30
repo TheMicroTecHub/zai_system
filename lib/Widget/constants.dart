@@ -38,26 +38,3 @@ Widget build(BuildContext context) {
 }
 }
 
-// class TFromField extends StatefulWidget {
-//  final String hintText;
-//  const TFromField({Key? key,required this.hintText}) : super(key: key);
-//
-//  @override
-//  State<TFromField> createState() => _TFromFieldState();
-// }
-// class _TFromFieldState extends State<TFromField> {
-//  @override
-//  Widget build(BuildContext context) {
-//   return TextFormField(
-//    decoration: InputDecoration(
-//     hintText: ,
-//     hintStyle: const TextStyle(fontFamily: 'Rubik Medium',fontSize: 16),
-//     fillColor: const Color(0xffF8F9FA),
-//     filled: true,
-//     prefixIcon: const Icon(Icons.person_outlined,color: iconcolor,),
-//     focusedBorder: fbbutton,
-//     enabledBorder: ebbutton,
-//    ),
-//   );
-//  }
-// }
