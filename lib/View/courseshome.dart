@@ -14,25 +14,26 @@ class _CoursesHomeState extends State<CoursesHome> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 80),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Column(
             children: [
               Container(
-                  decoration: const BoxDecoration(color: Colors.black),
                   child: const Padding(
-                    padding: EdgeInsets.all(3.0),
-                    child: Text("Courses",
-                        style: TextStyle(color: Colors.red, fontSize: 20)),
-                  )),
+                padding: EdgeInsets.all(3.0),
+                child: Text("Courses",
+                    style: TextStyle(
+                        color: Color(0xFFE4393C),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
+              )),
               const SizedBox(
-                height: 30,
+                height: 10,
               ),
               const Text("Our Courses.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 30,
                       fontWeight: FontWeight.bold)),
             ],
@@ -42,12 +43,10 @@ class _CoursesHomeState extends State<CoursesHome> {
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           child: Column(
             children: [
-              Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: const Image(
-                      image: AssetImage("assests/webDevelopment.png"))),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Image.asset("assests/webDevelopment.png"),
+              ),
               const SizedBox(
                 height: 30,
               ),

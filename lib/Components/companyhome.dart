@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
 import 'package:zai_system/View/team.dart';
 
-
 class Companyhome extends StatefulWidget {
   const Companyhome({super.key});
 
@@ -15,25 +14,26 @@ class _CompanyhomeState extends State<Companyhome> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Column(
             children: [
               Container(
-                  decoration: const BoxDecoration(color: Colors.black),
                   child: const Padding(
-                    padding: EdgeInsets.all(3.0),
-                    child: Text("Company",
-                        style: TextStyle(color: Colors.red, fontSize: 20)),
-                  )),
+                padding: EdgeInsets.all(3.0),
+                child: Text("Company",
+                    style: TextStyle(
+                        color: Color(0xFFE4393C),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
+              )),
               const SizedBox(
-                height: 30,
+                height: 10,
               ),
               const Text("Our Business Strategy Here.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 30,
                       fontWeight: FontWeight.bold)),
             ],
@@ -43,7 +43,10 @@ class _CompanyhomeState extends State<Companyhome> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              const Image(image: AssetImage("assests/team/owais.jpg")),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Image.asset("assests/team/owais.jpg"),
+              ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 15),
                 child: Align(
@@ -51,7 +54,7 @@ class _CompanyhomeState extends State<Companyhome> {
                   child: Text(
                     "Welcome To",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
                     ),
@@ -63,7 +66,7 @@ class _CompanyhomeState extends State<Companyhome> {
                 child: Text(
                   "ZAI SYSTEMS (SMC-PRIVATE) LIMITED",
                   style: TextStyle(
-                    color: Colors.red,
+                    color: Color(0xFFE4393C),
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
                   ),
@@ -72,7 +75,7 @@ class _CompanyhomeState extends State<Companyhome> {
               Text(
                 "\nIf you are worried about your new business then no need to worry because Zai Systems have ways out for all of your problems. \n \nZai Systems has a powerful combination of business experience and technological expertise providing clients best-in-className solutions, in software development projects. Zai Systems delivers high-quality, cost-effective, full lifecycle solutions for all sorts of development projects",
                 style: TextStyle(
-                  color: Colors.grey.shade400,
+                  color: Colors.black,
                   fontWeight: FontWeight.normal,
                   fontSize: 18,
                 ),
@@ -82,8 +85,8 @@ class _CompanyhomeState extends State<Companyhome> {
                 child: Text(
                   "\nOwais Ahmad Khan, CEO",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.normal,
+                    color: Color(0xFFE4393C),
+                    fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
                 ),
@@ -91,7 +94,7 @@ class _CompanyhomeState extends State<Companyhome> {
               Text(
                 "\nA chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs act as the company's public face and make major corporate decisions.",
                 style: TextStyle(
-                  color: Colors.grey.shade400,
+                  color: Colors.black,
                   fontWeight: FontWeight.normal,
                   fontSize: 18,
                 ),
@@ -107,7 +110,7 @@ class _CompanyhomeState extends State<Companyhome> {
                     alignment: Alignment.topLeft,
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(8),
                         gradient: const LinearGradient(
                           colors: [
                             Color.fromARGB(255, 156, 27, 27),
@@ -120,7 +123,7 @@ class _CompanyhomeState extends State<Companyhome> {
                       ),
                       child: const Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 18, horizontal: 25),
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                         child: Text(
                           "More About Us",
                           style: TextStyle(

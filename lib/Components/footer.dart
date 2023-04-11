@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Footer extends StatefulWidget {
   const Footer({super.key});
 
@@ -15,7 +14,6 @@ class _FooterState extends State<Footer> {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          
           Container(
               decoration: const BoxDecoration(color: Colors.black),
               child: const Image(image: AssetImage("assests/location.png"))),
@@ -24,7 +22,7 @@ class _FooterState extends State<Footer> {
             child: Column(
               children: [
                 const Image(
-                  image: AssetImage("assests/logowhite.png"),
+                  image: AssetImage("assests/logo.png"),
                   width: 100,
                   height: 100,
                 ),
@@ -34,7 +32,7 @@ class _FooterState extends State<Footer> {
                     "ZaiSystems a software company for those professionals who seek passion in the world of IT. Zaisystems integrates technology and human potential to provide intelligent business solutions for entrepreneurs and enterprises.",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                        color: Colors.grey.shade400,
+                        color: Colors.black,
                         fontSize: 20,
                         fontWeight: FontWeight.normal),
                   ),
@@ -53,7 +51,7 @@ class _FooterState extends State<Footer> {
                           const Text(
                             "We Also Provide",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -61,7 +59,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "CRM Systems Provider",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -69,7 +67,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "ERP Systems Provider",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -77,7 +75,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "POS Systems Provider",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -85,7 +83,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "E-commerce Solution",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -93,7 +91,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "Software Provider",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -108,7 +106,7 @@ class _FooterState extends State<Footer> {
                           const Text(
                             "Our Services",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -116,7 +114,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "Custom Software \nDevelopment",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -124,7 +122,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "Mobile App Development",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -132,7 +130,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "Discovery Workshop",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -140,7 +138,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "Web Development",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -148,7 +146,7 @@ class _FooterState extends State<Footer> {
                           Text(
                             "UI/UX Design",
                             style: TextStyle(
-                                color: Colors.grey.shade400,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -165,7 +163,7 @@ class _FooterState extends State<Footer> {
                     const Text(
                       "Follow Us",
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
@@ -174,19 +172,22 @@ class _FooterState extends State<Footer> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const SizedBox(width: 5),
-                        Icon(
-                          Icons.facebook,
-                          color: Colors.grey.shade300,
+                        Image.asset(
+                          "assests/facebook.png",
+                          height: 30,
+                          width: 30,
                         ),
                         const SizedBox(width: 5),
-                        Icon(
-                          Icons.facebook,
-                          color: Colors.grey.shade300,
+                        Image.asset(
+                          "assests/insta.png",
+                          height: 30,
+                          width: 30,
                         ),
                         const SizedBox(width: 5),
-                        Icon(
-                          Icons.facebook,
-                          color: Colors.grey.shade300,
+                        Image.asset(
+                          "assests/linkedin.png",
+                          height: 30,
+                          width: 30,
                         ),
                       ],
                     ),
@@ -196,7 +197,7 @@ class _FooterState extends State<Footer> {
                     const Text(
                       "Opening Hours",
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
@@ -206,7 +207,7 @@ class _FooterState extends State<Footer> {
                     Text(
                       "Monday-Saturday",
                       style: TextStyle(
-                          color: Colors.grey.shade400,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.normal),
                     ),
@@ -216,7 +217,7 @@ class _FooterState extends State<Footer> {
                     Text(
                       "9:00am to 6:00pm",
                       style: TextStyle(
-                          color: Colors.grey.shade400,
+                          color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.normal),
                     ),
@@ -237,7 +238,7 @@ class _FooterState extends State<Footer> {
                 child: Text(
                   "Home",
                   style: TextStyle(
-                      color: Colors.grey.shade400,
+                      color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.normal),
                 ),
@@ -247,7 +248,7 @@ class _FooterState extends State<Footer> {
                 child: Text(
                   "About Us",
                   style: TextStyle(
-                      color: Colors.grey.shade400,
+                      color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.normal),
                 ),
@@ -257,7 +258,7 @@ class _FooterState extends State<Footer> {
                 child: Text(
                   "Contact Us",
                   style: TextStyle(
-                      color: Colors.grey.shade400,
+                      color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.normal),
                 ),
@@ -270,7 +271,7 @@ class _FooterState extends State<Footer> {
           Text(
             "© 2022 – Zai Systems – All Rights Reserved",
             style: TextStyle(
-                color: Colors.grey.shade400,
+                color: Colors.black,
                 fontSize: 15,
                 fontWeight: FontWeight.normal),
           ),

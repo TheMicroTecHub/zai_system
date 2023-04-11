@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
-
 class Carousel extends StatefulWidget {
   const Carousel({super.key});
 
@@ -14,115 +13,136 @@ class _CarouselState extends State<Carousel> {
   Widget build(BuildContext context) {
     return ImageSlideshow(
       width: double.infinity,
-      height: 300,
+      height: 250,
       initialPage: 0,
       indicatorColor: Colors.red,
       indicatorBackgroundColor: Colors.grey,
       // ignore: sort_child_properties_last
       children: [
-       
+        Container(
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: Stack(children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Image.asset("assests/bg.png"),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "ZaiSystems",
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "ZaiSystems speciality teams create cost-effective innovative custom solutions to meet your challenges",
+                          style: TextStyle(
+                              color: Colors.grey.shade300,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        )
+                      ]),
+                ),
+              ]),
+            ),
+          ),
+        ),
         Container(
           // height: 300,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/bg.png"),
-              opacity: (10),
-              fit: BoxFit.cover,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
+          decoration: BoxDecoration(color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: Stack(children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Image.asset("assests/bg2.png"),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Courses Provided",
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "ZaiSystems speciality teams create cost-effective innovative custom solutions to meet your challenges",
+                          style: TextStyle(
+                              color: Colors.grey.shade300,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        )
+                      ]),
+                ),
+              ]),
             ),
           ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "ZaiSystems",
-                  style: TextStyle(
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  "ZaiSystems speciality teams create cost-effective innovative custom solutions to meet your challenges",
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 17,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
         ),
         Container(
+          // height: 300,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/bgI.png"),
-              opacity: (10),
-              fit: BoxFit.cover,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
+          decoration: BoxDecoration(color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: Stack(children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Image.asset("assests/bg3.png"),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Software Provider",
+                          style: TextStyle(
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "ZaiSystems speciality teams create cost-effective innovative custom solutions to meet your challenges",
+                          style: TextStyle(
+                              color: Colors.grey.shade300,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        )
+                      ]),
+                ),
+              ]),
             ),
           ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Courses Provided",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  "ZaiSystems speciality teams create cost-effective innovative custom solutions to meet your challenges",
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 17,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
-        ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/bg3.jpg"),
-              opacity: (10),
-              fit: BoxFit.cover,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
-            ),
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Software Provider",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  "ZaiSystems speciality teams create cost-effective innovative custom solutions to meet your challenges",
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 17,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
         ),
       ],
       onPageChanged: (value) {

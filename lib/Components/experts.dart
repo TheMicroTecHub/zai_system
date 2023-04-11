@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Experts extends StatefulWidget {
   const Experts({super.key});
 
@@ -16,25 +15,26 @@ class _ExpertsState extends State<Experts> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-         
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 60),
+            padding: const EdgeInsets.symmetric(vertical: 30),
             child: Column(
               children: [
                 Container(
-                    decoration: const BoxDecoration(color: Colors.black),
                     child: const Padding(
-                      padding: EdgeInsets.all(3.0),
-                      child: Text("Our Experts",
-                          style: TextStyle(color: Colors.red, fontSize: 20)),
-                    )),
+                  padding: EdgeInsets.all(3.0),
+                  child: Text("Our Experts",
+                      style: TextStyle(
+                          color: Color(0xFFE4393C),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold)),
+                )),
                 const SizedBox(
                   height: 30,
                 ),
                 const Text("Our Experts Team",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 30,
                         fontWeight: FontWeight.bold)),
               ],

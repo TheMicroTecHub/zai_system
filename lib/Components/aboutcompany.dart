@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:zai_system/View/Courses_Page.dart';
 
 class AboutCompany extends StatefulWidget {
   const AboutCompany({super.key});
@@ -15,25 +15,22 @@ class _AboutCompanyState extends State<AboutCompany> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-         
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 80),
+            padding: const EdgeInsets.symmetric(vertical: 20),
             child: Column(
               children: [
-                Container(
-                    decoration: const BoxDecoration(color: Colors.black),
-                    child: const Padding(
-                      padding: EdgeInsets.all(3.0),
-                      child: Text("About Our Company",
-                          style: TextStyle(color: Colors.red, fontSize: 20)),
-                    )),
+                Text("About Our Company",
+                    style: TextStyle(
+                        color: Color(0xFFE4393C),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
                 const SizedBox(
                   height: 30,
                 ),
                 const Text("Services provide for you.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 30,
                         fontWeight: FontWeight.bold)),
               ],
@@ -159,21 +156,24 @@ class _AboutCompanyState extends State<AboutCompany> {
                     end: FractionalOffset(0.0, 0.5),
                     stops: [0.0, 0.5],
                   ),
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(8),
                 ),
                 child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 18, horizontal: 25),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
                     child: TextButton(
                       child: const Text(
                         "Read More",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.normal,
-                          fontSize: 19,
+                          fontSize: 17,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Courses()));
+                      },
                     )),
               ),
             ),

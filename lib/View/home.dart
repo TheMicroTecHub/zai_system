@@ -16,8 +16,6 @@ import 'package:zai_system/View/loginscreen.dart';
 
 import 'package:zai_system/model/current_appuser.dart';
 
-
-
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -52,14 +50,8 @@ class _HomescreenState extends State<Homescreen> {
       ),
       drawer: MyDrawer(),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.black, Colors.red],
-            begin: FractionalOffset(0.0, 0.9),
-            end: FractionalOffset(0.9, 0.0),
-            stops: [0.3, 1.0],
-          ),
-        ),
+        decoration:
+            const BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
         child: SingleChildScrollView(
           child: Column(children: const [
             Carousel(),

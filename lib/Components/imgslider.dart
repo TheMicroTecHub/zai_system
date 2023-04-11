@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
-
 class ImageSlider extends StatefulWidget {
   const ImageSlider({super.key});
 
@@ -13,258 +12,292 @@ class _ImageSliderState extends State<ImageSlider> {
   @override
   Widget build(BuildContext context) {
     return ImageSlideshow(
-      
       width: double.infinity,
-      height: 300,
+      height: 220,
       initialPage: 0,
       indicatorColor: Colors.red,
       indicatorBackgroundColor: Colors.grey,
       children: [
-        
         Container(
-          // height: 300,
-          width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/img1.PNG"),
-              fit: BoxFit.cover,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
-            ),
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Quadient Inspire Services",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
+            // height: 300,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                  //height: 300,
+                  child: Stack(children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Image.asset("assests/img1.PNG"),
                 ),
-                SizedBox(
-                  height: 15,
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15.0, horizontal: 8),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Quadient Inspire Services",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Your Custom CCM Development Partner",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Zai Systems has partnered with Quadient to provide its clients best in class CCM Development Services",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.grey.shade300,
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal),
+                        )
+                      ]),
                 ),
-                Text(
-                  "Your Custom CCM Development Partner",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Zai Systems has partnered with Quadient to provide its clients best in class CCM Development Services",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
-        ),
+              ])),
+            )),
         Container(
-          // height: 300,
-          width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/img2.PNG"),
-              fit: BoxFit.cover,
-              opacity: 20,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
-            ),
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Development Teams",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "Technical Resourses When You Need Them.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Zai Systems provides cost-effective onsite & virtual staffing solutions by building strong relationships and connecting people",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
-        ),
+            // height: 300,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                  // height: 300,
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child: Image.asset("assests/img2.PNG"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15.0, horizontal: 8),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Development Teams",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Technical Resourses When You Need Them.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Zai Systems provides cost-effective onsite & virtual staffing solutions by building strong relationships and connecting people",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.grey.shade300,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal),
+                            )
+                          ]),
+                    )
+                  ])),
+            )),
         Container(
-          // height: 300,
-          width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/img3.PNG"),
-              fit: BoxFit.cover,
-              opacity: 20,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
-            ),
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Process Automation",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "Innovative Automation Techniques at your Finger Tips",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "We expertise in Robotic Process Automation, Process Mining, Webscraping and Document Processing.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
-        ),
+            // height: 300,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                // height: 300,
+                width: MediaQuery.of(context).size.width,
+                child: Stack(children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0),
+                    child: Image.asset("assests/img3.PNG"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 15.0, horizontal: 8),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Process Automation",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Innovative Automation Techniques at your Finger Tips",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "We expertise in Robotic Process Automation, Process Mining, Webscraping and Document Processing.",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                color: Colors.grey.shade300,
+                                fontSize: 15,
+                                fontWeight: FontWeight.normal),
+                          )
+                        ]),
+                  ),
+                ]),
+              ),
+            )),
         Container(
-          // height: 300,
-          width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/img4.PNG"),
-              fit: BoxFit.cover,
-              opacity: 20,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
-            ),
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "CallMiner Solutions",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "The CallMiner one-stop-shop",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Zai Systems is a certified CallMiner strategic partner helping customers leverage all the platform’s capabilities.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
-        ),
+            // height: 300,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                  // height: 300,
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child: Image.asset("assests/img4.PNG"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15.0, horizontal: 8),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "CallMiner Solutions",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "The CallMiner one-stop-shop",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Zai Systems is a certified CallMiner strategic partner helping customers leverage all the platform’s capabilities.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.grey.shade300,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal),
+                            )
+                          ]),
+                    ),
+                  ])),
+            )),
         Container(
-          // height: 300,
-          width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assests/img.PNG"),
-              fit: BoxFit.cover,
-              opacity: 20,
-              colorFilter:
-                  ColorFilter.mode(Colors.transparent, BlendMode.darken),
-            ),
-          ),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  "Legacy Migration",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "Migrate VFP, VB6 and Classic ASP Applications To .NET",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Zai Systems is your migration partner in converting legacy applications for security, performance & competitive advantages.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.grey.shade300,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                )
-              ]),
-        ),
+            // height: 300,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                  // height: 300,
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child: Image.asset("assests/img.PNG"),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15.0, horizontal: 8),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Legacy Migration",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Migrate VFP, VB6 and Classic ASP Applications To .NET",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Zai Systems is your migration partner in converting legacy applications for security, performance & competitive advantages.",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Colors.grey.shade300,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal),
+                            )
+                          ]),
+                    ),
+                  ])),
+            )),
       ],
       onPageChanged: (value) {
         print('Page changed: $value');
       },
-      autoPlayInterval: 4000,
+      autoPlayInterval: 5000,
       isLoop: true,
     );
   }
