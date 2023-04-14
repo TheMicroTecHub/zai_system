@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key});
@@ -10,6 +13,21 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
+    Future<void> launchFacebook(String fbUrl, String fbWebUrl) async {
+      try {
+        bool launched = await launch(fbUrl, forceSafariVC: false);
+        print("Launched Native app $launched");
+
+        if (!launched) {
+          await launch(fbWebUrl, forceSafariVC: false);
+          print("Launched browser $launched");
+        }
+      } catch (e) {
+        await launch(fbWebUrl, forceSafariVC: false);
+        print("Inside catch");
+      }
+    }
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
@@ -172,22 +190,79 @@ class _FooterState extends State<Footer> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const SizedBox(width: 5),
-                        Image.asset(
-                          "assests/facebook.png",
-                          height: 30,
-                          width: 30,
+                        InkWell(
+                          onTap: () {
+                            if (Platform.isAndroid) {
+                              var fbUrl =
+                                  "https://www.facebook.com/zaisystems"; //for android
+                              launchFacebook(
+                                  fbUrl,
+                                  "https://www.facebook.com/zaisystems"
+                                      .toString());
+                            } else if (Platform.isIOS) {
+                              var fbUrl =
+                                  "https://www.facebook.com/zaisystems"; //for IOS
+                              launchFacebook(
+                                  fbUrl,
+                                  "https://www.facebook.com/zaisystems"
+                                      .toString());
+                            }
+                          },
+                          child: Image.asset(
+                            "assests/facebook.png",
+                            height: 30,
+                            width: 30,
+                          ),
                         ),
                         const SizedBox(width: 5),
-                        Image.asset(
-                          "assests/insta.png",
-                          height: 30,
-                          width: 30,
+                        InkWell(
+                          onTap: () {
+                            if (Platform.isAndroid) {
+                              var fbUrl =
+                                  "https://www.instagram.com/zaisystems/"; //for android
+                              launchFacebook(
+                                  fbUrl,
+                                  "https://www.instagram.com/zaisystems/"
+                                      .toString());
+                            } else if (Platform.isIOS) {
+                              var fbUrl =
+                                  "https://www.instagram.com/zaisystems/"; //for IOS
+                              launchFacebook(
+                                  fbUrl,
+                                  "https://www.instagram.com/zaisystems/"
+                                      .toString());
+                            }
+                          },
+                          child: Image.asset(
+                            "assests/insta.png",
+                            height: 30,
+                            width: 30,
+                          ),
                         ),
                         const SizedBox(width: 5),
-                        Image.asset(
-                          "assests/linkedin.png",
-                          height: 30,
-                          width: 30,
+                        InkWell(
+                          onTap: () {
+                            if (Platform.isAndroid) {
+                              var fbUrl =
+                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"; //for android
+                              launchFacebook(
+                                  fbUrl,
+                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"
+                                      .toString());
+                            } else if (Platform.isIOS) {
+                              var fbUrl =
+                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"; //for IOS
+                              launchFacebook(
+                                  fbUrl,
+                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"
+                                      .toString());
+                            }
+                          },
+                          child: Image.asset(
+                            "assests/linkedin.png",
+                            height: 30,
+                            width: 30,
+                          ),
                         ),
                       ],
                     ),

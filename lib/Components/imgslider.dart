@@ -84,7 +84,7 @@ class _ImageSliderState extends State<ImageSlider> {
                   child: Stack(children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset("assests/img2.PNG"),
+                      child: Image.asset("assests/img2.jpg"),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
@@ -139,7 +139,7 @@ class _ImageSliderState extends State<ImageSlider> {
                 child: Stack(children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15.0),
-                    child: Image.asset("assests/img3.PNG"),
+                    child: Image.asset("assests/img3.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
@@ -195,7 +195,7 @@ class _ImageSliderState extends State<ImageSlider> {
                   child: Stack(children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset("assests/img4.PNG"),
+                      child: Image.asset("assests/img4.jpg"),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
@@ -250,7 +250,7 @@ class _ImageSliderState extends State<ImageSlider> {
                   child: Stack(children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset("assests/img.PNG"),
+                      child: Image.asset("assests/img.jpg"),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
