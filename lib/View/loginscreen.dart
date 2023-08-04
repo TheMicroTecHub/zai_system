@@ -7,6 +7,7 @@ import 'package:zai_system/View/forgotpassword.dart';
 import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/verification_screen.dart';
 import 'package:zai_system/model/current_appuser.dart';
+import 'package:zai_system/Widget/round_button.dart';
 
 import '../Widget/constants.dart';
 
@@ -169,14 +170,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       Padding(
                         padding: apppaddings,
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               decoration: BoxDecoration(
                                   color: redcolor,
                                   borderRadius: BorderRadius.circular(20)),
                               height: 50,
-                              width: 150,
+                              width: 300,
                               child: TextButton(
                                 child: Center(
                                   child: Text(
