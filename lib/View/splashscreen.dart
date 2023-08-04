@@ -2,8 +2,9 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zai_system/View/home.dart';
-import 'package:zai_system/View/verification_screen.dart';
+import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/model/current_appuser.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -21,15 +22,13 @@ class _SplashScreenState extends State<SplashScreen> {
       CurrentAppUser.currentUserData.getCurrentUserData(user.uid);
       Timer(
           const Duration(seconds: 3),
-          () => Navigator.push(context,
+          () => Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => const Homescreen())));
     } else {
       Timer(
           const Duration(seconds: 3),
-          () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const VerificationScr())));
+          () => Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const LoginScreen())));
     }
   }
 
@@ -42,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Center(
             child: Image.asset(
-              'assests/splashScreen/spBlack.png',
+              'assests/splashScreen/spWhite.png',
               width: 100,
               height: 100,
             ),

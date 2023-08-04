@@ -1,9 +1,11 @@
+// ignore_for_file: unused_import, unused_field
+
 import 'dart:io';
 import 'package:badges/badges.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Badge;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zai_system/Components/home_screen.dart';
@@ -134,17 +136,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           backgroundColor: Colors.black,
         ),
         body: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Colors.black, Color(0xff810000)])),
           child: Padding(
             padding: const EdgeInsets.only(top: 70.0),
             child: Column(children: [
               Center(
                   child: Badge(
-                badgeColor: Colors.white70,
+                badgeStyle: BadgeStyle(
+                  badgeColor: Colors.white70,
+                ),
                 position: BadgePosition.bottomEnd(),
                 badgeContent: InkWell(
                   onTap: () => dialog(context),
@@ -171,7 +170,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         fit: BoxFit.fill,
                         loadingBuilder: (context, child, loadingProgress) {
                           if (loadingProgress == null) return child;
-                          return const Center(child: CircularProgressIndicator());
+                          return const Center(
+                              child: CircularProgressIndicator());
                         },
                         errorBuilder: (context, error, stackTrace) {
                           return Container(

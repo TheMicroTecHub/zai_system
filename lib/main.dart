@@ -17,10 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromARGB(255, 42, 0, 0),
+      ),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         getPages: [
           GetPage(name: "/", page: () => const SplashScreen()),
-        ]);
+        ]
+    );
   }
 }

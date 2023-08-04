@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/View/Courses_Page.dart';
@@ -28,23 +30,10 @@ class Team extends StatelessWidget {
       backgroundColor: Colors.black,
       drawer: const MyDrawer(),
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.black, Colors.red],
-            begin: FractionalOffset(1.0, 0.0),
-            end: FractionalOffset(0.0, 0.9),
-            stops: [0.0, 1.0],
-          ),
-        ),
         child: Stack(children: [
           Container(
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Colors.black, Colors.red],
-                begin: FractionalOffset(1.0, 0.0),
-                end: FractionalOffset(0.0, 0.9),
-                stops: [0.0, 1.0],
-              ),
+              color: Color.fromARGB(255, 42, 0, 0),
               borderRadius: BorderRadius.circular(20),
             ),
             child: ListView.separated(
@@ -109,6 +98,14 @@ class Team extends StatelessWidget {
                                 ),
                                 Text(
                                   companydata[index].position,
+                                  style: const TextStyle(
+                                      color: Colors.white, fontSize: 16),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  companydata[index].introduction,
                                   style: const TextStyle(
                                       color: Colors.white, fontSize: 16),
                                 ),

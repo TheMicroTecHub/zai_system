@@ -244,17 +244,13 @@ class _ExpertsState extends State<Experts> {
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Container(
-                        child: const Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    )
-                        // ClipOval(
-                        //   child: Image.asset(
-                        //     "assets/team/huzaifa.jpeg",
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
+                      child: ClipOval(
+                        child: Image.asset(
+                          "assests/team/taimoorali.jpg",
+                          fit: BoxFit.fill,
                         ),
+                      ),
+                    ),
                   ),
                 ),
               ])),
@@ -355,16 +351,12 @@ class _ExpertsState extends State<Experts> {
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Container(
-                      child: const Icon(
-                        Icons.person,
-                        color: Colors.white,
+                      child: ClipOval(
+                        child: Image.asset(
+                          "assests/team/mishalriasat.jpeg",
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                      // ClipOval(
-                      //   child: Image.asset(
-                      //     "assets/team/huzaifa.jpeg",
-                      //     fit: BoxFit.fill,
-                      //   ),
-                      // ),
                     ),
                   ),
                 ),

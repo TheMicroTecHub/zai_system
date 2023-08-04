@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zai_system/Utils/utils.dart';
@@ -6,8 +8,6 @@ import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:zai_system/Widget/round_button.dart';
-
-
 
 class OTPVerificationScr extends StatefulWidget {
   final String verificationId;
@@ -26,16 +26,10 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             height: MediaQuery.of(context).size.height,
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [Colors.red, Colors.black])),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Column(
@@ -95,21 +89,28 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
                         ),
                         onChanged: (value) {}),
                   ),
-                  // const SizedBox(height: 1,),
-                  // Padding(
-                  //   padding: apppaddings,
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.center,
-                  //     children: [
-                  //       const Text("Didn't receive OTP?"),
-                  //
-                  //       TextButton(
-                  //           onPressed: (){
-                  //
-                  //           },
-                  //           child: const Text('Resend OTP', style: TextStyle(color: whitecolor,fontSize: 15, fontWeight: FontWeight.bold,decoration: TextDecoration.underline),))
-                  //     ],),
-                  // ),
+                  const SizedBox(
+                    height: 1,
+                  ),
+                  Padding(
+                    padding: apppaddings,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text("Didn't receive OTP?", style: TextStyle( color: whitecolor),),
+                        TextButton(
+                            onPressed: () {},
+                            child: const Text(
+                              'Resend OTP',
+                              style: TextStyle(
+                                  color: whitecolor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.underline),
+                            ))
+                      ],
+                    ),
+                  ),
                   const SizedBox(
                     height: 40,
                   ),
@@ -136,12 +137,14 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const LoginScreen()));
+                                        builder: (context) =>
+                                            const LoginScreen()));
                               } catch (e) {
                                 setState(() {
                                   loading = false;
                                 });
-                                Utils().toastMessage(e.toString());
+                                // Utils().toastMessage(e.toString());
+                                // print(e);
                               }
                             })
                       ],

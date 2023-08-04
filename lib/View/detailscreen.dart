@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -57,45 +59,44 @@ class _DetailScreenState extends State<DetailScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-        
         body: SafeArea(
-          child: Stack(
-            fit: StackFit.expand,
-            children: <Widget>[
-              FractionallySizedBox(
-                  alignment: Alignment.topCenter,
-                  heightFactor: 0.7,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(companydata[id].image),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  )),
-              Positioned(
-                  top: 50,
-                  left: 10,
-                  child: IconButton(
-                    onPressed: () => Get.back(),
-                    icon: const Icon(
-                      Icons.arrow_back_ios,
-                      color: Colors.white,
-                    ),
-                  )),
-              FractionallySizedBox(
-                alignment: Alignment.bottomCenter,
-                heightFactor: 0.5,
-                child: Container(
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(50))),
-                  child: panelBody(),
+      child: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          FractionallySizedBox(
+              alignment: Alignment.topCenter,
+              heightFactor: 0.7,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(companydata[id].image),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-            ],
+              )),
+          Positioned(
+              top: 50,
+              left: 10,
+              child: IconButton(
+                onPressed: () => Get.back(),
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+              )),
+          FractionallySizedBox(
+            alignment: Alignment.bottomCenter,
+            heightFactor: 0.5,
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(50))),
+              child: panelBody(),
+            ),
           ),
-        ));
+        ],
+      ),
+    ));
   }
 
   SingleChildScrollView panelBody() {

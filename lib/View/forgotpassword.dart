@@ -29,10 +29,8 @@ class _ForgotPScreenState extends State<ForgotPScreen> {
             child: Container(
                 height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                        colors: [Colors.red, Colors.black])),
+                    color: Color.fromARGB(255, 42, 0, 0),
+                ),
                 child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 80),
                     child: SingleChildScrollView(

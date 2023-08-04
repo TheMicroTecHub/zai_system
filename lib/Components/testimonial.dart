@@ -34,7 +34,7 @@ class _TestimonialsState extends State<Testimonials> {
                 const Text("Testimonial.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.bold)),
               ],
@@ -42,16 +42,11 @@ class _TestimonialsState extends State<Testimonials> {
           ),
           ImageSlideshow(
               width: double.infinity,
-              height: 700,
+              height: 650,
               initialPage: 0,
               indicatorColor: Colors.red,
               indicatorBackgroundColor: Colors.grey,
               children: [
-                // Container(
-                //   // height: 300,
-                //   width: MediaQuery.of(context).size.width,
-                //   decoration: const BoxDecoration(color: Colors.white),
-                // ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
@@ -90,7 +85,7 @@ class _TestimonialsState extends State<Testimonials> {
                             "Poland",
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 20,
                                 fontWeight: FontWeight.normal),
                           ),
@@ -101,7 +96,7 @@ class _TestimonialsState extends State<Testimonials> {
                         Text(
                           "Excellent communication, follow thru and very dedicated! Complete ease working with Zai Systems and his team. All are organized and very efficient with their processes.",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
@@ -115,7 +110,7 @@ class _TestimonialsState extends State<Testimonials> {
                               "Chandra Keyser",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -125,7 +120,7 @@ class _TestimonialsState extends State<Testimonials> {
                             Text(
                               "CO-FOUNDER",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.normal,
                                   fontStyle: FontStyle.italic),
@@ -171,7 +166,7 @@ class _TestimonialsState extends State<Testimonials> {
                           "GERMANY",
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.normal),
                         ),
@@ -181,7 +176,7 @@ class _TestimonialsState extends State<Testimonials> {
                         Text(
                           "Amazing company to work with. They were extremely knowledgeable and did an amazing job on our website design and conversion to the Shopify platform. They were very patient with us and were very fair in price. Very very happy with the outcome!",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
@@ -195,7 +190,7 @@ class _TestimonialsState extends State<Testimonials> {
                               "Ryan Donnelly",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -205,7 +200,7 @@ class _TestimonialsState extends State<Testimonials> {
                             Text(
                               "App Developer",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.normal,
                                   fontStyle: FontStyle.italic),
@@ -250,7 +245,7 @@ class _TestimonialsState extends State<Testimonials> {
                           "USA",
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.normal),
                         ),
@@ -260,7 +255,7 @@ class _TestimonialsState extends State<Testimonials> {
                         Text(
                           "I worked with Zaisystem on multiple projects and continue to come back to them. They are professional, personable and deliver a great project. They work well with my project feedback, often times able to read between the lines of what I am saying, and are very timely with their turnaround times. ",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
@@ -274,7 +269,7 @@ class _TestimonialsState extends State<Testimonials> {
                               "Jason Galli",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -284,7 +279,7 @@ class _TestimonialsState extends State<Testimonials> {
                             Text(
                               "App Developer",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.normal,
                                   fontStyle: FontStyle.italic),
@@ -294,109 +289,6 @@ class _TestimonialsState extends State<Testimonials> {
                       ]),
                 )
               ]),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Stack(alignment: Alignment.topCenter, children: <Widget>[
-              Padding(
-                  padding: const EdgeInsets.only(
-                    top: 160 / 2.0,
-                  ),
-                  child: Container(
-                    height: 320.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      color: const Color.fromARGB(255, 48, 47, 47),
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 8.0,
-                          offset: Offset(0.0, 5.0),
-                        ),
-                      ],
-                    ),
-                    width: double.infinity,
-                    child: Padding(
-                        padding: const EdgeInsets.only(
-                          top: 15.0,
-                          bottom: 15.0,
-                          left: 20,
-                          right: 20,
-                        ),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              const Text(
-                                'Get in Touch',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 34.0,
-                                    color: Colors.white),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                'You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 20.0,
-                                    color: Colors.grey.shade400),
-                              ),
-                              const SizedBox(
-                                height: 40,
-                              ),
-                              Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.email_outlined,
-                                        color: Colors.grey.shade400,
-                                      ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'zaisystems@gmail.com',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16.0,
-                                            color: Colors.grey.shade400),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Icon(
-                                        Icons.phone,
-                                        color: Colors.grey.shade400,
-                                      ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        '03346906960',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16.0,
-                                            color: Colors.grey.shade400),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ])),
-                  )),
-            ]),
-          )
         ]);
   }
 }

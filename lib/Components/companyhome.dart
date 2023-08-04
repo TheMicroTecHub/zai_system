@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
 import 'package:zai_system/View/team.dart';
@@ -30,10 +32,10 @@ class _CompanyhomeState extends State<Companyhome> {
               const SizedBox(
                 height: 10,
               ),
-              const Text("Our Business Strategy Here.",
+              Text("Our Business Strategy Here.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.bold)),
             ],
@@ -43,18 +45,14 @@ class _CompanyhomeState extends State<Companyhome> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10.0),
-                child: Image.asset("assests/team/owais.jpg"),
-              ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(vertical: 15),
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
                     "Welcome To",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
                     ),
@@ -73,32 +71,32 @@ class _CompanyhomeState extends State<Companyhome> {
                 ),
               ),
               Text(
-                "\nIf you are worried about your new business then no need to worry because Zai Systems have ways out for all of your problems. \n \nZai Systems has a powerful combination of business experience and technological expertise providing clients best-in-className solutions, in software development projects. Zai Systems delivers high-quality, cost-effective, full lifecycle solutions for all sorts of development projects",
+                "\nIf you are worried about your new business then no need to worry because Zai Systems have ways out for all of your problems.\n \nZai Systems has a powerful combination of business experience and technological expertise providing clients best-in-className solutions, in software development projects. Zai Systems delivers high-quality, cost-effective, full lifecycle solutions for all sorts of development projects",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontWeight: FontWeight.normal,
                   fontSize: 18,
                 ),
               ),
-              const Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "\nOwais Ahmad Khan, CEO",
-                  style: TextStyle(
-                    color: Color(0xFFE4393C),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-              Text(
-                "\nA chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs act as the company's public face and make major corporate decisions.",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 18,
-                ),
-              ),
+              // const Align(
+              //   alignment: Alignment.topLeft,
+              //   child: Text(
+              //     "\nOwais Ahmad Khan, CEO",
+              //     style: TextStyle(
+              //       color: Color(0xFFE4393C),
+              //       fontWeight: FontWeight.bold,
+              //       fontSize: 20,
+              //     ),
+              //   ),
+              // ),
+              // Text(
+              //   "\nA chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs act as the company's public face and make major corporate decisions.",
+              //   style: TextStyle(
+              //     color: Colors.black,
+              //     fontWeight: FontWeight.normal,
+              //     fontSize: 18,
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: InkWell(
@@ -107,7 +105,7 @@ class _CompanyhomeState extends State<Companyhome> {
                         MaterialPageRoute(builder: (context) => Team()));
                   },
                   child: Align(
-                    alignment: Alignment.topLeft,
+                    alignment: Alignment.center,
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
@@ -125,7 +123,7 @@ class _CompanyhomeState extends State<Companyhome> {
                         padding:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                         child: Text(
-                          "More About Us",
+                          "Our Team",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.normal,

@@ -34,7 +34,7 @@ class _ExpertiseState extends State<Expertise> {
               const Text("Our Expertise In",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 30,
                       fontWeight: FontWeight.bold)),
             ],

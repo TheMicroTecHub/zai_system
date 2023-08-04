@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field, unused_local_variable
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zai_system/View/Courses_Page.dart';
@@ -5,6 +7,7 @@ import 'package:zai_system/View/home.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
+import 'package:zai_system/View/hcm360.dart';
 import 'package:zai_system/model/current_appuser.dart';
 
 class MyDrawer extends StatefulWidget {
@@ -76,6 +79,39 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             InkWell(
                 onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => hrm()))
+                      .then((value) => setState(() {}));
+                },
+                child: _buildRow(Icons.design_services, "HCM 360°")),
+            _buildDivider(),
+            SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Courses()))
+                      .then((value) => setState(() {}));
+                },
+                child: _buildRow(Icons.my_library_books_sharp, "IT Training")),
+            _buildDivider(),
+            SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Team()))
+                      .then((value) => setState(() {}));
+                },
+                child: _buildRow(Icons.group, "Team")),
+            _buildDivider(),
+            SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
                   Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -83,28 +119,6 @@ class _MyDrawerState extends State<MyDrawer> {
                       .then((value) => setState(() {}));
                 },
                 child: _buildRow(Icons.person_pin, "My profile")),
-            _buildDivider(),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Courses()))
-                      .then((value) => setState(() {}));
-                },
-                child: _buildRow(Icons.my_library_books_sharp, "Courses")),
-            _buildDivider(),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Team()))
-                      .then((value) => setState(() {}));
-                },
-                child: _buildRow(Icons.group, "Team")),
             _buildDivider(),
             SizedBox(
               height: 20,

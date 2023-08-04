@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unused_import, must_be_immutable
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -240,7 +242,7 @@ class _DetailPageState extends State<DetailPage> {
                             data[id].description,
                             style: const TextStyle(
                                 fontSize: 15,
-                                color: Color(0xFFb8b8b8),
+                                //color: Color(0xFFb8b8b8),
                                 fontStyle: FontStyle.normal),
                           ),
                         ),
