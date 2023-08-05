@@ -220,7 +220,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       padding: const EdgeInsets.symmetric(vertical: 30),
                       child: InkWell(
                         onTap: () async {
-                          Navigator.push(context, MaterialPageRoute(builder: (ctx)=>const EmailVerificationScreen()));
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx)=>const EmailVerificationScreen()));
                         },
                         child: Align(
                           alignment: Alignment.center,
