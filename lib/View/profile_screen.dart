@@ -12,6 +12,9 @@ import 'package:zai_system/Components/home_screen.dart';
 
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/model/current_appuser.dart';
+import 'package:zai_system/Widget/round_button.dart';
+import 'package:zai_system/Widget/constants.dart';
+import 'package:zai_system/View/email_verification.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -37,12 +40,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   bool showSpinner = false;
   final ref = FirebaseStorage.instance.ref('images');
   bool isUploading = false;
+  User? user = FirebaseAuth.instance.currentUser;
 
   void uploadImage() {
     setState(() {
       isUploading = true;
     });
-    final _auth = FirebaseAuth.instance;
     final _user = _auth.currentUser;
     if (_user != null && _image != null) {
       final _uid = _user.uid;
@@ -206,7 +209,55 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 style: const TextStyle(fontSize: 17, color: Colors.grey),
               ),
               const SizedBox(
-                height: 80,
+                height: 5,
+              ),
+              Padding(
+                padding: apppaddings,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 30),
+                      child: InkWell(
+                        onTap: () async {
+                          Navigator.push(context, MaterialPageRoute(builder: (ctx)=>const EmailVerificationScreen()));
+                        },
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 156, 27, 27),
+                                  Color.fromARGB(255, 238, 22, 7)
+                                ],
+                                begin: FractionalOffset(0.7, 0.9),
+                                end: FractionalOffset(0.0, 0.5),
+                                stops: [0.0, 0.5],
+                              ),
+                            ),
+                            child: const Padding(
+                              padding:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                              child: Text(
+                                "Verify",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 19,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 40,
               ),
               Container(
                 height: 230,

@@ -22,21 +22,24 @@ class VerificationScr extends StatefulWidget {
 class _VerificationScrState extends State<VerificationScr> {
   final _formKey = GlobalKey<FormState>();
   static const String id = '/signup';
-  String username = "", email = "", password = "", contact = "";
+  String username = "", email = "", password = "", contact = "", confirmPassword = "";
   bool load = false;
   bool showSpinner = false;
   TextEditingController namecontroller = TextEditingController();
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
+  TextEditingController confirmpasswordcontroller = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
   final _auth = FirebaseAuth.instance;
   String? errorMessage;
   bool passwordVisible=false;
+  bool confirmpasswordVisible=false;
 
   @override
   void initState(){
     super.initState();
     passwordVisible=false;
+    confirmpasswordVisible=false;
   }
 
   @override
@@ -48,7 +51,7 @@ class _VerificationScrState extends State<VerificationScr> {
           child: Container(
             height: MediaQuery.of(context).size.height,
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 50),
+              padding: const EdgeInsets.symmetric(vertical: 80),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -66,13 +69,6 @@ class _VerificationScrState extends State<VerificationScr> {
                     ),
                     const SizedBox(
                       height: 20,
-                    ),
-                    const Text(
-                      'SIGNUP',
-                      style: TextStyle(
-                          fontSize: 35,
-                          color: whitecolor,
-                          fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
                       height: 30,
@@ -150,6 +146,7 @@ class _VerificationScrState extends State<VerificationScr> {
                               } else
                                 return null;
                             },
+                            onChanged: (value) => password = value,
                             decoration: InputDecoration(
                               hintText: 'PASSWORD',
                               hintStyle: const TextStyle(
@@ -183,44 +180,91 @@ class _VerificationScrState extends State<VerificationScr> {
                         Padding(
                           padding: apppaddings,
                           child: TextFormField(
-                            controller: phoneNumberController,
+                            controller: confirmpasswordcontroller,
+                            keyboardType: TextInputType.text,
+                            obscureText: !confirmpasswordVisible,
                             validator: (value) {
                               if (value!.isEmpty) {
-                                return 'Provide Contact in +92 format required';
-                              } else
+                                return 'required';
+                              }
+                              if (value != password) {
+                                return 'Confirmation password does not match the entered password';
+                              }
+                              else
                                 return null;
                             },
-                            keyboardType: TextInputType.phone,
+                            onChanged: (value) => confirmPassword = value,
                             decoration: InputDecoration(
-                              hintText: '+923001234567',
+                              hintText: 'CONFIRM PASSWORD',
                               hintStyle: const TextStyle(
                                   fontFamily: 'Rubik Medium', fontSize: 16),
                               fillColor: const Color(0xffF8F9FA),
                               filled: true,
                               prefixIcon: const Icon(
-                                Icons.perm_contact_cal_outlined,
+                                Icons.lock_outlined,
                                 color: iconcolor,
+                              ),
+                              suffixIcon: IconButton(
+                                onPressed: (){
+                                  setState(() {
+                                    confirmpasswordVisible = !confirmpasswordVisible;
+                                  });
+                                },
+                                icon: Icon(confirmpasswordVisible
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                  color: iconcolor,
+                                ),
                               ),
                               focusedBorder: fbbutton,
                               enabledBorder: ebbutton,
                             ),
                           ),
                         ),
+                        // const SizedBox(
+                        //   height: 15,
+                        // ),
+                        // Padding(
+                        //   padding: apppaddings,
+                        //   child: TextFormField(
+                        //     controller: phoneNumberController,
+                        //     validator: (value) {
+                        //       if (value!.isEmpty) {
+                        //         return 'Provide Contact in +92 format required';
+                        //       } else
+                        //         return null;
+                        //     },
+                        //     keyboardType: TextInputType.phone,
+                        //     decoration: InputDecoration(
+                        //       hintText: '+923001234567',
+                        //       hintStyle: const TextStyle(
+                        //           fontFamily: 'Rubik Medium', fontSize: 16),
+                        //       fillColor: const Color(0xffF8F9FA),
+                        //       filled: true,
+                        //       prefixIcon: const Icon(
+                        //         Icons.perm_contact_cal_outlined,
+                        //         color: iconcolor,
+                        //       ),
+                        //       focusedBorder: fbbutton,
+                        //       enabledBorder: ebbutton,
+                        //     ),
+                        //   ),
+                        // ),
                       ]),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text('Enter your phone number to receive',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: whitecolor,
-                            fontWeight: FontWeight.w500)),
-                    const Text('verification code',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: whitecolor,
-                            fontWeight: FontWeight.w500)),
+                    // const SizedBox(
+                    //   height: 10,
+                    // ),
+                    // const Text('Enter your phone number to receive',
+                    //     style: TextStyle(
+                    //         fontSize: 14,
+                    //         color: whitecolor,
+                    //         fontWeight: FontWeight.w500)),
+                    // const Text('verification code',
+                    //     style: TextStyle(
+                    //         fontSize: 14,
+                    //         color: whitecolor,
+                    //         fontWeight: FontWeight.w500)),
                     const SizedBox(
                       height: 30,
                     ),
@@ -230,49 +274,65 @@ class _VerificationScrState extends State<VerificationScr> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           RoundButton(
-                            title: 'GET OTP',
+                            title: 'SIGN UP',
                             loading: load,
                             onTap: () async {
                               setState(() {
-                                load = false;
+                                load = true;
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) => const LoginScreen()));
+
                               });
                               if (_formKey.currentState!.validate()) {
                                 await signUp(emailcontroller.text.toString(),
                                     passwordcontroller.text.toString());
-                                _auth.verifyPhoneNumber(
-                                    phoneNumber: phoneNumberController.text,
-                                    verificationCompleted: (_) {
-                                      setState(() {
-                                        load = false;
-                                      });
-                                    },
-                                    verificationFailed: (e) {
-                                      setState(() {
-                                        load = false;
-                                      });
-                                      Utils().toastMessage(e.toString());
-                                    },
-                                    codeSent: (String verificationId, int? token) {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  OTPVerificationScr(
-                                                    verificationId: verificationId,
-                                                  )));
-                                      setState(() {
-                                        load = true;
-                                      });
-                                    },
-                                    codeAutoRetrievalTimeout: (e) {
-                                      Utils().toastMessage(e.toString());
-                                      setState(() {
-                                        load = false;
-                                      });
-                                    });
                               }
                             },
                           )
+                          // RoundButton(
+                          //   title: 'GET OTP',
+                          //   loading: load,
+                          //   onTap: () async {
+                          //     setState(() {
+                          //       load = false;
+                          //     });
+                          //     if (_formKey.currentState!.validate()) {
+                          //       await signUp(emailcontroller.text.toString(),
+                          //           passwordcontroller.text.toString());
+                          //       _auth.verifyPhoneNumber(
+                          //           phoneNumber: phoneNumberController.text,
+                          //           verificationCompleted: (_) {
+                          //             setState(() {
+                          //               load = false;
+                          //             });
+                          //           },
+                          //           verificationFailed: (e) {
+                          //             setState(() {
+                          //               load = false;
+                          //             });
+                          //             Utils().toastMessage(e.toString());
+                          //           },
+                          //           codeSent: (String verificationId, int? token) {
+                          //             Navigator.push(
+                          //                 context,
+                          //                 MaterialPageRoute(
+                          //                     builder: (context) =>
+                          //                         OTPVerificationScr(
+                          //                           verificationId: verificationId,
+                          //                         )));
+                          //             setState(() {
+                          //               load = true;
+                          //             });
+                          //           },
+                          //           codeAutoRetrievalTimeout: (e) {
+                          //             Utils().toastMessage(e.toString());
+                          //             setState(() {
+                          //               load = false;
+                          //             });
+                          //           });
+                          //     }
+                          //   },
+                          // )
                         ],
                       ),
                     ),
