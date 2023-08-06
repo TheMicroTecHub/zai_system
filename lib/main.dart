@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zai_system/Components/home_screen.dart';
 import 'package:zai_system/View/forgotpassword.dart';
+import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/View/signup.dart';
 import 'package:zai_system/View/splashscreen.dart';

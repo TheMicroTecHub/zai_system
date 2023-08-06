@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zai_system/View/Courses_Page.dart';
-import 'package:zai_system/View/home.dart';
+import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
@@ -39,8 +39,11 @@ class _MyDrawerState extends State<MyDrawer> {
     return Container(
       padding: const EdgeInsets.only(left: 16.0, right: 40, top: 40),
       decoration: BoxDecoration(
-          color: Colors.grey.shade800,
-          boxShadow: [BoxShadow(color: Colors.black45)]),
+        color: Colors.grey.shade800,
+        boxShadow: const [
+          BoxShadow(color: Colors.black45),
+        ],
+      ),
       width: 300,
       child: SafeArea(
         child: Column(
@@ -48,7 +51,7 @@ class _MyDrawerState extends State<MyDrawer> {
             Container(
               height: 100,
               alignment: Alignment.center,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.grey,
               ),
@@ -57,57 +60,37 @@ class _MyDrawerState extends State<MyDrawer> {
                 backgroundImage: NetworkImage(image),
               ),
             ),
-            SizedBox(height: 5.0),
+            const SizedBox(height: 5.0),
             Text(
               " $name",
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
             InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Homescreen()))
+                  Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()))
                       .then((value) => setState(() {}));
                 },
                 child: _buildRow(Icons.home, "Home")),
             _buildDivider(),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => hrm()))
+                          MaterialPageRoute(builder: (context) => const hrm()))
                       .then((value) => setState(() {}));
                 },
                 child: _buildRow(Icons.design_services, "HCM 360°")),
             _buildDivider(),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Courses()))
-                      .then((value) => setState(() {}));
-                },
-                child: _buildRow(Icons.my_library_books_sharp, "IT Training")),
-            _buildDivider(),
-            SizedBox(
-              height: 20,
-            ),
-            InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Team()))
-                      .then((value) => setState(() {}));
-                },
-                child: _buildRow(Icons.group, "Team")),
-            _buildDivider(),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             InkWell(
@@ -115,12 +98,36 @@ class _MyDrawerState extends State<MyDrawer> {
                   Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ProfileScreen()))
+                              builder: (context) => const Courses()))
+                      .then((value) => setState(() {}));
+                },
+                child: _buildRow(Icons.my_library_books_sharp, "IT Training")),
+            _buildDivider(),
+            const SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Team()))
+                      .then((value) => setState(() {}));
+                },
+                child: _buildRow(Icons.group, "Team")),
+            _buildDivider(),
+            const SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
+                  Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProfileScreen()))
                       .then((value) => setState(() {}));
                 },
                 child: _buildRow(Icons.person_pin, "My profile")),
             _buildDivider(),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             InkWell(
@@ -136,13 +143,14 @@ class _MyDrawerState extends State<MyDrawer> {
   }
 
   Divider _buildDivider() {
-    return Divider(
+    return const Divider(
       color: Color.fromARGB(255, 225, 225, 225),
     );
   }
 
   Widget _buildRow(IconData icon, String title, {bool showBadge = false}) {
-    final TextStyle tStyle = TextStyle(color: Colors.grey, fontSize: 16.0);
+    final TextStyle tStyle =
+        const TextStyle(color: Colors.grey, fontSize: 16.0);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Row(children: [
@@ -150,15 +158,15 @@ class _MyDrawerState extends State<MyDrawer> {
           icon,
           color: Colors.white,
         ),
-        SizedBox(width: 10.0),
+        const SizedBox(width: 10.0),
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             color: Colors.white,
           ),
         ),
-        Spacer(),
+        const Spacer(),
       ]),
     );
   }

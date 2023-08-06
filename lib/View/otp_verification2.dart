@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:zai_system/Utils/utils.dart';
-import 'package:zai_system/View/home.dart';
+import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/Widget/constants.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
@@ -97,7 +97,10 @@ class _OTPVerificationScrState extends State<OTPVerificationScr> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Didn't receive OTP?", style: TextStyle( color: whitecolor),),
+                        const Text(
+                          "Didn't receive OTP?",
+                          style: TextStyle(color: whitecolor),
+                        ),
                         TextButton(
                             onPressed: () {},
                             child: const Text(
