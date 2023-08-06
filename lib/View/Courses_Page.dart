@@ -11,10 +11,11 @@ import 'package:zai_system/model/courses_model.dart';
 
 // ignore: must_be_immutable
 class Courses extends StatelessWidget {
-  final data = model.getCoursesData();
+  const Courses({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final data = model.getCoursesData();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,

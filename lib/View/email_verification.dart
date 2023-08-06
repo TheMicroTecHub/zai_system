@@ -36,7 +36,8 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
     if (isEmailVerified = true) {
       // TODO: implement your code after email verification
       Fluttertoast.showToast(msg: "Email Successfully Verified");
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx)=>const ProfileScreen()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (ctx) => const ProfileScreen()));
 
       timer?.cancel();
     }
@@ -63,9 +64,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 child: Text(
                   'Check your \n Email',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white
-                  ),
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
               const SizedBox(height: 8),
@@ -75,9 +74,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   child: Text(
                     'We have sent you a Email on  ${auth.currentUser?.email}',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.white
-                    ),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
@@ -85,15 +82,12 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
               const Center(child: CircularProgressIndicator()),
               const SizedBox(height: 8),
               const Padding(
-                padding: EdgeInsets
-                    .symmetric(horizontal: 32.0),
+                padding: EdgeInsets.symmetric(horizontal: 32.0),
                 child: Center(
                   child: Text(
                     'Verifying email....',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.white
-                    ),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
@@ -130,8 +124,8 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                               ),
                             ),
                             child: const Padding(
-                              padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 25),
                               child: Text(
                                 "Resend",
                                 style: TextStyle(

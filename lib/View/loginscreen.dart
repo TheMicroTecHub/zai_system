@@ -2,12 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-
-import 'package:zai_system/View/forgotpassword.dart';
-import 'package:zai_system/View/home.dart';
-import 'package:zai_system/View/signup.dart';
-import 'package:zai_system/model/current_appuser.dart';
 import 'package:zai_system/Widget/round_button.dart';
+import 'package:zai_system/model/current_appuser.dart';
 
 import '../Widget/constants.dart';
 
@@ -19,29 +15,29 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Future<bool> _onWillPop() async {
-    return false; //<-- SEE HERE
-  }
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-  bool passwordVisible=false;
+  bool passwordVisible = false;
 
-  @override
-  void initState(){
-    super.initState();
-    passwordVisible=false;
-  }
   final _auth = FirebaseAuth.instance;
   bool load = false;
   String? errorMessage;
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=> FocusManager.instance.primaryFocus?.unfocus(),
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
+          child: SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 90),
@@ -72,13 +68,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         Padding(
                           padding: apppaddings,
                           child: TextFormField(
+                            enabled: !load,
                             controller: emailController,
                             keyboardType: TextInputType.text,
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'required';
-                              } else
-                                return null;
+                              }
+                              return null;
                             },
                             decoration: InputDecoration(
                               hintText: 'EMAIL',
@@ -101,14 +98,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         Padding(
                           padding: apppaddings,
                           child: TextFormField(
+                            enabled: !load,
                             controller: passwordController,
                             keyboardType: TextInputType.text,
                             obscureText: !passwordVisible,
                             validator: (value) {
                               if (value!.isEmpty) {
                                 return 'required';
-                              } else
-                                return null;
+                              }
+                              return null;
                             },
                             decoration: InputDecoration(
                               hintText: 'PASSWORD',
@@ -121,16 +119,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: iconcolor,
                               ),
                               suffixIcon: IconButton(
-                                  onPressed: (){
-                                    setState(() {
-                                      passwordVisible = !passwordVisible;
-                                    });
-                                  },
-                                  icon: Icon(passwordVisible
-                                  ? Icons.visibility
+                                onPressed: () {
+                                  setState(() {
+                                    passwordVisible = !passwordVisible;
+                                  });
+                                },
+                                icon: Icon(
+                                  passwordVisible
+                                      ? Icons.visibility
                                       : Icons.visibility_off,
-                                    color: iconcolor,
-                                  ),
+                                  color: iconcolor,
+                                ),
                               ),
                               focusedBorder: fbbutton,
                               enabledBorder: ebbutton,
@@ -148,9 +147,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           TextButton(
-                              onPressed: () {
-                                Get.to(() => ForgotPScreen());
-                              },
+                              onPressed: load
+                                  ? null
+                                  : () {
+                                      Get.toNamed("/forgotpassword");
+                                    },
                               child: const Text(
                                 'Forgot Password?',
                                 style: TextStyle(
@@ -167,35 +168,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Padding(
                       padding: apppaddings,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                                color: redcolor,
-                                borderRadius: BorderRadius.circular(20)),
-                            height: 50,
-                            width: 300,
-                            child: TextButton(
-                              child: Center(
-                                child: Text(
-                                  'LOG IN',
-                                  style: const TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontFamily: 'Rubik Medium',
-                                  ),
-                                ),
-                              ),
-                              onPressed: () async {
+                      child: RoundButton(
+                        title: 'Login',
+                        loading: load,
+                        onTap: load
+                            ? null
+                            : () async {
                                 if (_formkey.currentState!.validate()) {
-                                  await signIn(emailController.text,
-                                      passwordController.text);
+                                  setState(() {
+                                    load = true;
+                                  });
+                                  await signIn();
                                 }
                               },
-                            ),
-                          ),
-                        ],
                       ),
                     ),
                     Padding(
@@ -208,15 +193,16 @@ class _LoginScreenState extends State<LoginScreen> {
                               style: TextStyle(fontSize: 15, color: whitecolor),
                             ),
                             TextButton(
-                                onPressed: () {
-                                  Navigator.push(context,
-                                      MaterialPageRoute(builder: (context) => const VerificationScr()));
-                                },
-                                child: const Text('Sign up',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 15)))
+                              onPressed:
+                                  load ? null : () => Get.toNamed("/signup"),
+                              child: const Text(
+                                'Sign up',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 15),
+                              ),
+                            )
                           ],
                         )),
                   ],
@@ -229,24 +215,26 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Future<void> signIn(String email, String password) async {
-    print("Validated");
-
+  Future<void> signIn() async {
     try {
+      final email = emailController.text;
+      final password = passwordController.text;
       await _auth
           .signInWithEmailAndPassword(email: email, password: password)
-          .then((uid) => {
-                CurrentAppUser.currentUserData
-                    .getCurrentUserData(uid.user!.uid),
-                Fluttertoast.showToast(msg: "Login Successful"),
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const Homescreen())),
-              });
+          .then(
+        (uid) {
+          CurrentAppUser.currentUserData.getCurrentUserData(uid.user!.uid);
+          Fluttertoast.showToast(msg: "Login Successful");
+          setState(() {
+            load = false;
+          });
+          Get.offAllNamed("/home");
+        },
+      );
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
         case "invalid-email":
           errorMessage = "Your email address appears to be malformed.";
-
           break;
         case "wrong-password":
           errorMessage = "Your password is wrong.";
@@ -267,7 +255,9 @@ class _LoginScreenState extends State<LoginScreen> {
           errorMessage = "An undefined Error happened.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
-      print(error.code);
+      setState(() {
+        load = false;
+      });
     }
   }
 }

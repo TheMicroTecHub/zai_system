@@ -1,6 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:zai_system/Components/home_screen.dart';
+import 'package:zai_system/View/forgotpassword.dart';
+import 'package:zai_system/View/loginscreen.dart';
+import 'package:zai_system/View/signup.dart';
 import 'package:zai_system/View/splashscreen.dart';
 import 'package:zai_system/firebase_options.dart';
 
@@ -17,14 +21,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 42, 0, 0),
-      ),
+        theme: ThemeData(
+          scaffoldBackgroundColor: const Color.fromARGB(255, 42, 0, 0),
+        ),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
-        getPages: [
+        getPages: <GetPage>[
           GetPage(name: "/", page: () => const SplashScreen()),
-        ]
-    );
+          GetPage(name: "/home", page: () => const HomeScreen()),
+          GetPage(name: "/signup", page: () => const VerificationScr()),
+          GetPage(name: "/login", page: () => const LoginScreen()),
+          GetPage(name: "/forgotpassword", page: () => const ForgotPScreen()),
+        ]);
   }
 }
