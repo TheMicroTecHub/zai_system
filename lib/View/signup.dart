@@ -7,14 +7,14 @@ import 'package:zai_system/Widget/constants.dart';
 import 'package:zai_system/Widget/round_button.dart';
 import 'package:zai_system/model/app_user.dart';
 
-class VerificationScr extends StatefulWidget {
-  const VerificationScr({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<VerificationScr> createState() => _VerificationScrState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _VerificationScrState extends State<VerificationScr> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
   bool load = false;
   bool showSpinner = false;
