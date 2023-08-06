@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/View/detail_course.dart';
 import 'package:zai_system/View/drawer.dart';
-import 'package:zai_system/View/home.dart';
+import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/team.dart';
 import 'package:zai_system/model/courses_model.dart';

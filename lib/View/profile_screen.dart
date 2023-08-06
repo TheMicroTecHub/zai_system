@@ -8,8 +8,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart' hide Badge;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:zai_system/Components/home_screen.dart';
-
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/model/current_appuser.dart';
 import 'package:zai_system/Widget/round_button.dart';
@@ -220,7 +218,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       padding: const EdgeInsets.symmetric(vertical: 30),
                       child: InkWell(
                         onTap: () async {
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx)=>const EmailVerificationScreen()));
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (ctx) =>
+                                      const EmailVerificationScreen()));
                         },
                         child: Align(
                           alignment: Alignment.center,
@@ -238,8 +240,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                             child: const Padding(
-                              padding:
-                              EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 25),
                               child: Text(
                                 "Verify",
                                 style: TextStyle(

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/View/detailscreen.dart';
 import 'package:zai_system/View/drawer.dart';
-import 'package:zai_system/View/home.dart';
+import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/model/company_model.dart';
 
