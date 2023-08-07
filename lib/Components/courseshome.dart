@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/model/courses_model.dart';
-import 'package:get/get.dart';
-import 'package:zai_system/View/detail_course.dart';
+// import 'package:get/get.dart';
+// import 'package:zai_system/View/detail_course.dart';
 
 class CoursesHome extends StatefulWidget {
   const CoursesHome({super.key});
@@ -22,11 +22,11 @@ class _CoursesHomeState extends State<CoursesHome> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: const Text("Courses",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color(0xFFE4393C),
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold)),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color(0xFFE4393C),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold)),
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
@@ -44,170 +44,160 @@ class _CoursesHomeState extends State<CoursesHome> {
           child: Table(
             defaultColumnWidth: FixedColumnWidth(160.0),
             children: [
-              TableRow(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Grphic Design',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Grphic Design',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Angular',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Angular',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
-
+                  ),
+                ),
               ]),
-              TableRow(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Java',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'JavaScript',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ]),
-              TableRow(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'WordPress',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Java',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'App Dev',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'JavaScript',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
                   ),
-                ]
-              ),
-              TableRow(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'React JS',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'ASP Net',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ]),
-              TableRow(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Frontend Dev',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Python',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ]),
-              TableRow(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Node JS',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                ),
+              ]),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'WordPress',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Block Chain',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'App Dev',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
                   ),
-                ]
-              ),
-              TableRow(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Vue JS',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
+                ),
+              ]),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'React JS',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Flutter',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                      ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'ASP Net',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
-                  ]),
+                  ),
+                ),
+              ]),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Frontend Dev',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Python',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ]),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Node JS',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Block Chain',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ]),
+              TableRow(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Vue JS',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Flutter',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ]),
             ],
           ),
         ),
@@ -215,8 +205,8 @@ class _CoursesHomeState extends State<CoursesHome> {
           padding: const EdgeInsets.symmetric(vertical: 30),
           child: InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Courses()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Courses()));
             },
             child: Align(
               alignment: Alignment.center,
@@ -234,8 +224,7 @@ class _CoursesHomeState extends State<CoursesHome> {
                   ),
                 ),
                 child: const Padding(
-                  padding:
-                  EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                   child: Text(
                     "Courses we offer",
                     style: TextStyle(
