@@ -12,8 +12,8 @@ class _CarouselState extends State<Carousel> {
   @override
   Widget build(BuildContext context) {
     return ImageSlideshow(
-      width: double.infinity,
-      height: 250,
+      width: 400,
+      height: 265,
       initialPage: 0,
       indicatorColor: Colors.red,
       indicatorBackgroundColor: Colors.grey,
@@ -64,7 +64,6 @@ class _CarouselState extends State<Carousel> {
           ),
         ),
         Container(
-          // height: 300,
           width: MediaQuery.of(context).size.width,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -80,7 +79,7 @@ class _CarouselState extends State<Carousel> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +108,6 @@ class _CarouselState extends State<Carousel> {
           ),
         ),
         Container(
-          // height: 300,
           width: MediaQuery.of(context).size.width,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -125,7 +123,7 @@ class _CarouselState extends State<Carousel> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,

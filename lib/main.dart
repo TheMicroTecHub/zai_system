@@ -6,6 +6,11 @@ import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/loginscreen.dart';
 import 'package:zai_system/View/signup.dart';
 import 'package:zai_system/View/splashscreen.dart';
+import 'package:zai_system/View/hcm360.dart';
+import 'package:zai_system/View/Courses_Page.dart';
+import 'package:zai_system/View/team.dart';
+import 'package:zai_system/View/profile_screen.dart';
+import 'package:zai_system/View/services.dart';
 import 'package:zai_system/firebase_options.dart';
 
 void main() async {
@@ -32,6 +37,11 @@ class MyApp extends StatelessWidget {
           GetPage(name: "/signup", page: () => const SignUpScreen()),
           GetPage(name: "/login", page: () => const LoginScreen()),
           GetPage(name: "/forgotpassword", page: () => const ForgotPScreen()),
+          GetPage(name: "/hcm", page: () => const hcm()),
+          GetPage(name: "/courses", page: () => const Courses()),
+          GetPage(name: "/team", page: () => Team()),
+          GetPage(name: "/profile", page: () => const ProfileScreen()),
+          GetPage(name: "/services", page: () => const Services()),
         ]);
   }
 }

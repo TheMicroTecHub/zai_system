@@ -43,7 +43,7 @@ class _HcmHomeState extends State<HcmHome> {
               ),
               Padding(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.black,
@@ -54,8 +54,10 @@ class _HcmHomeState extends State<HcmHome> {
                       children: [
                         InkWell(
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Payroll()))
+                              Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Payroll()))
                                   .then((value) => setState(() {}));
                             },
                             child: Column(
@@ -89,7 +91,7 @@ class _HcmHomeState extends State<HcmHome> {
               ),
               Padding(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.black,
@@ -100,8 +102,10 @@ class _HcmHomeState extends State<HcmHome> {
                       children: [
                         InkWell(
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Attendance()))
+                              Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Attendance()))
                                   .then((value) => setState(() {}));
                             },
                             child: Column(
@@ -135,7 +139,7 @@ class _HcmHomeState extends State<HcmHome> {
               ),
               Padding(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.black,
@@ -146,8 +150,10 @@ class _HcmHomeState extends State<HcmHome> {
                       children: [
                         InkWell(
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => LetterFroms()))
+                              Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => LetterFroms()))
                                   .then((value) => setState(() {}));
                             },
                             child: Column(
@@ -181,7 +187,7 @@ class _HcmHomeState extends State<HcmHome> {
               ),
               Padding(
                 padding:
-                const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.black,
@@ -192,8 +198,10 @@ class _HcmHomeState extends State<HcmHome> {
                       children: [
                         InkWell(
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => AllSolutions()))
+                              Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => AllSolutions()))
                                   .then((value) => setState(() {}));
                             },
                             child: Column(
@@ -230,7 +238,7 @@ class _HcmHomeState extends State<HcmHome> {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => hrm()));
+                        MaterialPageRoute(builder: (context) => hcm()));
                   },
                   child: Align(
                     alignment: Alignment.center,
@@ -249,7 +257,7 @@ class _HcmHomeState extends State<HcmHome> {
                       ),
                       child: const Padding(
                         padding:
-                        EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 25),
                         child: Text(
                           "Read More",
                           style: TextStyle(

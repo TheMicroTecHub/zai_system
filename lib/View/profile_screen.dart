@@ -13,6 +13,7 @@ import 'package:zai_system/model/current_appuser.dart';
 import 'package:zai_system/Widget/round_button.dart';
 import 'package:zai_system/Widget/constants.dart';
 import 'package:zai_system/View/email_verification.dart';
+import 'package:zai_system/View/drawer.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -136,6 +137,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           centerTitle: true,
           backgroundColor: Colors.black,
         ),
+        drawer: const MyDrawer(),
         body: Container(
           child: Padding(
             padding: const EdgeInsets.only(top: 70.0),

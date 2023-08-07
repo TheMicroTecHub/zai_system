@@ -13,14 +13,14 @@ import 'package:zai_system/View/Letter&Forms.dart';
 import 'package:zai_system/View/All_Solutions.dart';
 
 // ignore: must_be_immutable
-class hrm extends StatefulWidget {
-  const hrm({super.key});
+class hcm extends StatefulWidget {
+  const hcm({super.key});
 
   @override
-  State<hrm> createState() => _hrmState();
+  State<hcm> createState() => _hcmState();
 }
 
-class _hrmState extends State<hrm> {
+class _hcmState extends State<hcm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

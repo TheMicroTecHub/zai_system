@@ -41,7 +41,7 @@ class _FooterState extends State<Footer> {
               child: Column(
                 children: [
                   const Image(
-                    image: AssetImage("assests/logo.png"),
+                    image: AssetImage("assests/logowhite.png"),
                     width: 100,
                     height: 100,
                   ),
@@ -51,9 +51,9 @@ class _FooterState extends State<Footer> {
                       "Zai Systems a software company for those professionals who seek passion in the world of IT. Zai Systems integrates technology and human potential to provide intelligent business solutions for entrepreneurs and enterprises.",
                       textAlign: TextAlign.justify,
                       style: TextStyle(
-                          color: Colors.grey.shade400,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal,
+                        color: Colors.grey.shade400,
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
                       ),
                     ),
                   ),
@@ -273,17 +273,13 @@ class _FooterState extends State<Footer> {
                                 if (Platform.isAndroid) {
                                   var fbUrl =
                                       "https://www.zaisystems.com"; //for android
-                                  launchFacebook(
-                                      fbUrl,
-                                      "https://www.zaisystems.com"
-                                          .toString());
+                                  launchFacebook(fbUrl,
+                                      "https://www.zaisystems.com".toString());
                                 } else if (Platform.isIOS) {
                                   var fbUrl =
                                       "https://www.zaisystems.com"; //for IOS
-                                  launchFacebook(
-                                      fbUrl,
-                                      "https://www.zaisystems.com"
-                                          .toString());
+                                  launchFacebook(fbUrl,
+                                      "https://www.zaisystems.com".toString());
                                 }
                               },
                               child: Image.asset(

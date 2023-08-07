@@ -2,13 +2,9 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:zai_system/View/Courses_Page.dart';
-import 'package:zai_system/View/home_screen.dart';
 import 'package:zai_system/View/loginscreen.dart';
-import 'package:zai_system/View/profile_screen.dart';
-import 'package:zai_system/View/team.dart';
-import 'package:zai_system/View/hcm360.dart';
 import 'package:zai_system/model/current_appuser.dart';
+import 'package:get/get.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -71,11 +67,7 @@ class _MyDrawerState extends State<MyDrawer> {
             const SizedBox(height: 30.0),
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomeScreen()))
-                      .then((value) => setState(() {}));
+                  Get.offNamed("/home");
                 },
                 child: _buildRow(Icons.home, "Home")),
             _buildDivider(),
@@ -84,9 +76,7 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const hrm()))
-                      .then((value) => setState(() {}));
+                  Get.offNamed("/hcm");
                 },
                 child: _buildRow(Icons.design_services, "HCM 360°")),
             _buildDivider(),
@@ -95,11 +85,16 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Courses()))
-                      .then((value) => setState(() {}));
+                  Get.offNamed("/services");
+                },
+                child: _buildRow(Icons.miscellaneous_services, "Services")),
+            _buildDivider(),
+            const SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
+                  Get.offNamed("/courses");
                 },
                 child: _buildRow(Icons.my_library_books_sharp, "IT Training")),
             _buildDivider(),
@@ -108,9 +103,7 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Team()))
-                      .then((value) => setState(() {}));
+                  Get.offNamed("/team");
                 },
                 child: _buildRow(Icons.group, "Team")),
             _buildDivider(),
@@ -119,11 +112,7 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ProfileScreen()))
-                      .then((value) => setState(() {}));
+                  Get.offNamed("/profile");
                 },
                 child: _buildRow(Icons.person_pin, "My profile")),
             _buildDivider(),
