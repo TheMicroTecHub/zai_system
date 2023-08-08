@@ -11,10 +11,11 @@ class Carousel extends StatefulWidget {
 class _CarouselState extends State<Carousel> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
       child: ImageSlideshow(
         width: 400,
-        height: 257,
+        height: 250,
         initialPage: 0,
         indicatorColor: Colors.red,
         indicatorBackgroundColor: Colors.grey,
@@ -23,7 +24,7 @@ class _CarouselState extends State<Carousel> {
           Container(
             width: MediaQuery.of(context).size.width,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(top: 10),
               child: Container(
                 child: Stack(children: [
                   ClipRRect(
@@ -67,7 +68,7 @@ class _CarouselState extends State<Carousel> {
           Container(
             width: MediaQuery.of(context).size.width,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(top: 10),
               child: Container(
                 child: Stack(children: [
                   ClipRRect(
@@ -101,7 +102,7 @@ class _CarouselState extends State<Carousel> {
                                 color: Colors.grey.shade300,
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
-                          )
+                          ),
                         ]),
                   ),
                 ]),
@@ -111,7 +112,7 @@ class _CarouselState extends State<Carousel> {
           Container(
             width: MediaQuery.of(context).size.width,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(top: 10),
               child: Container(
                 child: Stack(children: [
                   ClipRRect(
@@ -153,10 +154,9 @@ class _CarouselState extends State<Carousel> {
             ),
           ),
           Container(
-            // height: 300,
             width: MediaQuery.of(context).size.width,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.only(top: 10),
               child: Container(
                 child: Stack(children: [
                   ClipRRect(
