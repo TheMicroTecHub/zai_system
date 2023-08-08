@@ -45,10 +45,12 @@ class _AboutCompanyState extends State<AboutCompany> {
               indicatorBackgroundColor: Colors.grey,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Column(
@@ -80,10 +82,12 @@ class _AboutCompanyState extends State<AboutCompany> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Column(
@@ -115,10 +119,12 @@ class _AboutCompanyState extends State<AboutCompany> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Column(
@@ -143,7 +149,8 @@ class _AboutCompanyState extends State<AboutCompany> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.normal),
                           ),
-                          const Image(image: AssetImage("assests/schedule.png")),
+                          const Image(
+                              image: AssetImage("assests/schedule.png")),
                         ],
                       ),
                     ),
