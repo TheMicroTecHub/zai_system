@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:zai_system/Components/getintouch.dart';
 
 class Payroll extends StatefulWidget {
   const Payroll({super.key});
@@ -85,7 +86,7 @@ class _PayrollState extends State<Payroll> {
                 ),
                 ImageSlideshow(
                     width: 600,
-                    height: 250,
+                    height: 300,
                     initialPage: 0,
                     indicatorColor: Colors.red,
                     indicatorBackgroundColor: Colors.grey,
@@ -101,14 +102,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Payroll Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Payroll Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -137,14 +146,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Attendance Tracking",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Attendance Tracking",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -173,14 +190,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Customizable Leave Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Customizable Leave Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -209,14 +234,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Employee Self-Service",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Employee Self-Service",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -245,14 +278,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Performance Evaluation",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Performance Evaluation",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -281,14 +322,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Job Portal",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Job Portal",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -317,14 +366,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Task Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Task Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -353,14 +410,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Letters & Forms",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Letters & Forms",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -389,14 +454,22 @@ class _PayrollState extends State<Payroll> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Loans Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Payroll()));
+                                    },
+                                    child: Text(
+                                      "Loans Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -647,6 +720,7 @@ class _PayrollState extends State<Payroll> {
                     ),
                   ),
                 ),
+                const GetInTouch(),
                 Container(
                     decoration: const BoxDecoration(color: Colors.black),
                     child: Footer()),

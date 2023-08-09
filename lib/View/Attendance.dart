@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
+import 'package:zai_system/Components/getintouch.dart';
 
 class Attendance extends StatefulWidget {
   const Attendance({super.key});
@@ -273,6 +274,7 @@ class _AttendanceState extends State<Attendance> {
                     ),
                   ),
                 ),
+                const GetInTouch(),
                 Container(
                     decoration: const BoxDecoration(color: Colors.black),
                     child: Footer()),

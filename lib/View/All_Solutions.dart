@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:zai_system/Components/getintouch.dart';
 
 class AllSolutions extends StatefulWidget {
   const AllSolutions({super.key});
@@ -75,7 +76,7 @@ class _AllSolutionsState extends State<AllSolutions> {
                 ),
                 ImageSlideshow(
                     width: 600,
-                    height: 250,
+                    height: 300,
                     initialPage: 0,
                     indicatorColor: Colors.red,
                     indicatorBackgroundColor: Colors.grey,
@@ -91,14 +92,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Payroll Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Payroll Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -127,14 +137,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Attendance Tracking",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Attendance Tracking",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -163,14 +182,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Customizable Leave Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Customizable Leave Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -199,14 +227,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Employee Self-Service",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Employee Self-Service",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -235,14 +272,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Performance Evaluation",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Performance Evaluation",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -271,14 +317,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Job Portal",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Job Portal",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -307,14 +362,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Task Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Task Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -343,14 +407,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Letters & Forms",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Letters & Forms",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -379,14 +452,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Loans Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Loans Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -415,14 +497,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Benefits & Expenses Tracking",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Benefits & Expenses Tracking",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -451,14 +542,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Custody Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Custody Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -487,14 +587,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Work Days Notice and Warning Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Work Days Notice and Warning Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -523,14 +632,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Workflow & Approvals",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Workflow & Approvals",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -559,14 +677,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Memo Communication",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Memo Communication",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -595,14 +722,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Decision Management",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Decision Management",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -631,14 +767,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "End-of-Service",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "End-of-Service",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -667,14 +812,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Insightful Dashboard",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Insightful Dashboard",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -703,14 +857,23 @@ class _AllSolutionsState extends State<AllSolutions> {
                             padding: const EdgeInsets.all(15.0),
                             child: Column(
                               children: [
-                                const Align(
+                                Align(
                                   alignment: Alignment.center,
-                                  child: Text(
-                                    "Automated Rules & Regulations",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  AllSolutions()));
+                                    },
+                                    child: Text(
+                                      "Automated Rules & Regulations",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -799,6 +962,7 @@ class _AllSolutionsState extends State<AllSolutions> {
                     ),
                   ),
                 ),
+                const GetInTouch(),
                 Container(
                     decoration: const BoxDecoration(color: Colors.black),
                     child: Footer()),

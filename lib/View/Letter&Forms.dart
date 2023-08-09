@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
+import 'package:zai_system/Components/getintouch.dart';
 
 class LetterFroms extends StatefulWidget {
   const LetterFroms({super.key});
@@ -196,6 +197,7 @@ class _LetterFromsState extends State<LetterFroms> {
                     ),
                   ),
                 ),
+                const GetInTouch(),
                 Container(
                     decoration: const BoxDecoration(color: Colors.black),
                     child: Footer()),
