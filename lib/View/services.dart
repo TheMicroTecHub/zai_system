@@ -139,13 +139,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "User Experience Design",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -153,6 +146,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "User Experience Design",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -184,13 +184,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "Managed Cloud Services",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -198,6 +191,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "Managed Cloud Services",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -229,13 +229,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "DevOps",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -243,6 +236,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "DevOps",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -274,13 +274,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "Web and Mobile",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -288,6 +281,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "Web and Mobile",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -319,13 +319,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "E-commerce",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -333,6 +326,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "E-commerce",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -364,13 +364,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "Bespoke IT Solutions for Business",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -378,6 +371,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "Bespoke IT Solutions for Business",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -409,13 +409,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "Data Analytics",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -423,6 +416,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "Data Analytics",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -454,13 +454,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "Business Intelligence",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -468,6 +461,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "Business Intelligence",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -499,13 +499,6 @@ class _ServicesState extends State<Services> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: TextButton(
-                                    child: Text(
-                                      "Information Strategy",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -513,6 +506,13 @@ class _ServicesState extends State<Services> {
                                               builder: (context) =>
                                                   Services()));
                                     },
+                                    child: Text(
+                                      "Information Strategy",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
