@@ -11,6 +11,7 @@ import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/View/team.dart';
 import 'package:zai_system/View/profile_screen.dart';
 import 'package:zai_system/View/services.dart';
+import 'package:zai_system/View/contact_us.dart';
 import 'package:zai_system/firebase_options.dart';
 
 void main() async {
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: "/team", page: () => Team()),
           GetPage(name: "/profile", page: () => const ProfileScreen()),
           GetPage(name: "/services", page: () => const Services()),
+          GetPage(name: "/contact", page: () => const ContactUsScreen()),
         ]);
   }
 }

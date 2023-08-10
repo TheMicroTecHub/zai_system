@@ -322,7 +322,7 @@ class _FooterState extends State<Footer> {
                             fontWeight: FontWeight.normal),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

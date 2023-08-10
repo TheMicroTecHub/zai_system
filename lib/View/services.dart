@@ -3,6 +3,7 @@ import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:zai_system/Components/getintouch.dart';
+import 'package:zai_system/View/contact_us.dart';
 
 class Services extends StatefulWidget {
   const Services({super.key});
@@ -81,7 +82,8 @@ class _ServicesState extends State<Services> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Services()));
+                                            builder: (context) =>
+                                                ContactUsScreen()));
                                   },
                                 )),
                           ),

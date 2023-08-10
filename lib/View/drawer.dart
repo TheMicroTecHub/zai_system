@@ -112,6 +112,15 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             InkWell(
                 onTap: () {
+                  Get.offNamed("/contact");
+                },
+                child: _buildRow(Icons.contact_page, "Contact Us")),
+            _buildDivider(),
+            const SizedBox(
+              height: 20,
+            ),
+            InkWell(
+                onTap: () {
                   Get.offNamed("/profile");
                 },
                 child: _buildRow(Icons.person_pin, "My profile")),

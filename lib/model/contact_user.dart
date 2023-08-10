@@ -1,22 +1,24 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AppUser {
-  String? uid;
-  String? profileUrl;
+  Timestamp? uid;
+
   String? email;
   String? name;
-  String? image;
   Timestamp? createdAt;
   String? phone;
+  String? subject;
+  String? message;
+  // String? city;
 
-  AppUser({
-    this.uid,
-    this.email,
-    this.name,
-    this.createdAt,
-    this.image,
-    this.phone,
-  });
+  AppUser(
+      {this.uid,
+      this.email,
+      this.name,
+      this.createdAt,
+      this.phone,
+      this.subject,
+      this.message});
 
   // receiving data from server
   static AppUser fromMap(Map<String, dynamic> map) {
@@ -25,20 +27,22 @@ class AppUser {
       email: map['email'],
       name: map['name'],
       createdAt: map['created_at'],
-      image: map['image'],
       phone: map['phone'],
+      subject: map['subject'],
+      message: map['message'],
     );
   }
 
   // sending data to our server
   static Map<String, dynamic> toMap(AppUser userM) {
     return {
-      'uid': userM.uid,
+      'uid': DateTime.now().microsecondsSinceEpoch.toString(),
       'email': userM.email,
       'name': userM.name,
       'created_at': Timestamp.now(),
-      'image': userM.image,
       'phone': userM.phone,
+      'subject': userM.subject,
+      'message': userM.message,
     };
   }
 }
