@@ -46,7 +46,7 @@ class _AboutCompanyState extends State<AboutCompany> {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                      const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.black,
