@@ -78,6 +78,26 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
       }
     }
 
+    void launchGmail({
+      required String mail,
+    }) async {
+      String url() {
+        if (Platform.isAndroid) {
+          // add the [https]
+          return "mailto:$mail"; // new line
+        } else {
+          // add the [https]
+          return "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=$mail"; // new line
+        }
+      }
+
+      if (await canLaunch(url())) {
+        await launch(url());
+      } else {
+        throw 'Could not launch ${url()}';
+      }
+    }
+
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
@@ -92,670 +112,657 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
         drawer: MyDrawer(),
         body: Container(
           child: SingleChildScrollView(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Column(
-                      children: [
-                        Text("Contact Us",
-                            style: TextStyle(
-                                color: Color(0xFFE4393C),
-                                fontSize: 50,
-                                fontWeight: FontWeight.bold)),
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                            "You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.grey.shade400,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                  ),
-                  Divider(
-                    color: Colors.white,
-                    thickness: 1,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Column(
-                      children: [
-                        Text("Contact Form",
-                            style: TextStyle(
-                                color: Color(0xFFE4393C),
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold)),
-                        const SizedBox(
-                          height: 30,
-                        ),
-                        Text("Our Contact Address",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Column(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Column(
                     children: [
-                      Text("Mails",
-                          textAlign: TextAlign.left,
+                      Text("Contact Us",
+                          style: TextStyle(
+                              color: Color(0xFFE4393C),
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold)),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                          "You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.grey.shade400,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                ),
+                Divider(
+                  color: Colors.white,
+                  thickness: 1,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Column(
+                    children: [
+                      Text("Contact Form",
+                          style: TextStyle(
+                              color: Color(0xFFE4393C),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold)),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Text("Our Contact Address",
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 40,
                               fontWeight: FontWeight.bold)),
-                      ImageSlideshow(
-                        width: 270,
-                        height: 200,
-                        initialPage: 0,
-                        indicatorColor: Colors.red,
-                        indicatorBackgroundColor: Colors.grey,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0, top: 10.0, right: 10.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assests/website.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "CEO",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "ceo@zaisystems.com",
-                                        style: TextStyle(
-                                            color: Colors.grey.shade400,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.normal),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0, top: 10.0, right: 10.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assests/website.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "HR",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "hr@zaisystems.com",
-                                        style: TextStyle(
-                                            color: Colors.grey.shade400,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.normal),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0, top: 10.0, right: 10.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assests/website.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "Our Emil Address",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "zaisystems@gmail.com",
-                                        style: TextStyle(
-                                            color: Colors.grey.shade400,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.normal),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0, top: 10.0, right: 10.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assests/website.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "Our Info",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ContactUsScreen()));
-                                      },
-                                      child: Text(
-                                        "info@zaisystems.com",
-                                        style: TextStyle(
-                                            color: Colors.grey.shade400,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.normal),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Column(
-                    children: [
-                      Text("Phone/Address",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40,
-                              fontWeight: FontWeight.bold)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.headphones,
-                            size: 30,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Column(
+                  children: [
+                    Text("Mails",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
                             color: Colors.white,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "Contact Phone Number",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              TextButton(
-                                onPressed: () => {
-                                  launchWhatsApp(
-                                      phone: 03332959077, message: 'Hello'),
-                                },
-                                child: Text(
-                                  "0334-6906960",
-                                  style: TextStyle(
-                                      color: Colors.grey.shade400,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.maps_home_work,
-                            size: 30,
-                            color: Colors.white,
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "Our Location",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "Lahore, Pakistan",
-                                style: TextStyle(
-                                    color: Colors.grey.shade400,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            "Follow Us",
-                            style: TextStyle(
-                                color: Colors.grey.shade400,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const SizedBox(width: 5),
-                                InkWell(
-                                  onTap: () {
-                                    if (Platform.isAndroid) {
-                                      var fbUrl =
-                                          "https://www.facebook.com/zaisystems"; //for android
-                                      launchFacebook(
-                                          fbUrl,
-                                          "https://www.facebook.com/zaisystems"
-                                              .toString());
-                                    } else if (Platform.isIOS) {
-                                      var fbUrl =
-                                          "https://www.facebook.com/zaisystems"; //for IOS
-                                      launchFacebook(
-                                          fbUrl,
-                                          "https://www.facebook.com/zaisystems"
-                                              .toString());
-                                    }
-                                  },
-                                  child: Image.asset(
-                                    "assests/facebook.png",
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold)),
+                    ImageSlideshow(
+                      width: 280,
+                      height: 160,
+                      initialPage: 0,
+                      indicatorColor: Colors.red,
+                      indicatorBackgroundColor: Colors.grey,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10.0, top: 10.0, right: 10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assests/website.png",
                                     height: 30,
                                     width: 30,
                                   ),
-                                ),
-                                const SizedBox(width: 5),
-                                InkWell(
-                                  onTap: () {
-                                    if (Platform.isAndroid) {
-                                      var fbUrl =
-                                          "https://www.instagram.com/zaisystems/"; //for android
-                                      launchFacebook(
-                                          fbUrl,
-                                          "https://www.instagram.com/zaisystems/"
-                                              .toString());
-                                    } else if (Platform.isIOS) {
-                                      var fbUrl =
-                                          "https://www.instagram.com/zaisystems/"; //for IOS
-                                      launchFacebook(
-                                          fbUrl,
-                                          "https://www.instagram.com/zaisystems/"
-                                              .toString());
-                                    }
-                                  },
-                                  child: Image.asset(
-                                    "assests/insta.png",
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "CEO",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      launchGmail(
+                                        mail: "ceo@zaisystems.com",
+                                      );
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ContactUsScreen()));
+                                    },
+                                    child: Text(
+                                      "ceo@zaisystems.com",
+                                      style: TextStyle(
+                                          color: Colors.grey.shade400,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10.0, top: 10.0, right: 10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assests/website.png",
                                     height: 30,
                                     width: 30,
                                   ),
-                                ),
-                                const SizedBox(width: 5),
-                                InkWell(
-                                  onTap: () {
-                                    if (Platform.isAndroid) {
-                                      var fbUrl =
-                                          "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"; //for android
-                                      launchFacebook(
-                                          fbUrl,
-                                          "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"
-                                              .toString());
-                                    } else if (Platform.isIOS) {
-                                      var fbUrl =
-                                          "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"; //for IOS
-                                      launchFacebook(
-                                          fbUrl,
-                                          "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"
-                                              .toString());
-                                    }
-                                  },
-                                  child: Image.asset(
-                                    "assests/linkedin.png",
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "HR",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      launchGmail(
+                                        mail: "hr@zaisystems.com",
+                                      );
+                                    },
+                                    child: Text(
+                                      "hr@zaisystems.com",
+                                      style: TextStyle(
+                                          color: Colors.grey.shade400,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10.0, top: 10.0, right: 10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assests/website.png",
                                     height: 30,
                                     width: 30,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Our Emil Address",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      launchGmail(
+                                        mail: "zaisystems@gmail.com",
+                                      );
+                                    },
+                                    child: Text(
+                                      "zaisystems@gmail.com",
+                                      style: TextStyle(
+                                          color: Colors.grey.shade400,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Form(
-                    key: _formKey,
-                    child: Column(children: [
-                      Padding(
-                        padding: apppaddings,
-                        child: TextFormField(
-                          enabled: !load,
-                          controller: namecontroller,
-                          keyboardType: TextInputType.text,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'required';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            hintText: 'Your Name',
-                            hintStyle: const TextStyle(
-                                fontFamily: 'Rubik Medium', fontSize: 16),
-                            fillColor: const Color(0xffF8F9FA),
-                            filled: true,
-                            prefixIcon: const Icon(
-                              Icons.person_outlined,
-                              color: iconcolor,
-                            ),
-                            focusedBorder: fbbutton,
-                            enabledBorder: ebbutton,
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
-                        padding: apppaddings,
-                        child: TextFormField(
-                          enabled: !load,
-                          controller: emailcontroller,
-                          keyboardType: TextInputType.emailAddress,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'required';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            hintText: 'Email Address',
-                            hintStyle: const TextStyle(
-                                fontFamily: 'Rubik Medium', fontSize: 16),
-                            fillColor: const Color(0xffF8F9FA),
-                            filled: true,
-                            prefixIcon: const Icon(
-                              Icons.email_outlined,
-                              color: iconcolor,
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 10.0, top: 10.0, right: 10.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assests/website.png",
+                                    height: 30,
+                                    width: 30,
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Our Info",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      launchGmail(
+                                        mail: "info@zaisystems.com",
+                                      );
+                                    },
+                                    child: Text(
+                                      "info@zaisystems.com",
+                                      style: TextStyle(
+                                          color: Colors.grey.shade400,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                            focusedBorder: fbbutton,
-                            enabledBorder: ebbutton,
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
-                        padding: apppaddings,
-                        child: TextFormField(
-                          enabled: !load,
-                          controller: phoneNumberController,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Provide Contact in +92 format required';
-                            } else
-                              return null;
-                          },
-                          keyboardType: TextInputType.phone,
-                          decoration: InputDecoration(
-                            hintText: 'Phone Number',
-                            hintStyle: const TextStyle(
-                                fontFamily: 'Rubik Medium', fontSize: 16),
-                            fillColor: const Color(0xffF8F9FA),
-                            filled: true,
-                            prefixIcon: const Icon(
-                              Icons.perm_contact_cal_outlined,
-                              color: iconcolor,
-                            ),
-                            focusedBorder: fbbutton,
-                            enabledBorder: ebbutton,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
-                        padding: apppaddings,
-                        child: TextFormField(
-                          enabled: !load,
-                          controller: subjectController,
-                          keyboardType: TextInputType.text,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'required';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            hintText: 'Subject',
-                            hintStyle: const TextStyle(
-                                fontFamily: 'Rubik Medium', fontSize: 16),
-                            fillColor: const Color(0xffF8F9FA),
-                            filled: true,
-                            prefixIcon: const Icon(
-                              Icons.email_outlined,
-                              color: iconcolor,
-                            ),
-                            focusedBorder: fbbutton,
-                            enabledBorder: ebbutton,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
-                        padding: apppaddings,
-                        child: TextFormField(
-                          minLines: 1,
-                          maxLines: 5,
-                          enabled: !load,
-                          controller: messageController,
-                          keyboardType: TextInputType.text,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'required';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            hintText: 'Your Message',
-                            hintStyle: const TextStyle(
-                                fontFamily: 'Rubik Medium', fontSize: 16),
-                            fillColor: const Color(0xffF8F9FA),
-                            filled: true,
-                            prefixIcon: const Icon(
-                              Icons.email_outlined,
-                              color: iconcolor,
-                            ),
-                            focusedBorder: fbbutton,
-                            enabledBorder: ebbutton,
-                          ),
-                        ),
-                      ),
-                    ]),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Padding(
-                    padding: apppaddings,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        RoundButton(
-                          title: 'Submit Now',
-                          loading: load,
-                          onTap: load
-                              ? null
-                              : () async {
-                                  if (_formKey.currentState!.validate()) {
-                                    setState(() {
-                                      load = true;
-                                    });
-                                    await contactUs();
-                                  }
-                                },
-                        )
                       ],
                     ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Column(
+                  children: [
+                    Text("Phone/Address",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold)),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 10.0, top: 10.0, right: 10.0),
+                      child: Container(
+                        width: 350,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.headphones,
+                                    size: 30,
+                                    color: Colors.white,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        "Contact Phone Number",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      TextButton(
+                                        style: TextButton.styleFrom(
+                                          minimumSize: Size.zero,
+                                          padding: EdgeInsets.zero,
+                                          tapTargetSize:
+                                              MaterialTapTargetSize.shrinkWrap,
+                                        ),
+                                        onPressed: () => {
+                                          launchWhatsApp(
+                                              phone: 03346906960,
+                                              message: 'Hello'),
+                                        },
+                                        child: Text(
+                                          "0334-6906960",
+                                          style: TextStyle(
+                                              color: Colors.grey.shade400,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.normal),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.maps_home_work,
+                                    size: 30,
+                                    color: Colors.white,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        "Our Location",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "Lahore, Pakistan",
+                                        style: TextStyle(
+                                            color: Colors.grey.shade400,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.normal),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                              Column(
+                                children: [
+                                  Text(
+                                    "Follow Us",
+                                    style: TextStyle(
+                                        color: Colors.grey.shade400,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        const SizedBox(width: 5),
+                                        InkWell(
+                                          onTap: () {
+                                            if (Platform.isAndroid) {
+                                              var fbUrl =
+                                                  "https://www.facebook.com/zaisystems"; //for android
+                                              launchFacebook(
+                                                  fbUrl,
+                                                  "https://www.facebook.com/zaisystems"
+                                                      .toString());
+                                            } else if (Platform.isIOS) {
+                                              var fbUrl =
+                                                  "https://www.facebook.com/zaisystems"; //for IOS
+                                              launchFacebook(
+                                                  fbUrl,
+                                                  "https://www.facebook.com/zaisystems"
+                                                      .toString());
+                                            }
+                                          },
+                                          child: Image.asset(
+                                            "assests/facebook.png",
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 5),
+                                        InkWell(
+                                          onTap: () {
+                                            if (Platform.isAndroid) {
+                                              var fbUrl =
+                                                  "https://www.instagram.com/zaisystems/"; //for android
+                                              launchFacebook(
+                                                  fbUrl,
+                                                  "https://www.instagram.com/zaisystems/"
+                                                      .toString());
+                                            } else if (Platform.isIOS) {
+                                              var fbUrl =
+                                                  "https://www.instagram.com/zaisystems/"; //for IOS
+                                              launchFacebook(
+                                                  fbUrl,
+                                                  "https://www.instagram.com/zaisystems/"
+                                                      .toString());
+                                            }
+                                          },
+                                          child: Image.asset(
+                                            "assests/insta.png",
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 5),
+                                        InkWell(
+                                          onTap: () {
+                                            if (Platform.isAndroid) {
+                                              var fbUrl =
+                                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"; //for android
+                                              launchFacebook(
+                                                  fbUrl,
+                                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"
+                                                      .toString());
+                                            } else if (Platform.isIOS) {
+                                              var fbUrl =
+                                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"; //for IOS
+                                              launchFacebook(
+                                                  fbUrl,
+                                                  "https://www.linkedin.com/company/zai-systems-smc-private-limited/mycompany/"
+                                                      .toString());
+                                            }
+                                          },
+                                          child: Image.asset(
+                                            "assests/linkedin.png",
+                                            height: 30,
+                                            width: 30,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Form(
+                  key: _formKey,
+                  child: Column(children: [
+                    Padding(
+                      padding: apppaddings,
+                      child: TextFormField(
+                        enabled: !load,
+                        controller: namecontroller,
+                        keyboardType: TextInputType.text,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'required';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          hintText: 'Your Name',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'Rubik Medium', fontSize: 16),
+                          fillColor: const Color(0xffF8F9FA),
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.person_outlined,
+                            color: iconcolor,
+                          ),
+                          focusedBorder: fbbutton,
+                          enabledBorder: ebbutton,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: apppaddings,
+                      child: TextFormField(
+                        enabled: !load,
+                        controller: emailcontroller,
+                        keyboardType: TextInputType.emailAddress,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'required';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          hintText: 'Email Address',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'Rubik Medium', fontSize: 16),
+                          fillColor: const Color(0xffF8F9FA),
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.email_outlined,
+                            color: iconcolor,
+                          ),
+                          focusedBorder: fbbutton,
+                          enabledBorder: ebbutton,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: apppaddings,
+                      child: TextFormField(
+                        enabled: !load,
+                        controller: phoneNumberController,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'Provide Contact in +92 format required';
+                          } else
+                            return null;
+                        },
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                          hintText: 'Phone Number',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'Rubik Medium', fontSize: 16),
+                          fillColor: const Color(0xffF8F9FA),
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.perm_contact_cal_outlined,
+                            color: iconcolor,
+                          ),
+                          focusedBorder: fbbutton,
+                          enabledBorder: ebbutton,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: apppaddings,
+                      child: TextFormField(
+                        enabled: !load,
+                        controller: subjectController,
+                        keyboardType: TextInputType.text,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'required';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          hintText: 'Subject',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'Rubik Medium', fontSize: 16),
+                          fillColor: const Color(0xffF8F9FA),
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.email_outlined,
+                            color: iconcolor,
+                          ),
+                          focusedBorder: fbbutton,
+                          enabledBorder: ebbutton,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: apppaddings,
+                      child: TextFormField(
+                        minLines: 1,
+                        maxLines: 5,
+                        enabled: !load,
+                        controller: messageController,
+                        keyboardType: TextInputType.text,
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'required';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          hintText: 'Your Message',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'Rubik Medium', fontSize: 16),
+                          fillColor: const Color(0xffF8F9FA),
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.email_outlined,
+                            color: iconcolor,
+                          ),
+                          focusedBorder: fbbutton,
+                          enabledBorder: ebbutton,
+                        ),
+                      ),
+                    ),
+                  ]),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: apppaddings,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      RoundButton(
+                        title: 'Submit Now',
+                        loading: load,
+                        onTap: load
+                            ? null
+                            : () async {
+                                if (_formKey.currentState!.validate()) {
+                                  setState(() {
+                                    load = true;
+                                  });
+                                  await contactUs();
+                                }
+                              },
+                      )
+                    ],
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const GetInTouch(),
-                  Container(
-                      decoration: const BoxDecoration(color: Colors.black),
-                      child: Footer()),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const GetInTouch(),
+                Container(
+                    decoration: const BoxDecoration(color: Colors.black),
+                    child: Footer()),
+              ],
             ),
           ),
         ),

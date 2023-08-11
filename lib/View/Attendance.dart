@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:zai_system/Components/getintouch.dart';
+import 'package:zai_system/View/demo.dart';
 
 class Attendance extends StatefulWidget {
   const Attendance({super.key});
@@ -268,7 +269,7 @@ class _AttendanceState extends State<Attendance> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Attendance()));
+                                      builder: (context) => DemoScreen()));
                             },
                           )),
                     ),

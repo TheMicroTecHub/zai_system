@@ -3,6 +3,7 @@ import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:zai_system/Components/getintouch.dart';
+import 'package:zai_system/View/demo.dart';
 
 class Payroll extends StatefulWidget {
   const Payroll({super.key});
@@ -714,7 +715,7 @@ class _PayrollState extends State<Payroll> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Payroll()));
+                                      builder: (context) => DemoScreen()));
                             },
                           )),
                     ),

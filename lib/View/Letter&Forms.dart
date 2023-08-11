@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:zai_system/Components/footer.dart';
 import 'package:zai_system/Components/getintouch.dart';
+import 'package:zai_system/View/demo.dart';
 
 class LetterFroms extends StatefulWidget {
   const LetterFroms({super.key});
@@ -191,7 +192,7 @@ class _LetterFromsState extends State<LetterFroms> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LetterFroms()));
+                                      builder: (context) => DemoScreen()));
                             },
                           )),
                     ),
