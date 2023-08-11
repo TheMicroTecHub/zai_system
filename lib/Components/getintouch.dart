@@ -56,6 +56,7 @@ class _GetInTouchState extends State<GetInTouch> {
                         ),
                         Text(
                           'You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.',
+                          textAlign: TextAlign.justify,
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20.0,
