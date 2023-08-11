@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:zai_system/Components/aboutcompany.dart';
 import 'package:zai_system/View/team.dart';
+import 'package:get/get.dart';
 
 class Companyhome extends StatefulWidget {
   const Companyhome({super.key});
@@ -72,6 +73,7 @@ class _CompanyhomeState extends State<Companyhome> {
               ),
               Text(
                 "\nIf you are worried about your new business then no need to worry because Zai Systems have ways out for all of your problems.\n \nZai Systems has a powerful combination of business experience and technological expertise providing clients best-in-className solutions, in software development projects. Zai Systems delivers high-quality, cost-effective, full lifecycle solutions for all sorts of development projects",
+                textAlign: TextAlign.justify,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
@@ -101,8 +103,7 @@ class _CompanyhomeState extends State<Companyhome> {
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Team()));
+                    Get.offNamed("/team");
                   },
                   child: Align(
                     alignment: Alignment.center,

@@ -211,11 +211,6 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       launchGmail(
                                         mail: "ceo@zaisystems.com",
                                       );
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  ContactUsScreen()));
                                     },
                                     child: Text(
                                       "ceo@zaisystems.com",

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:zai_system/View/Courses_Page.dart';
 import 'package:zai_system/model/courses_model.dart';
-// import 'package:get/get.dart';
-// import 'package:zai_system/View/detail_course.dart';
+import 'package:get/get.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class CoursesHome extends StatefulWidget {
   const CoursesHome({super.key});
@@ -32,6 +31,7 @@ class _CoursesHomeState extends State<CoursesHome> {
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             "\nZai Systems offers a variety of IT courses that cover the fundamentals of web development, cybersecurity, data science, cloud computing, and digital marketing. Students have access to a dedicated instructor and a supportive community of learners. \n",
+            textAlign: TextAlign.justify,
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.normal,
@@ -39,174 +39,606 @@ class _CoursesHomeState extends State<CoursesHome> {
             ),
           ),
         ),
-        Container(
-          margin: EdgeInsets.all(20),
-          child: Table(
-            defaultColumnWidth: FixedColumnWidth(160.0),
+        ImageSlideshow(
+            width: 600,
+            height: 350,
+            initialPage: 0,
+            indicatorColor: Colors.red,
+            indicatorBackgroundColor: Colors.grey,
             children: [
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Grphic Design',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Graphic Design",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/Graphics.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Angular',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Angular",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/Angular.PNG')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Java',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Java",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/java.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'JavaScript',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "JavaScript",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(
+                            image: AssetImage('assests/course/Javascript.PNG')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'WordPress',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Wordpress",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(
+                            image: AssetImage('assests/course/wordpress.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'App Dev',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "App Development",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(
+                            image: AssetImage(
+                                'assests/course/App_Development.PNG')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'React JS',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "React JS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/React.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'ASP Net',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "ASP Net",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/ASP_Net.PNG')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Frontend Dev',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Frontend Development",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/Frontend.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Python',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Python",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/Python.PNG')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Node JS',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Node JS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/NodeJS.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Block Chain',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Block Chain",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(
+                            image: AssetImage('assests/course/Blockchain.PNG')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-              TableRow(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Vue JS',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Vue JS",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/Vue_JS.PNG')),
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Flutter',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade900,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Flutter",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image(image: AssetImage('assests/course/flutter.jpg')),
+                      ],
                     ),
                   ),
                 ),
-              ]),
-            ],
-          ),
-        ),
+              ),
+            ]),
+        // Container(
+        //   margin: EdgeInsets.all(20),
+        //   child: Table(
+        //     defaultColumnWidth: FixedColumnWidth(160.0),
+        //     children: [
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Grphic Design',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Angular',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Java',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'JavaScript',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'WordPress',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'App Dev',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'React JS',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'ASP Net',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Frontend Dev',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Python',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Node JS',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Block Chain',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //       TableRow(children: [
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Vue JS',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //         Padding(
+        //           padding: const EdgeInsets.all(8.0),
+        //           child: Text(
+        //             'Flutter',
+        //             style: TextStyle(
+        //               fontSize: 20.0,
+        //               color: Colors.white,
+        //             ),
+        //           ),
+        //         ),
+        //       ]),
+        //     ],
+        //   ),
+        // ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 30),
           child: InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Courses()));
+              Get.offNamed("/courses");
             },
             child: Align(
               alignment: Alignment.center,
