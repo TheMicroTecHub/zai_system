@@ -5,8 +5,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:zai_system/Widget/constants.dart';
 import 'package:zai_system/Widget/round_button.dart';
 import 'package:zai_system/View/drawer.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'dart:io';
+import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DemoScreen extends StatefulWidget {
   const DemoScreen({Key? key}) : super(key: key);
@@ -24,6 +24,13 @@ class _DemoScreenState extends State<DemoScreen> {
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController companyController = TextEditingController();
   TextEditingController empController = TextEditingController();
+  TextEditingController recipientController =
+      TextEditingController(text: 'babarmis108@gmail.com');
+  TextEditingController subjectController =
+      TextEditingController(text: 'Demo Request');
+  TextEditingController bodyController = TextEditingController(
+    text: 'Hi, I would to request a demo',
+  );
 
   @override
   void dispose() {
@@ -238,7 +245,7 @@ class _DemoScreenState extends State<DemoScreen> {
                                 setState(() {
                                   load = true;
                                 });
-                                await DemoDetail();
+                                await send();
                               }
                             },
                     )
@@ -252,16 +259,30 @@ class _DemoScreenState extends State<DemoScreen> {
     );
   }
 
-  Future<void> DemoDetail() async {
+  Future<void> send() async {
     final name = namecontroller.text;
-    final email = emailcontroller.text;
+    final mail = emailcontroller.text;
     final number = phoneNumberController.text;
-    final subject = companyController.text;
-    final message = empController.text;
+    final company = companyController.text;
+    final employ = empController.text;
+    final Email email = Email(
+      body: bodyController.text,
+      subject: subjectController.text,
+      recipients: [recipientController.text],
+    );
+
+    String platformResponse;
+
+    try {
+      await FlutterEmailSender.send(email);
+      platformResponse = 'success';
+    } catch (error) {
+      platformResponse = error.toString();
+    }
 
     if (_formKey.currentState!.validate()) {
       sendEmail();
-      Fluttertoast.showToast(msg: "Email sent successfully");
+      Fluttertoast.showToast(msg: platformResponse);
     }
   }
 

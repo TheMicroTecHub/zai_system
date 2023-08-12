@@ -43,16 +43,15 @@ class _CoursesHomeState extends State<CoursesHome> {
             width: 600,
             height: 350,
             initialPage: 0,
-            indicatorColor: Colors.red,
-            indicatorBackgroundColor: Colors.grey,
+            indicatorColor: Colors.grey,
+            indicatorBackgroundColor: Colors.grey.shade400,
             children: [
               Padding(
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -80,9 +79,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -110,9 +108,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -140,9 +137,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -171,9 +167,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -202,9 +197,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -234,9 +228,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -264,9 +257,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -294,9 +286,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -324,9 +315,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -354,9 +344,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -384,9 +373,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -415,9 +403,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                 padding:
                     const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
                 child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -441,199 +428,8 @@ class _CoursesHomeState extends State<CoursesHome> {
                   ),
                 ),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey.shade900,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      children: [
-                        Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Flutter",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Image(image: AssetImage('assests/course/flutter.jpg')),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
             ]),
-        // Container(
-        //   margin: EdgeInsets.all(20),
-        //   child: Table(
-        //     defaultColumnWidth: FixedColumnWidth(160.0),
-        //     children: [
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Grphic Design',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Angular',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Java',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'JavaScript',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'WordPress',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'App Dev',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'React JS',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'ASP Net',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Frontend Dev',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Python',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Node JS',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Block Chain',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //       TableRow(children: [
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Vue JS',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //         Padding(
-        //           padding: const EdgeInsets.all(8.0),
-        //           child: Text(
-        //             'Flutter',
-        //             style: TextStyle(
-        //               fontSize: 20.0,
-        //               color: Colors.white,
-        //             ),
-        //           ),
-        //         ),
-        //       ]),
-        //     ],
-        //   ),
-        // ),
+
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 30),
           child: InkWell(
