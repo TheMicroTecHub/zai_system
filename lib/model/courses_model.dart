@@ -148,15 +148,5 @@ class model {
               'Vue.js is a JavaScript framework for building user interfaces (UIs) and single-page applications (SPAs).',
           rate: 2000,
         ),
-        model(
-          id: 13,
-          name: 'Flutter',
-          image: 'assests/course/flutter.jpg',
-          description:
-          'Flutter apps are written in Dart and compiled into native code for each platform. This means that Flutter apps are as fast and responsive as native apps. Flutter also supports hot reload, which allows developers to make changes to their code and see the changes reflected in the app instantly. This makes Flutter a very efficient development environment.',
-          Shortdescription:
-          'Flutter is based on the Dart programming language, which is a compiled language that is fast and efficient.',
-          rate: 2000,
-        ),
       ];
 }

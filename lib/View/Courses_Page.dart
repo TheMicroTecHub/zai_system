@@ -4,9 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/View/detail_course.dart';
 import 'package:zai_system/View/drawer.dart';
-import 'package:zai_system/View/home_screen.dart';
-import 'package:zai_system/View/profile_screen.dart';
-import 'package:zai_system/View/team.dart';
 import 'package:zai_system/model/courses_model.dart';
 
 // ignore: must_be_immutable
@@ -54,7 +51,7 @@ class Courses extends StatelessWidget {
                     ),
                     Container(
                       height: 80,
-                      width: 129,
+                      width: 180,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(40),
                         // color: Colors.white
@@ -98,7 +95,7 @@ class Courses extends StatelessWidget {
                   ]),
                   const Row(children: [
                     SizedBox(
-                      width: 270,
+                      width: 320,
                     ),
                     SizedBox(
                       width: 50,
