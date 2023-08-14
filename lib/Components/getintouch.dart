@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:io';
 
 class GetInTouch extends StatefulWidget {
   const GetInTouch({super.key});
@@ -8,6 +10,47 @@ class GetInTouch extends StatefulWidget {
 }
 
 class _GetInTouchState extends State<GetInTouch> {
+  void launchGmail({
+    required String mail,
+  }) async {
+    String url() {
+      if (Platform.isAndroid) {
+        // add the [https]
+        return "mailto:$mail"; // new line
+      } else {
+        // add the [https]
+        return "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=$mail"; // new line
+      }
+    }
+
+    if (await canLaunch(url())) {
+      await launch(url());
+    } else {
+      throw 'Could not launch ${url()}';
+    }
+  }
+
+  void launchWhatsApp({
+    required int phone,
+    required String message,
+  }) async {
+    String url() {
+      if (Platform.isAndroid) {
+        // add the [https]
+        return "https://wa.me/$phone/?text=${Uri.parse(message)}"; // new line
+      } else {
+        // add the [https]
+        return "https://api.whatsapp.com/send?phone=$phone=${Uri.parse(message)}"; // new line
+      }
+    }
+
+    if (await canLaunch(url())) {
+      await launch(url());
+    } else {
+      throw 'Could not launch ${url()}';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,10 +61,10 @@ class _GetInTouchState extends State<GetInTouch> {
               top: 50 / 2.0,
             ),
             child: Container(
-              height: 320.0,
+              height: 300.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
-                color: const Color.fromARGB(255, 48, 47, 47),
+                color: Colors.black,
                 boxShadow: [
                   const BoxShadow(
                     color: Colors.black26,
@@ -63,7 +106,7 @@ class _GetInTouchState extends State<GetInTouch> {
                               color: Colors.grey.shade400),
                         ),
                         const SizedBox(
-                          height: 40,
+                          height: 10,
                         ),
                         Column(
                           children: [
@@ -77,12 +120,19 @@ class _GetInTouchState extends State<GetInTouch> {
                                 const SizedBox(
                                   width: 10,
                                 ),
-                                Text(
-                                  'zaisystems@gmail.com',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                      color: Colors.grey.shade400),
+                                TextButton(
+                                  onPressed: () {
+                                    launchGmail(
+                                      mail: 'zaisystems@gmail.com',
+                                    );
+                                  },
+                                  child: Text(
+                                    'zaisystems@gmail.com',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                        color: Colors.grey.shade400),
+                                  ),
                                 ),
                               ],
                             ),
@@ -99,12 +149,24 @@ class _GetInTouchState extends State<GetInTouch> {
                                 const SizedBox(
                                   width: 10,
                                 ),
-                                Text(
-                                  '03346906960',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                      color: Colors.grey.shade400),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    minimumSize: Size.zero,
+                                    padding: EdgeInsets.zero,
+                                    tapTargetSize:
+                                        MaterialTapTargetSize.shrinkWrap,
+                                  ),
+                                  onPressed: () => {
+                                    launchWhatsApp(
+                                        phone: 03346906960, message: 'Hello'),
+                                  },
+                                  child: Text(
+                                    '03346906960',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                        color: Colors.grey.shade400),
+                                  ),
                                 ),
                               ],
                             ),
