@@ -31,21 +31,61 @@ class _AllSolutionsState extends State<AllSolutions> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Column(
-                    children: [
-                      Text("IMPULSE HCM 360°",
-                          textAlign: TextAlign.center,
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Text("IMPULSE HCM 360°",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color(0xFFE4393C),
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold)),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Streamline your payroll processes with ease. The issue, approve, and seamlessly transfer salaries to bank accounts in just one click. Impulse HCM automatically calculates deductions, and additions, and ensures accuracy.",
+                          textAlign: TextAlign.justify,
                           style: TextStyle(
-                              color: Color(0xFFE4393C),
-                              fontSize: 50,
-                              fontWeight: FontWeight.bold)),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                    ],
+                              color: Colors.grey.shade400,
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ],
+                    ),
                   ),
+                ),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Text(
+                            "Cloud-based Human Capital Management (HCM) Software Solution",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold)),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Impulse HCM is a premier cloud-based Human Capital Management (HCM) software solution. We specialize in providing comprehensive services and innovative solutions for efficient human capital management in Pakistan and the USA, all at competitive prices.\n \nAt Impulse HCM, we are dedicated to revolutionizing the way organizations manage their workforce. Our cutting-edge software empowers businesses to streamline their HR operations, enhance employee engagement, and drive productivity to new heights. With a strong focus on delivering exceptional value, we ensure that organizations of all sizes can benefit from our expertise.\n \nOur robust platform offers a wide range of features and functionalities to effectively manage critical HR functions, including talent acquisition, employee onboarding, performance management, training and development, and more. With an intuitive user interface and advanced analytics and reporting capabilities, our software equips businesses with actionable insights to make informed decisions and foster continuous improvement.\n \nAt Impulse HCM, we pride ourselves on delivering excellence in customer service. Our team of professionals is committed to providing comprehensive support throughout the implementation process and beyond. We strive to build long-term partnerships with our clients, working closely with them to understand their unique needs and deliver solutions that align with their organizational goals.",
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                              color: Colors.grey.shade400,
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
