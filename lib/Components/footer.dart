@@ -46,7 +46,7 @@ class _FooterState extends State<Footer> {
                     height: 100,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 10),
+                    padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
                     child: Text(
                       "Zai Systems a software company for those professionals who seek passion in the world of IT. Zai Systems integrates technology and human potential to provide intelligent business solutions for entrepreneurs and enterprises.",
                       textAlign: TextAlign.justify,

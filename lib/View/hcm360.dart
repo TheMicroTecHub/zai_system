@@ -37,7 +37,7 @@ class _hcmState extends State<hcm> {
             )),
         drawer: const MyDrawer(),
         body: Padding(
-          padding: const EdgeInsets.only(left: 35, top: 160),
+          padding: const EdgeInsets.symmetric(vertical: 160, horizontal: 30.0),
           child: Container(
             width: 350,
             height: 430,
