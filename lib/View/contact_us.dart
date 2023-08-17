@@ -116,7 +116,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     children: [
                       Text("Contact Us",
@@ -138,6 +138,8 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                   ),
                 ),
                 Divider(
+                  indent: 140,
+                  endIndent: 140,
                   color: Colors.white,
                   thickness: 1,
                 ),
@@ -192,7 +194,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "assests/website.png",
+                                    "assests/mail icon.png",
                                     height: 30,
                                     width: 30,
                                   ),
@@ -237,7 +239,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "assests/website.png",
+                                    "assests/mail icon.png",
                                     height: 30,
                                     width: 30,
                                   ),
@@ -282,7 +284,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "assests/website.png",
+                                    "assests/mail icon.png",
                                     height: 30,
                                     width: 30,
                                   ),
@@ -327,7 +329,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               child: Column(
                                 children: [
                                   Image.asset(
-                                    "assests/website.png",
+                                    "assests/mail icon.png",
                                     height: 30,
                                     width: 30,
                                   ),
@@ -476,6 +478,9 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
                                   Container(
                                     child: Row(
                                       mainAxisAlignment:
@@ -501,12 +506,12 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                             }
                                           },
                                           child: Image.asset(
-                                            "assests/facebook.png",
+                                            "assests/fb icon.png",
                                             height: 30,
                                             width: 30,
                                           ),
                                         ),
-                                        const SizedBox(width: 5),
+                                        const SizedBox(width: 10),
                                         InkWell(
                                           onTap: () {
                                             if (Platform.isAndroid) {
@@ -526,12 +531,12 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                             }
                                           },
                                           child: Image.asset(
-                                            "assests/insta.png",
+                                            "assests/insta icon.png",
                                             height: 30,
                                             width: 30,
                                           ),
                                         ),
-                                        const SizedBox(width: 5),
+                                        const SizedBox(width: 10),
                                         InkWell(
                                           onTap: () {
                                             if (Platform.isAndroid) {
@@ -551,7 +556,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                             }
                                           },
                                           child: Image.asset(
-                                            "assests/linkedin.png",
+                                            "assests/linkedin icon.png",
                                             height: 30,
                                             width: 30,
                                           ),

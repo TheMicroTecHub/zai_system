@@ -37,7 +37,7 @@ class _MyDrawerState extends State<MyDrawer> {
         padding:
             const EdgeInsets.only(left: 16.0, right: 40, top: 40, bottom: 100),
         decoration: BoxDecoration(
-          color: Colors.grey.shade800,
+          color: Colors.black,
           boxShadow: const [
             BoxShadow(color: Colors.black45),
           ],

@@ -212,12 +212,12 @@ class _FooterState extends State<Footer> {
                                 }
                               },
                               child: Image.asset(
-                                "assests/facebook.png",
+                                "assests/fb icon.png",
                                 height: 30,
                                 width: 30,
                               ),
                             ),
-                            const SizedBox(width: 5),
+                            const SizedBox(width: 10),
                             InkWell(
                               onTap: () {
                                 if (Platform.isAndroid) {
@@ -237,12 +237,12 @@ class _FooterState extends State<Footer> {
                                 }
                               },
                               child: Image.asset(
-                                "assests/insta.png",
+                                "assests/insta icon.png",
                                 height: 30,
                                 width: 30,
                               ),
                             ),
-                            const SizedBox(width: 5),
+                            const SizedBox(width: 10),
                             InkWell(
                               onTap: () {
                                 if (Platform.isAndroid) {
@@ -262,12 +262,12 @@ class _FooterState extends State<Footer> {
                                 }
                               },
                               child: Image.asset(
-                                "assests/linkedin.png",
+                                "assests/linkedin icon.png",
                                 height: 30,
                                 width: 30,
                               ),
                             ),
-                            const SizedBox(width: 5),
+                            const SizedBox(width: 10),
                             InkWell(
                               onTap: () {
                                 if (Platform.isAndroid) {
@@ -283,7 +283,7 @@ class _FooterState extends State<Footer> {
                                 }
                               },
                               child: Image.asset(
-                                "assests/website.png",
+                                "assests/web icon.png",
                                 height: 30,
                                 width: 30,
                               ),
