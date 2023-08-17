@@ -37,15 +37,14 @@ class _hcmState extends State<hcm> {
             )),
         drawer: const MyDrawer(),
         body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 160, horizontal: 30.0),
+          padding: const EdgeInsets.symmetric(vertical: 130, horizontal: 30.0),
           child: Container(
             width: 350,
-            height: 430,
+            height: 600,
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(20),
             ),
-            padding: EdgeInsets.all(10.0),
             child: Container(
               child: Column(
                 children: <Widget>[
@@ -57,38 +56,42 @@ class _hcmState extends State<hcm> {
                                     builder: (context) => Payroll()))
                             .then((value) => setState(() {}));
                       },
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.arrow_right,
-                            color: Colors.red,
-                            size: 40,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Payrolls",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 40,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                              Container(
-                                width: 272.0,
-                                child: Text(
-                                  "Powerfull & Flexible Payroll",
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 5),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_right,
+                              color: Colors.red,
+                              size: 40,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Payrolls",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 20,
+                                    fontSize: 40,
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Container(
+                                  width: 272.0,
+                                  child: Text(
+                                    "Powerfull & Flexible Payroll",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontStyle: FontStyle.italic,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       )),
                   SizedBox(
                     height: 20,
@@ -101,38 +104,42 @@ class _hcmState extends State<hcm> {
                                     builder: (context) => Attendance()))
                             .then((value) => setState(() {}));
                       },
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.arrow_right,
-                            color: Colors.red,
-                            size: 40,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Attendance",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 40,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                              Container(
-                                width: 272.0,
-                                child: Text(
-                                  "Follow up attendance records from everywhere & anytime",
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 5),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_right,
+                              color: Colors.red,
+                              size: 40,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Attendance",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 20,
+                                    fontSize: 40,
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Container(
+                                  width: 272.0,
+                                  child: Text(
+                                    "Follow up attendance records from everywhere & anytime",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontStyle: FontStyle.italic,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       )),
                   SizedBox(
                     height: 20,
@@ -145,38 +152,42 @@ class _hcmState extends State<hcm> {
                                     builder: (context) => LetterFroms()))
                             .then((value) => setState(() {}));
                       },
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.arrow_right,
-                            color: Colors.red,
-                            size: 40,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Letter & Forms",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 40,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                              ),
-                              Container(
-                                width: 272.0,
-                                child: Text(
-                                  "Create, edit and design HR forms and official letters in a smart way",
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 5),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_right,
+                              color: Colors.red,
+                              size: 40,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Letter & Forms",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 20,
+                                    fontSize: 40,
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
+                                Container(
+                                  width: 272.0,
+                                  child: Text(
+                                    "Create, edit and design HR forms and official letters in a smart way",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontStyle: FontStyle.italic,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       )),
                   SizedBox(
                     height: 20,
@@ -189,38 +200,42 @@ class _hcmState extends State<hcm> {
                                     builder: (context) => AllSolutions()))
                             .then((value) => setState(() {}));
                       },
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.arrow_right,
-                            color: Colors.red,
-                            size: 40,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "All Solutions",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 40,
-                                  fontStyle: FontStyle.italic,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 5),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_right,
+                              color: Colors.red,
+                              size: 40,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "All Solutions",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 40,
+                                    fontStyle: FontStyle.italic,
+                                  ),
                                 ),
-                              ),
-                              // Container(
-                              //   width: 272.0,
-                              //   child: Text(
-                              //     "Follow up attendance records from everywhere & anytime",
-                              //     style: TextStyle(
-                              //       color: Colors.white,
-                              //       fontSize: 20,
-                              //       fontStyle: FontStyle.italic,
-                              //     ),
-                              //   ),
-                              // ),
-                            ],
-                          ),
-                        ],
+                                // Container(
+                                //   width: 272.0,
+                                //   child: Text(
+                                //     "Follow up attendance records from everywhere & anytime",
+                                //     style: TextStyle(
+                                //       color: Colors.white,
+                                //       fontSize: 20,
+                                //       fontStyle: FontStyle.italic,
+                                //     ),
+                                //   ),
+                                // ),
+                              ],
+                            ),
+                          ],
+                        ),
                       )),
                   SizedBox(
                     height: 20,
