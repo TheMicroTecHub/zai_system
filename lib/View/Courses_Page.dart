@@ -35,84 +35,87 @@ class Courses extends StatelessWidget {
           separatorBuilder: (BuildContext context, int index) =>
               const Divider(color: Colors.white),
           itemBuilder: (BuildContext context, int index) {
-            return TextButton(
-              onPressed: () {
-                int id = data[index].id;
-                Get.to(DetailPage(id: id));
-              },
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(children: [
+            return Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextButton(
+                onPressed: () {
+                  int id = data[index].id;
+                  Get.to(DetailPage(id: id));
+                },
+                child: Column(
+                  children: [
                     const SizedBox(
-                      width: 5,
+                      height: 8,
                     ),
-                    Container(
-                      height: 80,
-                      width: 180,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        // color: Colors.white
+                    Row(children: [
+                      const SizedBox(
+                        width: 5,
                       ),
-                      child: Image(
-                        image: AssetImage(data[index].image),
-                        fit: BoxFit.fill,
+                      Container(
+                        height: 80,
+                        width: 160,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          // color: Colors.white
+                        ),
+                        child: Image(
+                          image: AssetImage(data[index].image),
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    SizedBox(
-                      width: 190,
-                      height: 90,
-                      child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              data[index].name,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 18),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 5),
-                              child: Text(
-                                "${data[index].Shortdescription}",
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      SizedBox(
+                        width: 190,
+                        height: 90,
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                data[index].name,
                                 style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
                                     color: Colors.white,
-                                    fontSize: 12,
-                                    fontStyle: FontStyle.italic),
+                                    fontSize: 18),
                               ),
-                            ),
-                          ]),
-                    ),
-                  ]),
-                  const Row(children: [
-                    SizedBox(
-                      width: 320,
-                    ),
-                    SizedBox(
-                      width: 50,
-                      height: 50,
-                      child: Text(
-                        'More',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 5),
+                                child: Text(
+                                  "${data[index].Shortdescription}",
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontStyle: FontStyle.italic),
+                                ),
+                              ),
+                            ]),
                       ),
+                    ]),
+                    const Row(children: [
+                      SizedBox(
+                        width: 320,
+                      ),
+                      SizedBox(
+                        width: 50,
+                        height: 50,
+                        child: Text(
+                          'More',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red),
+                        ),
+                      ),
+                    ]),
+                    const SizedBox(
+                      height: 7,
                     ),
-                  ]),
-                  const SizedBox(
-                    height: 7,
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
           },

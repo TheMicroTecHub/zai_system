@@ -52,14 +52,6 @@ class _DetailPageState extends State<DetailPage> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.black, Colors.red],
-            begin: FractionalOffset(0.9, 0.0),
-            end: FractionalOffset(0.0, 0.9),
-            stops: [0.0, 1.0],
-          ),
-        ),
         child: Stack(
           children: [
             Positioned(
@@ -190,16 +182,9 @@ class _DetailPageState extends State<DetailPage> {
               width: width,
               height: height,
               child: Container(
-                  width: 80,
-                  height: 100,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Colors.black, Colors.red],
-                      begin: FractionalOffset(0.9, 0.0),
-                      end: FractionalOffset(0.0, 0.9),
-                      stops: [0.0, 1.0],
-                    ),
-                  )),
+                width: 80,
+                height: 100,
+              ),
             ),
             Positioned(
                 top: 250,
@@ -217,7 +202,7 @@ class _DetailPageState extends State<DetailPage> {
                               color: Colors.grey.withOpacity(0.2))
                         ]),
                     height: 435,
-                    width: 330,
+                    width: 360,
                     child: Column(children: [
                       const SizedBox(
                         height: 10,
