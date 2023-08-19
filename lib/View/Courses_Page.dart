@@ -36,7 +36,7 @@ class Courses extends StatelessWidget {
               const Divider(color: Colors.white),
           itemBuilder: (BuildContext context, int index) {
             return Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(5.0),
               child: TextButton(
                 onPressed: () {
                   int id = data[index].id;
@@ -44,15 +44,12 @@ class Courses extends StatelessWidget {
                 },
                 child: Column(
                   children: [
-                    const SizedBox(
-                      height: 8,
-                    ),
                     Row(children: [
                       const SizedBox(
                         width: 5,
                       ),
                       Container(
-                        height: 80,
+                        height: 90,
                         width: 160,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
@@ -67,8 +64,8 @@ class Courses extends StatelessWidget {
                         width: 20,
                       ),
                       SizedBox(
-                        width: 190,
-                        height: 90,
+                        width: 180,
+                        height: 110,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -97,11 +94,12 @@ class Courses extends StatelessWidget {
                     ]),
                     const Row(children: [
                       SizedBox(
-                        width: 320,
+                        width: 310,
+                        height: 40,
                       ),
                       SizedBox(
                         width: 50,
-                        height: 50,
+                        height: 20,
                         child: Text(
                           'More',
                           style: TextStyle(

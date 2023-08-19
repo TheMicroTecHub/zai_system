@@ -73,11 +73,10 @@ class _DetailPageState extends State<DetailPage> {
                 width: width,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 margin: const EdgeInsets.only(left: 25, right: 25),
-                //color: Colors.white,
                 child: Container(
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Row(
@@ -96,7 +95,8 @@ class _DetailPageState extends State<DetailPage> {
                           Text(
                             data[id].name,
                             style: const TextStyle(
-                                color: Colors.black,
+                                // color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 18,
                                 decoration: TextDecoration.none),
                           ),
@@ -123,7 +123,8 @@ class _DetailPageState extends State<DetailPage> {
                                         data[id].name,
                                         style: const TextStyle(
                                             fontSize: 11,
-                                            color: Colors.black,
+                                            // color: Colors.black,
+                                            color: Colors.white,
                                             fontWeight: FontWeight.w700),
                                       ),
                                       const Text(
@@ -153,7 +154,8 @@ class _DetailPageState extends State<DetailPage> {
                                         '${data[id].rate}',
                                         style: const TextStyle(
                                             fontSize: 11,
-                                            color: Colors.black,
+                                            // color: Colors.black,
+                                            color: Colors.white,
                                             fontWeight: FontWeight.w700),
                                       ),
                                       const Text(
@@ -189,11 +191,13 @@ class _DetailPageState extends State<DetailPage> {
             Positioned(
                 top: 250,
                 left: 0,
+                right: 0,
                 child: Container(
                     margin: const EdgeInsets.only(left: 25, right: 20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
+                        // color: Colors.white,
+                        color: Colors.black,
                         boxShadow: [
                           BoxShadow(
                               blurRadius: 20,
@@ -202,17 +206,19 @@ class _DetailPageState extends State<DetailPage> {
                               color: Colors.grey.withOpacity(0.2))
                         ]),
                     height: 435,
-                    width: 360,
+                    width: width,
                     child: Column(children: [
                       const SizedBox(
                         height: 10,
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(5, 0, 150, 0),
+                        padding: EdgeInsets.only(right: 170),
                         child: Text(
                           "Description",
                           style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       SizedBox(
@@ -225,9 +231,11 @@ class _DetailPageState extends State<DetailPage> {
                         child: SingleChildScrollView(
                           child: Text(
                             data[id].description,
+                            textAlign: TextAlign.justify,
                             style: const TextStyle(
                                 fontSize: 15,
                                 //color: Color(0xFFb8b8b8),
+                                color: Colors.white,
                                 fontStyle: FontStyle.normal),
                           ),
                         ),
@@ -236,6 +244,7 @@ class _DetailPageState extends State<DetailPage> {
                         height: 10,
                       ),
                       const Divider(
+                        color: Colors.white,
                         thickness: 1.0,
                       ),
                       const SizedBox(
@@ -255,7 +264,8 @@ class _DetailPageState extends State<DetailPage> {
                                 "WhatsApp",
                                 style: TextStyle(
                                     fontSize: 11,
-                                    color: Colors.black,
+                                    // color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.w700),
                               ),
                               TextButton.icon(

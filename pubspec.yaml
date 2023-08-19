@@ -55,7 +55,7 @@ dependencies:
   firebase_storage:
   badges: ^3.1.1
   flutter_email_sender: ^6.0.1
-  
+  google_sign_in: ^6.1.4
 
 dev_dependencies:
   flutter_test:

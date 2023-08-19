@@ -4,8 +4,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:zai_system/Widget/round_button.dart';
 import 'package:zai_system/model/current_appuser.dart';
-
 import '../Widget/constants.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -183,28 +183,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 70),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Don't have an account?",
-                              style: TextStyle(fontSize: 15, color: whitecolor),
-                            ),
-                            TextButton(
-                              onPressed:
-                                  load ? null : () => Get.toNamed("/signup"),
-                              child: const Text(
-                                'Sign up',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                    fontSize: 15),
-                              ),
-                            )
-                          ],
-                        )),
                   ],
                 ),
               ),
@@ -259,5 +237,30 @@ class _LoginScreenState extends State<LoginScreen> {
         load = false;
       });
     }
+  }
+}
+
+Future<void> signInWithGoogle() async {
+  try {
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+    if (googleUser == null) {
+      throw Exception("Google sign-in failed or was canceled.");
+    }
+
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
+
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    final userCredential =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+    final user = userCredential.user;
+
+    // Do what you want with users credintials
+  } catch (e) {
+    throw Exception(e.toString());
   }
 }

@@ -23,6 +23,8 @@ class hcm extends StatefulWidget {
 class _hcmState extends State<hcm> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Colors.black,
@@ -39,8 +41,8 @@ class _hcmState extends State<hcm> {
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 130, horizontal: 30.0),
           child: Container(
-            width: 350,
-            height: 600,
+            width: width,
+            height: height,
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(20),
