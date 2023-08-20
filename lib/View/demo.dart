@@ -22,7 +22,8 @@ class _DemoScreenState extends State<DemoScreen> {
   bool showSpinner = false;
   TextEditingController recipientController =
       TextEditingController(text: 'babarmis108@gmail.com');
-  TextEditingController subjectController = TextEditingController();
+  TextEditingController subjectController =
+      TextEditingController(text: 'Demo Request');
   TextEditingController bodyController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController compController = TextEditingController();
@@ -266,31 +267,29 @@ class _DemoScreenState extends State<DemoScreen> {
     final employee = empController.text;
     final number = phoneController.text;
     final email = emailController.text;
-    // final Email email = Email(
-    //   body: bodyController.text,
-    //   subject: subjectController.text,
-    //   recipients: [recipientController.text],
-    // );
+    final reqData =
+        'Name: $name\n Company: $company\n Employee: $employee\n  Phone: $number\n Email: $email';
+    final Email emailM = Email(
+      body: reqData,
+      subject: subjectController.text,
+      recipients: [recipientController.text],
+    );
 
-    // String platformResponse;
+    String platformResponse;
 
-    // try {
-    //   await FlutterEmailSender.send(email);
-    //   platformResponse = 'success';
-    // } catch (error) {
-    //   platformResponse = error.toString();
-    // }
-
-    // if (_formKey.currentState!.validate()) {
-    //   sendEmail();
-    //   Fluttertoast.showToast(msg: platformResponse);
-    // }
+    try {
+      await FlutterEmailSender.send(emailM);
+      platformResponse = 'success';
+    } catch (error) {
+      platformResponse = error.toString();
+    } finally {
+      setState(() {
+        load = false;
+      });
+    }
   }
 
   sendEmail() async {
-    setState(() {
-      load = false;
-    });
     Future.delayed(
       const Duration(milliseconds: 100),
       () => Navigator.of(context).pushReplacement(
