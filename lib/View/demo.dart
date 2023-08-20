@@ -268,7 +268,7 @@ class _DemoScreenState extends State<DemoScreen> {
     final number = phoneController.text;
     final email = emailController.text;
     final reqData =
-        'Name: $name\n Company: $company\n Employee: $employee\n  Phone: $number\n Email: $email';
+        'Name: $name\n Company: $company\n Employee: $employee\n Email: $email\n Phone: $number';
     final Email emailM = Email(
       body: reqData,
       subject: subjectController.text,
@@ -279,9 +279,11 @@ class _DemoScreenState extends State<DemoScreen> {
 
     try {
       await FlutterEmailSender.send(emailM);
-      platformResponse = 'success';
+      platformResponse = 'Email Sent';
+      Fluttertoast.showToast(msg: platformResponse);
     } catch (error) {
       platformResponse = error.toString();
+      Fluttertoast.showToast(msg: platformResponse);
     } finally {
       setState(() {
         load = false;

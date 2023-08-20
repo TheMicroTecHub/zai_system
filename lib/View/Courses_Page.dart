@@ -50,7 +50,7 @@ class Courses extends StatelessWidget {
                       ),
                       Container(
                         height: 90,
-                        width: 160,
+                        width: 140,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
                           // color: Colors.white
@@ -64,7 +64,7 @@ class Courses extends StatelessWidget {
                         width: 20,
                       ),
                       SizedBox(
-                        width: 180,
+                        width: 160,
                         height: 110,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,7 +94,7 @@ class Courses extends StatelessWidget {
                     ]),
                     const Row(children: [
                       SizedBox(
-                        width: 310,
+                        width: 280,
                         height: 40,
                       ),
                       SizedBox(

@@ -227,7 +227,7 @@ class _DetailPageState extends State<DetailPage> {
                       Container(
                         height: 270,
                         width: 300,
-                        margin: const EdgeInsets.only(left: 10, right: 10),
+                        margin: const EdgeInsets.only(left: 15, right: 15),
                         child: SingleChildScrollView(
                           child: Text(
                             data[id].description,
@@ -243,21 +243,42 @@ class _DetailPageState extends State<DetailPage> {
                       const SizedBox(
                         height: 10,
                       ),
-                      const Divider(
-                        color: Colors.white,
-                        thickness: 1.0,
-                      ),
                       const SizedBox(
                         height: 5,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
+                          // Column(
+                          //   crossAxisAlignment: CrossAxisAlignment.center,
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     const Text(
+                          //       "PDF",
+                          //       style: TextStyle(
+                          //           fontSize: 11,
+                          //           // color: Colors.black,
+                          //           color: Colors.white,
+                          //           fontWeight: FontWeight.w700),
+                          //     ),
+                          //     TextButton.icon(
+                          //       onPressed: () => {
+                          //         launchWhatsApp(
+                          //             phone: 03332959077, message: 'Hello'),
+                          //       },
+                          //       icon: const FaIcon(
+                          //         FontAwesomeIcons.solidFilePdf,
+                          //         color: Colors.white,
+                          //       ),
+                          //       label: const Text(''),
+                          //     ),
+                          //   ],
+                          // ),
                           const SizedBox(
                             width: 15,
                           ),
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
