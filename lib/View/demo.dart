@@ -300,11 +300,3 @@ class _DemoScreenState extends State<DemoScreen> {
     );
   }
 }
-
-class Controller extends GetxController {
-  final nameController = TextEditingController();
-  final compController = TextEditingController();
-  final empController = TextEditingController();
-  final phoneController = TextEditingController();
-  final emailController = TextEditingController();
-}
