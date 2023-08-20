@@ -6,6 +6,7 @@ import 'package:zai_system/Widget/constants.dart';
 import 'package:zai_system/Widget/round_button.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'package:get/get.dart';
 
 class DemoScreen extends StatefulWidget {
   const DemoScreen({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class DemoScreen extends StatefulWidget {
 }
 
 class _DemoScreenState extends State<DemoScreen> {
+  // final data = "Name: ${nameController.text}";
   final _formKey = GlobalKey<FormState>();
   bool load = false;
   bool showSpinner = false;
@@ -22,9 +24,19 @@ class _DemoScreenState extends State<DemoScreen> {
       TextEditingController(text: 'babarmis108@gmail.com');
   TextEditingController subjectController = TextEditingController();
   TextEditingController bodyController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController compController = TextEditingController();
+  TextEditingController empController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   @override
   void dispose() {
+    nameController.dispose();
+    compController.dispose();
+    empController.dispose();
+    phoneController.dispose();
+    emailController.dispose();
     recipientController.dispose();
     subjectController.dispose();
     bodyController.dispose();
@@ -67,41 +79,11 @@ class _DemoScreenState extends State<DemoScreen> {
               Form(
                 key: _formKey,
                 child: Column(children: [
-                  // Padding(
-                  //   padding: apppaddings,
-                  //   child: TextFormField(
-                  //     enabled: !load,
-                  //     controller: namecontroller,
-                  //     keyboardType: TextInputType.text,
-                  //     validator: (value) {
-                  //       if (value!.isEmpty) {
-                  //         return 'required';
-                  //       }
-                  //       return null;
-                  //     },
-                  //     decoration: InputDecoration(
-                  //       hintText: 'Name',
-                  //       hintStyle: const TextStyle(
-                  //           fontFamily: 'Rubik Medium', fontSize: 16),
-                  //       fillColor: const Color(0xffF8F9FA),
-                  //       filled: true,
-                  //       prefixIcon: const Icon(
-                  //         Icons.person_outlined,
-                  //         color: iconcolor,
-                  //       ),
-                  //       focusedBorder: fbbutton,
-                  //       enabledBorder: ebbutton,
-                  //     ),
-                  //   ),
-                  // ),
-                  // const SizedBox(
-                  //   height: 15,
-                  // ),
                   Padding(
                     padding: apppaddings,
                     child: TextFormField(
                       enabled: !load,
-                      controller: subjectController,
+                      controller: nameController,
                       keyboardType: TextInputType.text,
                       validator: (value) {
                         if (value!.isEmpty) {
@@ -110,7 +92,37 @@ class _DemoScreenState extends State<DemoScreen> {
                         return null;
                       },
                       decoration: InputDecoration(
-                        hintText: 'Demo Type',
+                        hintText: 'Name',
+                        hintStyle: const TextStyle(
+                            fontFamily: 'Rubik Medium', fontSize: 16),
+                        fillColor: const Color(0xffF8F9FA),
+                        filled: true,
+                        prefixIcon: const Icon(
+                          Icons.person_outlined,
+                          color: iconcolor,
+                        ),
+                        focusedBorder: fbbutton,
+                        enabledBorder: ebbutton,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: apppaddings,
+                    child: TextFormField(
+                      enabled: !load,
+                      controller: compController,
+                      keyboardType: TextInputType.text,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'required';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        hintText: 'Company Name',
                         hintStyle: const TextStyle(
                             fontFamily: 'Rubik Medium', fontSize: 16),
                         fillColor: const Color(0xffF8F9FA),
@@ -130,10 +142,8 @@ class _DemoScreenState extends State<DemoScreen> {
                   Padding(
                     padding: apppaddings,
                     child: TextFormField(
-                      minLines: 1, // Set this
-                      maxLines: 6,
                       enabled: !load,
-                      controller: bodyController,
+                      controller: empController,
                       keyboardType: TextInputType.text,
                       validator: (value) {
                         if (value!.isEmpty) {
@@ -142,7 +152,7 @@ class _DemoScreenState extends State<DemoScreen> {
                         return null;
                       },
                       decoration: InputDecoration(
-                        hintText: 'Details',
+                        hintText: 'No. of Employees',
                         hintStyle: const TextStyle(
                             fontFamily: 'Rubik Medium', fontSize: 16),
                         fillColor: const Color(0xffF8F9FA),
@@ -156,66 +166,66 @@ class _DemoScreenState extends State<DemoScreen> {
                       ),
                     ),
                   ),
-                  // const SizedBox(
-                  //   height: 15,
-                  // ),
-                  // Padding(
-                  //   padding: apppaddings,
-                  //   child: TextFormField(
-                  //     enabled: !load,
-                  //     controller: emailcontroller,
-                  //     keyboardType: TextInputType.emailAddress,
-                  //     validator: (value) {
-                  //       if (value!.isEmpty) {
-                  //         return 'required';
-                  //       }
-                  //       return null;
-                  //     },
-                  //     decoration: InputDecoration(
-                  //       hintText: 'Email',
-                  //       hintStyle: const TextStyle(
-                  //           fontFamily: 'Rubik Medium', fontSize: 16),
-                  //       fillColor: const Color(0xffF8F9FA),
-                  //       filled: true,
-                  //       prefixIcon: const Icon(
-                  //         Icons.email_outlined,
-                  //         color: iconcolor,
-                  //       ),
-                  //       focusedBorder: fbbutton,
-                  //       enabledBorder: ebbutton,
-                  //     ),
-                  //   ),
-                  // ),
-                  // const SizedBox(
-                  //   height: 15,
-                  // ),
-                  // Padding(
-                  //   padding: apppaddings,
-                  //   child: TextFormField(
-                  //     enabled: !load,
-                  //     controller: phoneNumberController,
-                  //     validator: (value) {
-                  //       if (value!.isEmpty) {
-                  //         return 'Provide Contact in +92 format required';
-                  //       } else
-                  //         return null;
-                  //     },
-                  //     keyboardType: TextInputType.phone,
-                  //     decoration: InputDecoration(
-                  //       hintText: 'Mobile',
-                  //       hintStyle: const TextStyle(
-                  //           fontFamily: 'Rubik Medium', fontSize: 16),
-                  //       fillColor: const Color(0xffF8F9FA),
-                  //       filled: true,
-                  //       prefixIcon: const Icon(
-                  //         Icons.perm_contact_cal_outlined,
-                  //         color: iconcolor,
-                  //       ),
-                  //       focusedBorder: fbbutton,
-                  //       enabledBorder: ebbutton,
-                  //     ),
-                  //   ),
-                  // ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: apppaddings,
+                    child: TextFormField(
+                      enabled: !load,
+                      controller: emailController,
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'required';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        hintText: 'Email',
+                        hintStyle: const TextStyle(
+                            fontFamily: 'Rubik Medium', fontSize: 16),
+                        fillColor: const Color(0xffF8F9FA),
+                        filled: true,
+                        prefixIcon: const Icon(
+                          Icons.email_outlined,
+                          color: iconcolor,
+                        ),
+                        focusedBorder: fbbutton,
+                        enabledBorder: ebbutton,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: apppaddings,
+                    child: TextFormField(
+                      enabled: !load,
+                      controller: phoneController,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Provide Contact in +92 format required';
+                        } else
+                          return null;
+                      },
+                      keyboardType: TextInputType.phone,
+                      decoration: InputDecoration(
+                        hintText: 'Mobile',
+                        hintStyle: const TextStyle(
+                            fontFamily: 'Rubik Medium', fontSize: 16),
+                        fillColor: const Color(0xffF8F9FA),
+                        filled: true,
+                        prefixIcon: const Icon(
+                          Icons.perm_contact_cal_outlined,
+                          color: iconcolor,
+                        ),
+                        focusedBorder: fbbutton,
+                        enabledBorder: ebbutton,
+                      ),
+                    ),
+                  ),
                 ]),
               ),
               const SizedBox(
@@ -251,25 +261,30 @@ class _DemoScreenState extends State<DemoScreen> {
   }
 
   Future<void> send() async {
-    final Email email = Email(
-      body: bodyController.text,
-      subject: subjectController.text,
-      recipients: [recipientController.text],
-    );
+    final name = nameController.text;
+    final company = compController.text;
+    final employee = empController.text;
+    final number = phoneController.text;
+    final email = emailController.text;
+    // final Email email = Email(
+    //   body: bodyController.text,
+    //   subject: subjectController.text,
+    //   recipients: [recipientController.text],
+    // );
 
-    String platformResponse;
+    // String platformResponse;
 
-    try {
-      await FlutterEmailSender.send(email);
-      platformResponse = 'success';
-    } catch (error) {
-      platformResponse = error.toString();
-    }
+    // try {
+    //   await FlutterEmailSender.send(email);
+    //   platformResponse = 'success';
+    // } catch (error) {
+    //   platformResponse = error.toString();
+    // }
 
-    if (_formKey.currentState!.validate()) {
-      sendEmail();
-      Fluttertoast.showToast(msg: platformResponse);
-    }
+    // if (_formKey.currentState!.validate()) {
+    //   sendEmail();
+    //   Fluttertoast.showToast(msg: platformResponse);
+    // }
   }
 
   sendEmail() async {
@@ -285,4 +300,12 @@ class _DemoScreenState extends State<DemoScreen> {
       ),
     );
   }
+}
+
+class Controller extends GetxController {
+  final nameController = TextEditingController();
+  final compController = TextEditingController();
+  final empController = TextEditingController();
+  final phoneController = TextEditingController();
+  final emailController = TextEditingController();
 }
