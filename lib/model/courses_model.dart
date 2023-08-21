@@ -10,6 +10,7 @@ class model {
   final String description;
   final String Shortdescription;
   final double rate;
+  final String pdf;
 
   model({
     required this.id,
@@ -18,18 +19,21 @@ class model {
     required this.description,
     required this.Shortdescription,
     required this.rate,
+    required this.pdf,
   });
 
   static List<model> getCoursesData() => [
         model(
-            id: 0,
-            name: 'Graphic design',
-            image: 'assests/course/Graphics.PNG',
-            description:
-                'Graphic design is the art, profession and academic discipline whose activity consists in projecting visual communications intended to transmit specific messages to social groups, with specific objectives.The role of the graphic designer in the communication process is that of encoder or interpreter of the message. They work on the interpretation, ordering and presentation of visual messages.',
-            Shortdescription:
-                'Graphic design is the art, profession and academic discipline.',
-            rate: 2000),
+          id: 0,
+          name: 'Graphic design',
+          image: 'assests/course/Graphics.PNG',
+          description:
+              'Graphic design is the art, profession and academic discipline whose activity consists in projecting visual communications intended to transmit specific messages to social groups, with specific objectives.The role of the graphic designer in the communication process is that of encoder or interpreter of the message. They work on the interpretation, ordering and presentation of visual messages.',
+          Shortdescription:
+              'Graphic design is the art, profession and academic discipline.',
+          rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
+        ),
         model(
           id: 1,
           name: 'Angular',
@@ -39,6 +43,7 @@ class model {
           Shortdescription:
               'Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 2,
@@ -49,6 +54,7 @@ class model {
           Shortdescription:
               'In our Java & Spring Framework Developer course students will learn to develop Java applications.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 3,
@@ -59,6 +65,7 @@ class model {
           Shortdescription:
               'JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 4,
@@ -69,16 +76,19 @@ class model {
           Shortdescription:
               'WordPress powers nearly one-third of the world’s websites, from small personal blogs to the complex sites of major corporations.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
-            id: 5,
-            name: 'App Development',
-            image: 'assests/course/App_Development.PNG',
-            description:
-                'React Native is an open-source mobile application framework created by Facebook, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use React\'s framework along with native platform capabilities.',
-            Shortdescription:
-                'React Native is an open-source mobile application framework created by Facebook, Inc.',
-            rate: 2000),
+          id: 5,
+          name: 'App Development',
+          image: 'assests/course/App_Development.PNG',
+          description:
+              'React Native is an open-source mobile application framework created by Facebook, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use React\'s framework along with native platform capabilities.',
+          Shortdescription:
+              'React Native is an open-source mobile application framework created by Facebook, Inc.',
+          rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
+        ),
         model(
           id: 6,
           name: 'React JS',
@@ -88,6 +98,7 @@ class model {
           Shortdescription:
               'The Complete React JS Course - Basics to Advance this course is a complete guide for React JS.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 7,
@@ -98,6 +109,7 @@ class model {
           Shortdescription:
               'This extensive project driven course covers n-tier web application development using Microsoft.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 8,
@@ -108,6 +120,7 @@ class model {
           Shortdescription:
               'In this project based course you will learn to develop interactive and responsive websites and front-end web development.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 9,
@@ -118,16 +131,19 @@ class model {
           Shortdescription:
               'Python is an interpreted high-level general-purpose programming language.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
-            id: 10,
-            name: 'Node JS',
-            image: 'assests/course/NodeJS.PNG',
-            description:
-                'Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project! Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. This allows Node.js to be very performant. A Node.js app runs in a single process, without creating a new thread for every request. Node.js provides a set of asynchronous I/O primitives in its standard library that prevent JavaScript code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, making blocking behavior the exception rather than the norm.When Node.js performs an I/O operation, like reading from the network, accessing a database or the filesystem, instead of blocking the thread and wasting CPU cycles waiting, Node.js will resume the operations when the response comes back.',
-            Shortdescription:
-                'Node.js is an open-source and cross-platform JavaScript runtime environment.',
-            rate: 2000),
+          id: 10,
+          name: 'Node JS',
+          image: 'assests/course/NodeJS.PNG',
+          description:
+              'Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project! Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. This allows Node.js to be very performant. A Node.js app runs in a single process, without creating a new thread for every request. Node.js provides a set of asynchronous I/O primitives in its standard library that prevent JavaScript code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, making blocking behavior the exception rather than the norm.When Node.js performs an I/O operation, like reading from the network, accessing a database or the filesystem, instead of blocking the thread and wasting CPU cycles waiting, Node.js will resume the operations when the response comes back.',
+          Shortdescription:
+              'Node.js is an open-source and cross-platform JavaScript runtime environment.',
+          rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
+        ),
         model(
           id: 11,
           name: 'Block Chain',
@@ -137,6 +153,7 @@ class model {
           Shortdescription:
               'Blockchain is a shared, immutable ledger that facilitates the process of recording transactions.',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
         model(
           id: 12,
@@ -147,6 +164,7 @@ class model {
           Shortdescription:
               'Vue.js is a JavaScript framework for building user interfaces (UIs) and single-page applications (SPAs).',
           rate: 2000,
+          pdf: 'assests/pdf/Graphic Design.pdf',
         ),
       ];
 }

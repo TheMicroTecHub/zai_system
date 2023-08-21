@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 import 'package:zai_system/model/courses_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:zai_system/Components/PDFView.dart';
 
 class DetailPage extends StatefulWidget {
   int id;
@@ -249,31 +250,38 @@ class _DetailPageState extends State<DetailPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          // Column(
-                          //   crossAxisAlignment: CrossAxisAlignment.center,
-                          //   mainAxisAlignment: MainAxisAlignment.center,
-                          //   children: [
-                          //     const Text(
-                          //       "PDF",
-                          //       style: TextStyle(
-                          //           fontSize: 11,
-                          //           // color: Colors.black,
-                          //           color: Colors.white,
-                          //           fontWeight: FontWeight.w700),
-                          //     ),
-                          //     TextButton.icon(
-                          //       onPressed: () => {
-                          //         launchWhatsApp(
-                          //             phone: 03332959077, message: 'Hello'),
-                          //       },
-                          //       icon: const FaIcon(
-                          //         FontAwesomeIcons.solidFilePdf,
-                          //         color: Colors.white,
-                          //       ),
-                          //       label: const Text(''),
-                          //     ),
-                          //   ],
-                          // ),
+                          const SizedBox(width: 15),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                "PDF",
+                                style: TextStyle(
+                                    fontSize: 11,
+                                    // color: Colors.black,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              TextButton.icon(
+                                onPressed: () => {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => MyPdfViewer(
+                                        pdfPath: data[id].pdf,
+                                      ),
+                                    ),
+                                  )
+                                },
+                                icon: const FaIcon(
+                                  FontAwesomeIcons.solidFilePdf,
+                                  color: Colors.white,
+                                ),
+                                label: const Text(''),
+                              ),
+                            ],
+                          ),
                           const SizedBox(
                             width: 15,
                           ),

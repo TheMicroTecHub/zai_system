@@ -6,7 +6,6 @@ import 'package:zai_system/Widget/constants.dart';
 import 'package:zai_system/Widget/round_button.dart';
 import 'package:zai_system/View/drawer.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
-import 'package:get/get.dart';
 
 class DemoScreen extends StatefulWidget {
   const DemoScreen({Key? key}) : super(key: key);
@@ -16,7 +15,6 @@ class DemoScreen extends StatefulWidget {
 }
 
 class _DemoScreenState extends State<DemoScreen> {
-  // final data = "Name: ${nameController.text}";
   final _formKey = GlobalKey<FormState>();
   bool load = false;
   bool showSpinner = false;
