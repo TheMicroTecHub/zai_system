@@ -43,7 +43,7 @@ class model {
           Shortdescription:
               'Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google.',
           rate: 2000,
-          pdf: 'assests/pdf/Graphic Design.pdf',
+          pdf: 'assests/pdf/zai systems courses profile.pdf',
         ),
         model(
           id: 2,

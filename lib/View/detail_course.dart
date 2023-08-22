@@ -269,7 +269,7 @@ class _DetailPageState extends State<DetailPage> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => MyPdfViewer(
-                                        pdfPath: data[id].pdf,
+                                        path: data[id].pdf,
                                       ),
                                     ),
                                   )
