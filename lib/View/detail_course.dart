@@ -12,6 +12,7 @@ import 'package:zai_system/model/courses_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zai_system/Components/PDFView.dart';
+import 'package:zai_system/View/contact_us.dart';
 
 class DetailPage extends StatefulWidget {
   int id;
@@ -37,6 +38,27 @@ class _DetailPageState extends State<DetailPage> {
       } else {
         // add the [https]
         return "https://api.whatsapp.com/send?phone=$phone=${Uri.parse(message)}"; // new line
+      }
+    }
+
+    if (await canLaunch(url())) {
+      await launch(url());
+    } else {
+      throw 'Could not launch ${url()}';
+    }
+  }
+
+  void launchForm({
+    String form =
+        "https://docs.google.com/forms/d/e/1FAIpQLSenssk7l7IpxMPIbX2HWXYhNi4ntz1HSyDLO-ereA0ypTCFpg/viewform",
+  }) async {
+    String url() {
+      if (Platform.isAndroid) {
+        // add the [https]
+        return "https://docs.google.com/forms/d/e/1FAIpQLSenssk7l7IpxMPIbX2HWXYhNi4ntz1HSyDLO-ereA0ypTCFpg/viewform"; // new line
+      } else {
+        // add the [https]
+        return "https://docs.google.com/forms/d/e/1FAIpQLSenssk7l7IpxMPIbX2HWXYhNi4ntz1HSyDLO-ereA0ypTCFpg/viewform"; // new line
       }
     }
 
@@ -226,7 +248,7 @@ class _DetailPageState extends State<DetailPage> {
                         height: 15,
                       ),
                       Container(
-                        height: 270,
+                        height: 190,
                         width: 300,
                         margin: const EdgeInsets.only(left: 15, right: 15),
                         child: SingleChildScrollView(
@@ -244,8 +266,90 @@ class _DetailPageState extends State<DetailPage> {
                       const SizedBox(
                         height: 10,
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 10, bottom: 20, top: 0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(255, 156, 27, 27),
+                                      Color.fromARGB(255, 238, 22, 7)
+                                    ],
+                                    begin: FractionalOffset(0.7, 0.9),
+                                    end: FractionalOffset(0.0, 0.5),
+                                    stops: [0.0, 0.5],
+                                  ),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 2, horizontal: 10),
+                                    child: TextButton(
+                                      child: const Text(
+                                        "Contact Us",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ContactUsScreen()));
+                                      },
+                                    )),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 10, bottom: 20, top: 0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(255, 156, 27, 27),
+                                      Color.fromARGB(255, 238, 22, 7)
+                                    ],
+                                    begin: FractionalOffset(0.7, 0.9),
+                                    end: FractionalOffset(0.0, 0.5),
+                                    stops: [0.0, 0.5],
+                                  ),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 2, horizontal: 10),
+                                    child: TextButton(
+                                      child: const Text(
+                                        "Registration",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 17,
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        launchForm();
+                                      },
+                                    )),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       const SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -309,7 +413,7 @@ class _DetailPageState extends State<DetailPage> {
                                 label: const Text(''),
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                       SizedBox(
