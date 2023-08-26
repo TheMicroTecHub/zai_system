@@ -340,7 +340,7 @@ class _DetailPageState extends State<DetailPage> {
                                     onPressed: () {
                                       // launchForm();
                                       launchWhatsApp(
-                                          phone: 03332959077,
+                                          phone: 03346906960,
                                           message:
                                               "Hello. I would like to register for a course.");
                                     },
@@ -406,7 +406,7 @@ class _DetailPageState extends State<DetailPage> {
                             TextButton.icon(
                               onPressed: () => {
                                 launchWhatsApp(
-                                    phone: 03332959077, message: 'Hello'),
+                                    phone: 03346906960, message: 'Hello'),
                               },
                               icon: const FaIcon(
                                 FontAwesomeIcons.whatsapp,
